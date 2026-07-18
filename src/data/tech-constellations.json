@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    { "id": "frontend", "name": "Frontend", "position": [2, 1, 0], "connections": ["react", "css", "animation"], "color": "#38bdf8", "size": 0.4 },
+    { "id": "react", "name": "React", "position": [1.5, 1.8, 0.5], "connections": ["frontend", "nextjs", "state"], "color": "#61dafb", "size": 0.35 },
+    { "id": "nextjs", "name": "Next.js", "position": [0.5, 2, 0.8], "connections": ["react", "backend"], "color": "#ffffff", "size": 0.3 },
+    { "id": "css", "name": "CSS", "position": [2.8, 1.5, -0.3], "connections": ["frontend", "animation"], "color": "#a855f7", "size": 0.25 },
+    { "id": "animation", "name": "Animation", "position": [3, 0.5, 0.2], "connections": ["frontend", "threejs"], "color": "#f97316", "size": 0.25 },
+    { "id": "backend", "name": "Backend", "position": [-1, 1.5, 0.5], "connections": ["nextjs", "database", "api"], "color": "#22c55e", "size": 0.4 },
+    { "id": "database", "name": "Database", "position": [-2, 2, -0.5], "connections": ["backend", "api"], "color": "#eab308", "size": 0.3 },
+    { "id": "api", "name": "API Design", "position": [-1.5, 0.5, 0.3], "connections": ["backend", "database"], "color": "#ec4899", "size": 0.3 },
+    { "id": "state", "name": "State Mgmt", "position": [0, 2.5, -0.2], "connections": ["react"], "color": "#14b8a6", "size": 0.2 },
+    { "id": "threejs", "name": "Three.js", "position": [3, -0.5, 0.6], "connections": ["animation", "webgl"], "color": "#f43f5e", "size": 0.3 },
+    { "id": "webgl", "name": "WebGL", "position": [2, -1, 1], "connections": ["threejs"], "color": "#8b5cf6", "size": 0.25 },
+    { "id": "testing", "name": "Testing", "position": [0, 0, 1], "connections": ["react", "nextjs"], "color": "#06b6d4", "size": 0.25 },
+    { "id": "devops", "name": "DevOps", "position": [-2, 0, -1], "connections": ["backend"], "color": "#f59e0b", "size": 0.3 }
+  ]
+}

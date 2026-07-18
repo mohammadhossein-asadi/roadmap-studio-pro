@@ -1,0 +1,223 @@
+{
+  "nodes": [
+    {
+      "id": "html",
+      "label": "HTML Fundamentals",
+      "description": "Master the building blocks of the web: semantic elements, forms, accessibility, and document structure.",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": true,
+      "resources": [
+        { "id": "r1", "title": "MDN HTML Guide", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "HTML Crash Course", "url": "#", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "css",
+      "label": "CSS Layout & Design",
+      "description": "Learn Flexbox, Grid, responsive design, animations, and modern CSS techniques.",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["html"],
+      "estimatedMinutes": 180,
+      "completed": true,
+      "resources": [
+        { "id": "r3", "title": "CSS Tricks Flexbox", "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "js-basics",
+      "label": "JavaScript Basics",
+      "description": "Variables, functions, control flow, arrays, objects, and DOM manipulation fundamentals.",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["html", "css"],
+      "estimatedMinutes": 240,
+      "completed": true,
+      "resources": [
+        { "id": "r4", "title": "JavaScript.info", "url": "https://javascript.info/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "js-advanced",
+      "label": "Advanced JavaScript",
+      "description": "Closures, prototypes, async/await, promises, generators, and design patterns.",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 300,
+      "prerequisites": ["js-basics"],
+      "estimatedMinutes": 300,
+      "completed": true,
+      "resources": [
+        { "id": "r5", "title": "You Don't Know JS", "url": "https://github.com/getify/You-Dont-Know-JS", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "react",
+      "label": "React Development",
+      "description": "Components, hooks, state management, context API, and the React ecosystem.",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 300,
+      "prerequisites": ["js-advanced"],
+      "estimatedMinutes": 360,
+      "completed": false,
+      "resources": [
+        { "id": "r6", "title": "React Official Docs", "url": "https://react.dev/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript Mastery",
+      "description": "Type system, generics, utility types, decorators, and integration with React.",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 300,
+      "prerequisites": ["js-advanced"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "nextjs",
+      "label": "Next.js Framework",
+      "description": "App Router, Server Components, Server Actions, middleware, and deployment strategies.",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["react", "typescript"],
+      "estimatedMinutes": 420,
+      "completed": false,
+      "resources": [
+        { "id": "r8", "title": "Next.js Docs", "url": "https://nextjs.org/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "tailwind",
+      "label": "Tailwind CSS",
+      "description": "Utility-first CSS, custom themes, plugins, and design system creation.",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["css"],
+      "estimatedMinutes": 150,
+      "completed": true,
+      "resources": [
+        { "id": "r9", "title": "Tailwind Docs", "url": "https://tailwindcss.com/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "Testing Strategies",
+      "description": "Unit testing, integration testing, E2E testing with Vitest, Testing Library, and Playwright.",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 500,
+      "prerequisites": ["react", "typescript"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r10", "title": "Vitest Guide", "url": "https://vitest.dev/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "threejs",
+      "label": "Three.js & WebGL",
+      "description": "3D graphics, shaders, geometry, materials, lighting, and React Three Fiber integration.",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 500,
+      "prerequisites": ["react", "typescript"],
+      "estimatedMinutes": 480,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Three.js Docs", "url": "https://threejs.org/docs/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "animation",
+      "label": "Motion & Animation",
+      "description": "Framer Motion, GSAP, CSS animations, scroll-driven animations, and physics-based motion.",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 300,
+      "prerequisites": ["react"],
+      "estimatedMinutes": 360,
+      "completed": false,
+      "resources": [
+        { "id": "r12", "title": "Motion Docs", "url": "https://motion.dev/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "perf",
+      "label": "Performance Engineering",
+      "description": "Core Web Vitals, code splitting, lazy loading, caching strategies, and profiling tools.",
+      "difficulty": "expert",
+      "x": 500,
+      "y": 700,
+      "prerequisites": ["nextjs", "testing"],
+      "estimatedMinutes": 420,
+      "completed": false,
+      "resources": [
+        { "id": "r13", "title": "Web.dev Performance", "url": "https://web.dev/performance", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "webgl-advanced",
+      "label": "Advanced WebGL Shaders",
+      "description": "Custom vertex/fragment shaders, GLSL, post-processing, and GPU-accelerated computing.",
+      "difficulty": "expert",
+      "x": 700,
+      "y": 700,
+      "prerequisites": ["threejs", "animation"],
+      "estimatedMinutes": 600,
+      "completed": false,
+      "resources": [
+        { "id": "r14", "title": "The Book of Shaders", "url": "https://thebookofshaders.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "system-design",
+      "label": "System Design",
+      "description": "Architecture patterns, micro-frontends, state machines, and scalable application design.",
+      "difficulty": "expert",
+      "x": 300,
+      "y": 900,
+      "prerequisites": ["nextjs", "perf"],
+      "estimatedMinutes": 480,
+      "completed": false,
+      "resources": [
+        { "id": "r15", "title": "System Design Primer", "url": "https://github.com/donnemartin/system-design-primer", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "html", "to": "css" },
+    { "id": "e2", "from": "html", "to": "js-basics" },
+    { "id": "e3", "from": "css", "to": "js-basics" },
+    { "id": "e4", "from": "js-basics", "to": "js-advanced" },
+    { "id": "e5", "from": "js-advanced", "to": "react" },
+    { "id": "e6", "from": "js-advanced", "to": "typescript" },
+    { "id": "e7", "from": "react", "to": "nextjs" },
+    { "id": "e8", "from": "typescript", "to": "nextjs" },
+    { "id": "e9", "from": "css", "to": "tailwind" },
+    { "id": "e10", "from": "react", "to": "testing" },
+    { "id": "e11", "from": "typescript", "to": "testing" },
+    { "id": "e12", "from": "react", "to": "threejs" },
+    { "id": "e13", "from": "typescript", "to": "threejs" },
+    { "id": "e14", "from": "react", "to": "animation" },
+    { "id": "e15", "from": "nextjs", "to": "perf" },
+    { "id": "e16", "from": "testing", "to": "perf" },
+    { "id": "e17", "from": "threejs", "to": "webgl-advanced" },
+    { "id": "e18", "from": "animation", "to": "webgl-advanced" },
+    { "id": "e19", "from": "nextjs", "to": "system-design" },
+    { "id": "e20", "from": "perf", "to": "system-design" }
+  ]
+}
