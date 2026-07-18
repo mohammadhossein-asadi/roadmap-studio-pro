@@ -1,0 +1,22 @@
+{
+  "completedNodes": ["html", "css", "js-basics", "js-advanced", "tailwind"],
+  "currentStreak": 12,
+  "longestStreak": 21,
+  "totalXP": 4750,
+  "level": 5,
+  "dailyActivity": [
+    { "date": "2026-07-06", "nodesCompleted": 1, "xpEarned": 300 },
+    { "date": "2026-07-07", "nodesCompleted": 0, "xpEarned": 50 },
+    { "date": "2026-07-08", "nodesCompleted": 1, "xpEarned": 350 },
+    { "date": "2026-07-09", "nodesCompleted": 0, "xpEarned": 75 },
+    { "date": "2026-07-10", "nodesCompleted": 1, "xpEarned": 400 },
+    { "date": "2026-07-11", "nodesCompleted": 2, "xpEarned": 600 },
+    { "date": "2026-07-12", "nodesCompleted": 0, "xpEarned": 100 },
+    { "date": "2026-07-13", "nodesCompleted": 1, "xpEarned": 250 },
+    { "date": "2026-07-14", "nodesCompleted": 0, "xpEarned": 50 },
+    { "date": "2026-07-15", "nodesCompleted": 1, "xpEarned": 300 },
+    { "date": "2026-07-16", "nodesCompleted": 1, "xpEarned": 350 },
+    { "date": "2026-07-17", "nodesCompleted": 0, "xpEarned": 75 },
+    { "date": "2026-07-18", "nodesCompleted": 2, "xpEarned": 500 }
+  ]
+}
