@@ -18,19 +18,19 @@ export function StatsCard({ icon: Icon, label, value, change, color = "from-viol
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -2 }}
-      className="group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl transition-all hover:bg-white/10 hover:border-white/20"
+      className="group rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 backdrop-blur-xl transition-all hover:bg-white/10 hover:border-white/20"
     >
       <div className="flex items-start justify-between">
-        <div className={cn("flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br", color)}>
-          <Icon className="h-5 w-5 text-white" />
+        <div className={cn("flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-gradient-to-br", color)}>
+          <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
         </div>
         {change && (
-          <span className="text-xs text-emerald-400">{change}</span>
+          <span className="text-[10px] sm:text-xs text-emerald-400">{change}</span>
         )}
       </div>
-      <div className="mt-4">
-        <p className="text-2xl font-bold text-white">{value}</p>
-        <p className="text-sm text-white/50">{label}</p>
+      <div className="mt-3 sm:mt-4">
+        <p className="text-xl sm:text-2xl font-bold text-white">{value}</p>
+        <p className="text-xs sm:text-sm text-white/50">{label}</p>
       </div>
     </motion.div>
   );

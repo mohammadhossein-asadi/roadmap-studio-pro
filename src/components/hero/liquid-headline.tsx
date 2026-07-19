@@ -31,7 +31,7 @@ export function LiquidHeadline() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", ...SPRING_CONFIG, delay: 0.2 }}
-        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight"
         style={{ filter: "url(#liquid)" }}
       >
         <span className="bg-gradient-to-r from-white via-white/90 to-white/60 bg-clip-text text-transparent">
@@ -47,7 +47,7 @@ export function LiquidHeadline() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", ...SPRING_CONFIG, delay: 0.4 }}
-        className="mt-6 max-w-2xl text-lg text-white/60"
+        className="mt-4 sm:mt-6 max-w-2xl text-base sm:text-lg text-white/60"
       >
         Visual roadmaps for Frontend, Backend, Full Stack, DevOps, Mobile, Cloud, Security, and Data Engineering.
         See what to learn next, track your progress, and level up as you go.

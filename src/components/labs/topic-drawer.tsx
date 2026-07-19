@@ -60,22 +60,22 @@ export function TopicDrawer({ node, onClose }: TopicDrawerProps) {
             transition={{ type: "spring", ...SPRING_CONFIG }}
             className="fixed right-0 top-0 bottom-0 z-50 w-full max-w-lg border-l border-white/10 bg-zinc-950/95 backdrop-blur-2xl overflow-y-auto"
           >
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-zinc-950/80 backdrop-blur-xl px-6 py-4">
-              <div className="flex items-center gap-3">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-zinc-950/80 backdrop-blur-xl px-4 sm:px-6 py-3 sm:py-4">
+              <div className="flex items-center gap-2 sm:gap-3 min-w-0">
                 <Badge variant={node.difficulty as "beginner" | "intermediate" | "advanced" | "expert"}>
                   {node.difficulty}
                 </Badge>
-                <div className="flex items-center gap-1 text-sm text-white/40">
+                <div className="flex items-center gap-1 text-xs sm:text-sm text-white/40 shrink-0">
                   <Clock className="h-3.5 w-3.5" />
                   {node.estimatedMinutes} min
                 </div>
               </div>
-              <Button variant="ghost" size="icon" onClick={onClose} aria-label="Close drawer">
+              <Button variant="ghost" size="icon" onClick={onClose} aria-label="Close drawer" className="shrink-0">
                 <X className="h-5 w-5" />
               </Button>
             </div>
 
-            <div className="p-6 space-y-8">
+            <div className="p-4 sm:p-6 space-y-6 sm:space-y-8">
               <div>
                 <h2 className="text-2xl font-bold text-white">{node.label}</h2>
                 <p className="mt-3 text-white/60 leading-relaxed">{node.description}</p>
