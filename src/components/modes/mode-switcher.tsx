@@ -21,7 +21,7 @@ interface ModeSwitcherProps {
 
 export function ModeSwitcher({ activeMode, onModeChange }: ModeSwitcherProps) {
   return (
-    <div className="flex items-center gap-1 rounded-xl border border-white/10 bg-black/40 p-1 backdrop-blur-xl">
+    <div className="flex items-center gap-0.5 sm:gap-1 rounded-xl border border-white/10 bg-black/40 p-0.5 sm:p-1 backdrop-blur-xl shrink-0">
       {modes.map((mode) => {
         const Icon = mode.icon;
         const isActive = activeMode === mode.id;
@@ -31,7 +31,7 @@ export function ModeSwitcher({ activeMode, onModeChange }: ModeSwitcherProps) {
             onClick={() => onModeChange(mode.id)}
             aria-pressed={isActive}
             className={cn(
-              "relative flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition-colors",
+              "relative flex items-center justify-center gap-1.5 sm:gap-2 rounded-lg px-2 sm:px-3 py-2.5 sm:py-2 text-xs sm:text-sm transition-colors min-h-[44px]",
               isActive ? "text-white" : "text-white/40 hover:text-white/70"
             )}
           >
@@ -42,7 +42,7 @@ export function ModeSwitcher({ activeMode, onModeChange }: ModeSwitcherProps) {
                 transition={{ type: "spring", ...SPRING_CONFIG }}
               />
             )}
-            <Icon className="relative z-10 h-4 w-4" />
+            <Icon className="relative z-10 h-4 w-4 shrink-0" />
             <span className="relative z-10 hidden sm:inline">{mode.label}</span>
           </button>
         );

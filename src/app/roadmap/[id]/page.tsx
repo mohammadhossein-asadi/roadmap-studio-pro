@@ -144,32 +144,32 @@ export default function RoadmapPage() {
     <div className="h-screen flex flex-col bg-[#050510]">
       <GlobalNav />
 
-      <div className="relative z-20 flex items-center justify-between border-b border-white/10 bg-black/40 backdrop-blur-xl px-6 py-3 pt-16">
-        <div className="flex items-center gap-4">
+      <div className="relative z-20 flex items-center justify-between gap-2 border-b border-white/10 bg-black/40 backdrop-blur-xl px-3 sm:px-6 py-2 sm:py-3 pt-14 sm:pt-16">
+        <div className="flex items-center gap-2 sm:gap-4 min-w-0">
           <Link href="/dashboard">
-            <Button variant="ghost" size="sm" className="gap-2">
+            <Button variant="ghost" size="sm" className="gap-1.5 sm:gap-2 shrink-0">
               <ArrowLeft className="h-4 w-4" />
-              Home
+              <span className="hidden sm:inline">Home</span>
             </Button>
           </Link>
-          <div className="h-4 w-px bg-white/10" />
+          <div className="h-4 w-px bg-white/10 shrink-0 hidden sm:block" />
 
-          <div className="relative">
+          <div className="relative shrink-0">
             <Button
               variant="ghost"
               size="sm"
-              className="gap-2"
+              className="gap-1.5 sm:gap-2"
               onClick={() => setShowDropdown(!showDropdown)}
             >
               <IconComponent className={`h-4 w-4 ${COLOR_CLASSES[meta?.color || 'violet']}`} />
-              <span className="text-sm font-medium text-white">{meta?.label || "Frontend Developer"}</span>
-              <ChevronDown className="h-3 w-3 text-white/40" />
+              <span className="text-xs sm:text-sm font-medium text-white truncate max-w-[100px] sm:max-w-none">{meta?.label || "Frontend Developer"}</span>
+              <ChevronDown className="h-3 w-3 text-white/40 shrink-0" />
             </Button>
 
             {showDropdown && (
               <>
                 <div className="fixed inset-0 z-40" onClick={() => { setShowDropdown(false); setSearchQuery(""); }} />
-                <div className="absolute top-full left-0 mt-1 z-50 w-80 rounded-lg border border-white/10 bg-black/90 backdrop-blur-xl shadow-xl overflow-hidden">
+                <div className="absolute top-full left-0 mt-1 z-50 w-[calc(100vw-2rem)] max-w-80 rounded-lg border border-white/10 bg-black/90 backdrop-blur-xl shadow-xl overflow-hidden">
                   <div className="p-2 border-b border-white/10">
                     <input
                       autoFocus
@@ -179,7 +179,7 @@ export default function RoadmapPage() {
                       className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white placeholder-white/40 outline-none focus:border-violet-500/50"
                     />
                   </div>
-                  <div className="max-h-80 overflow-y-auto">
+                  <div className="max-h-[50vh] sm:max-h-80 overflow-y-auto">
                     {roleRoadmaps.length > 0 && (
                       <div>
                         <div className="px-3 py-2 text-xs font-semibold text-white/30 uppercase tracking-wider">Role-based</div>
@@ -230,7 +230,7 @@ export default function RoadmapPage() {
             )}
           </div>
 
-          <span className="rounded-full bg-violet-500/20 px-3 py-1 text-xs text-violet-300 border border-violet-500/30">
+          <span className="hidden sm:inline-flex rounded-full bg-violet-500/20 px-3 py-1 text-xs text-violet-300 border border-violet-500/30 shrink-0">
             {typedNodes.length} topics
           </span>
         </div>

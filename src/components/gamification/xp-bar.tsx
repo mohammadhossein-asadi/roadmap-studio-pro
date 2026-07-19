@@ -15,14 +15,14 @@ export function XPBar({ currentXP, level }: XPBarProps) {
 
   return (
     <div className="space-y-2">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-amber-500 to-orange-500">
             <Zap className="h-3.5 w-3.5 text-white" />
           </div>
-          <span className="text-sm font-semibold text-white">Level {level}</span>
+          <span className="text-xs sm:text-sm font-semibold text-white">Level {level}</span>
         </div>
-        <span className="text-xs text-white/40">
+        <span className="text-[10px] sm:text-xs text-white/40 truncate">
           {xpInLevel.toLocaleString()} / {XP_PER_LEVEL.toLocaleString()} XP
         </span>
       </div>

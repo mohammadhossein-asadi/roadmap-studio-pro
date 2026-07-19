@@ -57,12 +57,12 @@ export function GlobalNav() {
             : "bg-transparent"
         )}
       >
-        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-          <Link href="/" className="flex items-center gap-2">
+        <nav className="mx-auto flex h-14 sm:h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-indigo-500">
               <span className="text-sm font-bold text-white">R</span>
             </div>
-            <span className="text-lg font-semibold text-white">Roadmap Studio</span>
+            <span className="text-base sm:text-lg font-semibold text-white hidden sm:inline">Roadmap Studio</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
@@ -78,7 +78,7 @@ export function GlobalNav() {
             ))}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <Button
               variant="glass"
               size="sm"
