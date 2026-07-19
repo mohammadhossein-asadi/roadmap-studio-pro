@@ -1,0 +1,257 @@
+{
+  "nodes": [
+    {
+      "id": "cloud-linux",
+      "label": "Linux & Networking",
+      "description": "Linux administration, TCP/IP, DNS, HTTP, and network troubleshooting fundamentals.",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Linux Journey", "url": "https://linuxjourney.com/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Computer Networking Full Course (Kurose)", "url": "https://www.youtube.com/watch?v=IPv9IVJZ3vQ", "type": "video", "rating": 5 },
+        { "id": "r3", "title": "Cisco Networking Academy", "url": "https://skillsnetworklabs.com/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud-aws",
+      "label": "AWS Core Services",
+      "description": "EC2, S3, VPC, IAM, RDS, Lambda, and the AWS management console.",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["cloud-linux"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r4", "title": "AWS Cloud Practitioner (free)", "url": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials", "type": "tutorial", "rating": 5 },
+        { "id": "r5", "title": "AWS Free Tier Hands-On", "url": "https://aws.amazon.com/free/", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "AWS Official YouTube", "url": "https://www.youtube.com/user/AmazonWebServices", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cloud-gcp",
+      "label": "Google Cloud Platform",
+      "description": "Compute Engine, Cloud Storage, BigQuery, Cloud Functions, and GCP console.",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["cloud-linux"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "GCP Fundamentals (Coursera free audit)", "url": "https://www.coursero.org/learn/gcp-fundamentals", "type": "tutorial", "rating": 5 },
+        { "id": "r8", "title": "Google Cloud Skills Boost", "url": "https://cloudskillsboost.google/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cloud-azure",
+      "label": "Microsoft Azure",
+      "description": "Azure VMs, Blob Storage, Azure SQL, Active Directory, and ARM templates.",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 100,
+      "prerequisites": ["cloud-linux"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Azure Fundamentals (Microsoft Learn)", "url": "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/", "type": "tutorial", "rating": 5 },
+        { "id": "r10", "title": "Azure for Beginners (freeCodeCamp)", "url": "https://www.freecodecamp.org/news/microsoft-azure-fundamentals-az-900-video/", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud-docker",
+      "label": "Docker Containers",
+      "description": "Images, containers, Dockerfile, volumes, networking, and Docker Compose.",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 300,
+      "prerequisites": ["cloud-aws"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Docker Official Getting Started", "url": "https://docs.docker.com/get-started/", "type": "docs", "rating": 5 },
+        { "id": "r12", "title": "Docker Tutorial (TechWorld with Nana)", "url": "https://www.youtube.com/watch?v=3c-iBn73dDE", "type": "video", "rating": 5 },
+        { "id": "r13", "title": "Docker for Beginners (freeCodeCamp)", "url": "https://www.youtube.com/watch?v=fqMOX6JJhGo", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cloud-k8s",
+      "label": "Kubernetes",
+      "description": "Pods, deployments, services, ingress, ConfigMaps, Helm, and cluster management.",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 300,
+      "prerequisites": ["cloud-docker"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r14", "title": "Kubernetes Official Tutorials", "url": "https://kubernetes.io/docs/tutorials/", "type": "docs", "rating": 5 },
+        { "id": "r15", "title": "K8s Course (freeCodeCamp)", "url": "https://www.youtube.com/watch?v=X48VuDVv0do", "type": "video", "rating": 5 },
+        { "id": "r16", "title": "Katacoda Kubernetes Scenarios", "url": "https://www.katacoda.com/courses/kubernetes", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cloud-terraform",
+      "label": "Terraform & IaC",
+      "description": "HCL syntax, providers, modules, state management, and infrastructure provisioning.",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["cloud-docker"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r17", "title": "Terraform Official Tutorials", "url": "https://developer.hashicorp.com/terraform/tutorials", "type": "tutorial", "rating": 5 },
+        { "id": "r18", "title": "Terraform Full Course (freeCodeCamp)", "url": "https://www.youtube.com/watch?v=l5kTaihGNGM", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cloud-cicd",
+      "label": "CI/CD Pipelines",
+      "description": "GitHub Actions, GitLab CI, Jenkins, deployment automation, and pipeline design.",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 300,
+      "prerequisites": ["cloud-docker"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r19", "title": "GitHub Actions Docs", "url": "https://docs.github.com/en/actions", "type": "docs", "rating": 5 },
+        { "id": "r20", "title": "CI/CD Full Course (freeCodeCamp)", "url": "https://www.youtube.com/watch?v=scEDHsr3APg", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cloud-monitoring",
+      "label": "Monitoring & Observability",
+      "description": "Prometheus, Grafana, ELK stack, distributed tracing, alerting, and SLOs.",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 300,
+      "prerequisites": ["cloud-k8s"],
+      "estimatedMinutes": 280,
+      "completed": false,
+      "resources": [
+        { "id": "r21", "title": "Prometheus Getting Started", "url": "https://prometheus.io/docs/prometheus/latest/getting_started/", "type": "docs", "rating": 5 },
+        { "id": "r22", "title": "Grafana Tutorials", "url": "https://grafana.com/tutorials/", "type": "tutorial", "rating": 5 },
+        { "id": "r23", "title": "Monitoring Course (freeCodeCamp)", "url": "https://www.youtube.com/watch?v=QoDqxm7ybLc", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud-serverless",
+      "label": "Serverless Architecture",
+      "description": "AWS Lambda, API Gateway, step functions, event-driven design, and serverless patterns.",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["cloud-aws", "cloud-cicd"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r24", "title": "AWS Lambda Getting Started", "url": "https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html", "type": "docs", "rating": 5 },
+        { "id": "r25", "title": "Serverless Land", "url": "https://serverlessland.com/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud-cost",
+      "label": "Cost Optimization & FinOps",
+      "description": "Resource rightsizing, reserved instances, spot instances, budgets, and FinOps practices.",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 500,
+      "prerequisites": ["cloud-aws"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r26", "title": "AWS Cost Management", "url": "https://aws.amazon.com/aws-cost-management/", "type": "docs", "rating": 4 },
+        { "id": "r27", "title": "FinOps Foundation", "url": "https://finops.org/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud-security",
+      "label": "Cloud Security",
+      "description": "IAM policies, security groups, WAF, encryption, compliance, and zero-trust architecture.",
+      "difficulty": "expert",
+      "x": 200,
+      "y": 700,
+      "prerequisites": ["cloud-k8s", "cloud-terraform"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r28", "title": "AWS Security Best Practices", "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/security-best-practices/", "type": "docs", "rating": 5 },
+        { "id": "r29", "title": "Cloud Security Alliance", "url": "https://cloudsecurityalliance.org/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud-sre",
+      "label": "SRE & Reliability",
+      "description": "SLIs, SLOs, error budgets, incident response, chaos engineering, and toil reduction.",
+      "difficulty": "expert",
+      "x": 600,
+      "y": 700,
+      "prerequisites": ["cloud-monitoring", "cloud-serverless"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r30", "title": "Google SRE Book (free online)", "url": "https://sre.google/sre-book/table-of-contents/", "type": "docs", "rating": 5 },
+        { "id": "r31", "title": "SRE Workbook (free online)", "url": "https://sre.google/workbook/table-of-contents/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cloud-arch",
+      "label": "Solution Architecture",
+      "description": "Multi-account strategy, Well-Architected Framework, migration patterns, and design principles.",
+      "difficulty": "expert",
+      "x": 400,
+      "y": 900,
+      "prerequisites": ["cloud-security", "cloud-sre", "cloud-cost"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r32", "title": "AWS Well-Architected Labs", "url": "https://wellarchitectedlabs.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r33", "title": "AWS Solutions Architect Path", "url": "https://explore.skillbuilder.aws/learn/path/60688/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cloud-multi",
+      "label": "Multi-Cloud Strategy",
+      "description": "Cross-cloud networking, multi-cloud management tools, and vendor-neutral architecture.",
+      "difficulty": "expert",
+      "x": 800,
+      "y": 700,
+      "prerequisites": ["cloud-aws", "cloud-gcp", "cloud-azure"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r34", "title": "Multi-Cloud with Terraform", "url": "https://developer.hashicorp.com/terraform/tutorials/cloud-get-started", "type": "tutorial", "rating": 5 },
+        { "id": "r35", "title": "HashiCorp Multi-Cloud Patterns", "url": "https://www.hashicorp.com/solutions/multi-cloud", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "cloud-linux", "to": "cloud-aws" },
+    { "id": "e2", "from": "cloud-linux", "to": "cloud-gcp" },
+    { "id": "e3", "from": "cloud-linux", "to": "cloud-azure" },
+    { "id": "e4", "from": "cloud-aws", "to": "cloud-docker" },
+    { "id": "e5", "from": "cloud-docker", "to": "cloud-k8s" },
+    { "id": "e6", "from": "cloud-docker", "to": "cloud-terraform" },
+    { "id": "e7", "from": "cloud-docker", "to": "cloud-cicd" },
+    { "id": "e8", "from": "cloud-k8s", "to": "cloud-monitoring" },
+    { "id": "e9", "from": "cloud-aws", "to": "cloud-serverless" },
+    { "id": "e10", "from": "cloud-cicd", "to": "cloud-serverless" },
+    { "id": "e11", "from": "cloud-aws", "to": "cloud-cost" },
+    { "id": "e12", "from": "cloud-k8s", "to": "cloud-security" },
+    { "id": "e13", "from": "cloud-terraform", "to": "cloud-security" },
+    { "id": "e14", "from": "cloud-monitoring", "to": "cloud-sre" },
+    { "id": "e15", "from": "cloud-serverless", "to": "cloud-sre" },
+    { "id": "e16", "from": "cloud-security", "to": "cloud-arch" },
+    { "id": "e17", "from": "cloud-sre", "to": "cloud-arch" },
+    { "id": "e18", "from": "cloud-cost", "to": "cloud-arch" },
+    { "id": "e19", "from": "cloud-aws", "to": "cloud-multi" },
+    { "id": "e20", "from": "cloud-gcp", "to": "cloud-multi" },
+    { "id": "e21", "from": "cloud-azure", "to": "cloud-multi" }
+  ]
+}

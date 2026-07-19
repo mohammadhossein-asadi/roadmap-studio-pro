@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "monitoring",
+      "label": "Monitoring & Observability",
+      "description": "Metrics, logs, traces, Prometheus, Grafana, OpenTelemetry",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Prometheus Getting Started", "url": "https://prometheus.io/docs/prometheus/latest/getting_started/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Grafana Fundamentals", "url": "https://grafana.com/tutorials/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "incident-response",
+      "label": "Incident Response",
+      "description": "On-call, runbooks, postmortems, PagerDuty, escalation policies",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["monitoring"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Google SRE Book - Incident Response", "url": "https://sre.google/sre-book/incident-response/", "type": "tutorial", "rating": 5 },
+        { "id": "r4", "title": "PagerDuty Incident Response", "url": "https://support.pagerduty.com/docs/incident-management", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "slos",
+      "label": "SLOs & SLIs",
+      "description": "Service level objectives, error budgets, reliability metrics, availability targets",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["incident-response"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Google SRE Book - SLOs", "url": "https://sre.google/sre-book/service-level-objectives/", "type": "tutorial", "rating": 5 },
+        { "id": "r6", "title": "SLO Training by Google", "url": "https://sre.google/training/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "automation",
+      "label": "Automation & IaC",
+      "description": "Terraform, Ansible, CI/CD pipelines, GitOps, automated remediation",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["slos"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Terraform Getting Started", "url": "https://developer.hashicorp.com/terraform/tutorials", "type": "tutorial", "rating": 5 },
+        { "id": "r8", "title": "GitHub Actions Docs", "url": "https://docs.github.com/en/actions", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "culture",
+      "label": "SRE Culture & Practices",
+      "description": "Blameless postmortems, toil reduction, error budgets, cognitive load",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["automation"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Google SRE Book", "url": "https://sre.google/sre-book/table-of-contents/", "type": "tutorial", "rating": 5 },
+        { "id": "r10", "title": "SRE Workbook", "url": "https://sre.google/workbook/table-of-contents/", "type": "tutorial", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "monitoring", "to": "incident-response" },
+    { "id": "e2", "from": "incident-response", "to": "slos" },
+    { "id": "e3", "from": "slos", "to": "automation" },
+    { "id": "e4", "from": "automation", "to": "culture" }
+  ]
+}

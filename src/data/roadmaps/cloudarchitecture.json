@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "cloud-platforms",
+      "label": "Cloud Platforms",
+      "description": "AWS, GCP, Azure overview — global infrastructure, services, free tiers",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "AWS Well-Architected Framework", "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Google Cloud Architecture Center", "url": "https://cloud.google.com/architecture", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "networking",
+      "label": "Cloud Networking",
+      "description": "VPC, subnets, security groups, CDNs, DNS, load balancers",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["cloud-platforms"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "AWS VPC Guide", "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html", "type": "docs", "rating": 5 },
+        { "id": "r4", "title": "Azure Networking Overview", "url": "https://learn.microsoft.com/en-us/azure/networking/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "compute",
+      "label": "Compute Services",
+      "description": "EC2, Lambda, GKE, containers, auto-scaling, serverless",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["networking"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "AWS Compute Guide", "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "Docker Getting Started", "url": "https://docs.docker.com/get-started/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "storage",
+      "label": "Storage & Databases",
+      "description": "S3, RDS, DynamoDB, Cloud SQL, managed databases, object vs block storage",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["compute"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "AWS Storage Guide", "url": "https://docs.aws.amazon.com/sgsg/latest/userguide/Welcome.html", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "Cloud SQL Docs", "url": "https://cloud.google.com/sql/docs/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Cloud Security",
+      "description": "IAM, KMS, WAF, security best practices, least privilege",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["storage"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "AWS Security Best Practices", "url": "https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "GCP Security Guide", "url": "https://cloud.google.com/docs/security/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cost",
+      "label": "Cost Optimization",
+      "description": "Reserved instances, spot pricing, cost monitoring, right-sizing",
+      "difficulty": "intermediate",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["security"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "AWS Cost Optimization", "url": "https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/welcome.html", "type": "docs", "rating": 5 },
+        { "id": "r12", "title": "AWS Pricing Calculator", "url": "https://calculator.aws/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "cloud-platforms", "to": "networking" },
+    { "id": "e2", "from": "networking", "to": "compute" },
+    { "id": "e3", "from": "compute", "to": "storage" },
+    { "id": "e4", "from": "storage", "to": "security" },
+    { "id": "e5", "from": "security", "to": "cost" }
+  ]
+}

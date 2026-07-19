@@ -1,0 +1,119 @@
+{
+  "nodes": [
+    {
+      "id": "php-1",
+      "label": "PHP Syntax",
+      "description": "PHP basics, variables, loops, and functions",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PHP Manual", "url": "https://www.php.net/manual/en/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "W3Schools PHP Tutorial", "url": "https://www.w3schools.com/php/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "php-2",
+      "label": "Object-Oriented PHP",
+      "description": "Classes, objects, inheritance, and interfaces",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["php-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PHP OOP Tutorial", "url": "https://www.php.net/manual/en/language.oop5.php", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "OOP in PHP Guide", "url": "https://www.w3schools.com/php/php_oop_1.asp", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "php-3",
+      "label": "Laravel",
+      "description": "The most popular PHP framework",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["php-2"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Laravel Documentation", "url": "https://laravel.com/docs", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Laravel Tutorial", "url": "https://laravel.com/docs/11.x/installation", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "php-4",
+      "label": "Database",
+      "description": "Database operations with PDO and Eloquent",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["php-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PHP PDO Tutorial", "url": "https://www.php.net/manual/en/pdo.intro.php", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Eloquent ORM", "url": "https://laravel.com/docs/11.x/eloquent", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "php-5",
+      "label": "Authentication",
+      "description": "Implement user authentication and authorization",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["php-3", "php-4"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Laravel Sanctum", "url": "https://laravel.com/docs/11.x/sanctum", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Laravel Breeze", "url": "https://laravel.com/docs/11.x/starter-kits", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "php-6",
+      "label": "API Development",
+      "description": "Build RESTful APIs with Laravel",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["php-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Laravel Resources", "url": "https://laravel.com/docs/11.x/eloquent-resources", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "API Tutorial", "url": "https://laravel.com/docs/11.x/routing", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "php-7",
+      "label": "Testing",
+      "description": "Write tests with PHPUnit and Laravel Testing",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["php-5", "php-6"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Laravel Testing", "url": "https://laravel.com/docs/11.x/testing", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "PHPUnit Documentation", "url": "https://phpunit.de/documentation.html", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "php-1", "to": "php-2" },
+    { "id": "e2", "from": "php-2", "to": "php-3" },
+    { "id": "e3", "from": "php-2", "to": "php-4" },
+    { "id": "e4", "from": "php-3", "to": "php-5" },
+    { "id": "e5", "from": "php-4", "to": "php-5" },
+    { "id": "e6", "from": "php-3", "to": "php-6" },
+    { "id": "e7", "from": "php-5", "to": "php-7" },
+    { "id": "e8", "from": "php-6", "to": "php-7" }
+  ]
+}

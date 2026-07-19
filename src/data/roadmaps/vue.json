@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "vue-basics",
+      "label": "Vue.js Basics",
+      "description": "Template syntax, directives, data binding, event handling",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Vue.js Official Guide", "url": "https://vuejs.org/guide/introduction.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Vue 3 Tutorial - VueMastery", "url": "https://www.vuemastery.com/courses/intro-to-vue-3/intro-to-vue3/", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "vue-components",
+      "label": "Components & Props",
+      "description": "Single-file components, props, events, slots, component communication",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["vue-basics"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Components Basics - Vue Docs", "url": "https://vuejs.org/guide/essentials/component-basics.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Vue Components - Fireship", "url": "https://www.youtube.com/watch?v=YLVSRnO3yfQ", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "vue-reactivity",
+      "label": "Reactivity System",
+      "description": "reactive(), ref(), computed(), watch(), lifecycle hooks",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["vue-components"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Reactivity in Depth - Vue Docs", "url": "https://vuejs.org/guide/extras/reactivity-in-depth.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Vue Reactivity - VueMastery", "url": "https://www.vuemastery.com/courses/vue3-reactivity/the-option-api/", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "vue-composition",
+      "label": "Composition API",
+      "description": "setup(), composables, code organization, reusability patterns",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["vue-reactivity"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Composition API FAQ - Vue Docs", "url": "https://vuejs.org/guide/extras/composition-api-faq.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Vue Composables Pattern - VueUse", "url": "https://vueuse.org/guide/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "vue-router",
+      "label": "Vue Router",
+      "description": "Route configuration, navigation, dynamic routes, guards",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["vue-composition"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Vue Router Official Guide", "url": "https://router.vuejs.org/guide/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Vue Router Tutorial - Academind", "url": "https://www.youtube.com/watch?v=FXpIoQ_rT_c", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "vue-state",
+      "label": "State Management (Pinia)",
+      "description": "Pinia store, state management patterns, devtools integration",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["vue-router"],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Pinia Official Docs", "url": "https://pinia.vuejs.org/getting-started/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Pinia vs Vuex - Vue School", "url": "https://vueschool.io/articles/vuejs-tutorials/pinia-vs-vuex/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "vue-testing",
+      "label": "Testing Vue Apps",
+      "description": "Unit tests with Vitest, component testing with Vue Test Utils",
+      "difficulty": "advanced",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["vue-state"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Testing Guide - Vue Docs", "url": "https://vuejs.org/guide/scaling-up/testing.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Vue Test Utils Docs", "url": "https://test-utils.vuejs.org/guide/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "vue-basics", "to": "vue-components" },
+    { "id": "e2", "from": "vue-components", "to": "vue-reactivity" },
+    { "id": "e3", "from": "vue-reactivity", "to": "vue-composition" },
+    { "id": "e4", "from": "vue-composition", "to": "vue-router" },
+    { "id": "e5", "from": "vue-router", "to": "vue-state" },
+    { "id": "e6", "from": "vue-state", "to": "vue-testing" }
+  ]
+}

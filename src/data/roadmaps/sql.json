@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "sql-select",
+      "label": "SELECT & Basic Queries",
+      "description": "SELECT, WHERE, ORDER BY, LIMIT, basic filtering",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "W3Schools SQL Tutorial", "url": "https://www.w3schools.com/sql/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "SQLBolt Interactive Lessons", "url": "https://sqlbolt.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sql-joins",
+      "label": "JOINs",
+      "description": "INNER, LEFT, RIGHT, FULL OUTER JOINs, self joins",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["sql-select"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Visual Guide to SQL Joins", "url": "https://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "SQL Joins - Mode Analytics", "url": "https://mode.com/sql-tutorial/sql-joins", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sql-aggregation",
+      "label": "Aggregation & GROUP BY",
+      "description": "COUNT, SUM, AVG, MIN, MAX, GROUP BY, HAVING",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["sql-joins"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "SQL Group By - W3Schools", "url": "https://www.w3schools.com/sql/sql_groupby.asp", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Mode SQL Tutorial - Aggregates", "url": "https://mode.com/sql-tutorial/sql-aliases-for-columns", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sql-subqueries",
+      "label": "Subqueries & CTEs",
+      "description": "Nested queries, Common Table Expressions, window functions",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["sql-aggregation"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PostgreSQL CTE Documentation", "url": "https://www.postgresql.org/docs/current/queries-with.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "SQL Window Functions - LearnSQL", "url": "https://learnsql.com/blog/learn-sql-window-functions/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sql-indexing",
+      "label": "Indexing & Optimization",
+      "description": "B-tree indexes, composite indexes, EXPLAIN, query plans",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["sql-subqueries"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Use The Index, Luke", "url": "https://use-the-index-luke.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "PostgreSQL Performance Tips", "url": "https://www.postgresql.org/docs/current/performance-tips.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sql-performance",
+      "label": "Query Performance Tuning",
+      "description": "Query execution plans, slow query analysis, partitioning",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["sql-indexing"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MySQL EXPLAIN Output Format", "url": "https://dev.mysql.com/doc/refman/8.0/en/explain-output.html", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "SQL Performance Explained (Book)", "url": "https://sql-performance-explained.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sql-procedures",
+      "label": "Stored Procedures & Functions",
+      "description": "Writing stored procedures, functions, triggers, and cursors",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["sql-performance"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PostgreSQL PL/pgSQL Tutorial", "url": "https://www.postgresqltutorial.com/postgresql-plpgsql/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "MySQL Stored Procedures", "url": "https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "sql-select", "to": "sql-joins" },
+    { "id": "e2", "from": "sql-joins", "to": "sql-aggregation" },
+    { "id": "e3", "from": "sql-aggregation", "to": "sql-subqueries" },
+    { "id": "e4", "from": "sql-subqueries", "to": "sql-indexing" },
+    { "id": "e5", "from": "sql-indexing", "to": "sql-performance" },
+    { "id": "e6", "from": "sql-performance", "to": "sql-procedures" }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "nodes": [
+    {
+      "id": "laravel-1",
+      "label": "Routing",
+      "description": "Define routes and handle HTTP requests",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Laravel Routing", "url": "https://laravel.com/docs/11.x/routing", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Laravel Getting Started", "url": "https://laravel.com/docs/11.x/getting-started", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "laravel-2",
+      "label": "Eloquent ORM",
+      "description": "Database abstraction and active record pattern",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["laravel-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Eloquent ORM Docs", "url": "https://laravel.com/docs/11.x/eloquent", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Eloquent Relationships", "url": "https://laravel.com/docs/11.x/eloquent-relationships", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "laravel-3",
+      "label": "Blade Templates",
+      "description": "Templating engine for views",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["laravel-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Blade Documentation", "url": "https://laravel.com/docs/11.x/blade", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Blade Components", "url": "https://laravel.com/docs/11.x/blade#components", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "laravel-4",
+      "label": "Authentication",
+      "description": "User authentication with Breeze or Fortify",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["laravel-2", "laravel-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Laravel Breeze", "url": "https://laravel.com/docs/11.x/starter-kits", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Authentication Guide", "url": "https://laravel.com/docs/11.x/authentication", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "laravel-5",
+      "label": "API Development",
+      "description": "Build RESTful APIs with Laravel",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["laravel-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Laravel API Resources", "url": "https://laravel.com/docs/11.x/eloquent-resources", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Sanctum API Authentication", "url": "https://laravel.com/docs/11.x/sanctum", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "laravel-6",
+      "label": "Testing",
+      "description": "Unit and feature testing in Laravel",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["laravel-4"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Laravel Testing Docs", "url": "https://laravel.com/docs/11.x/testing", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "HTTP Testing Guide", "url": "https://laravel.com/docs/11.x/http-tests", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "laravel-7",
+      "label": "Deployment",
+      "description": "Deploy Laravel applications",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["laravel-5", "laravel-6"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Laravel Deployment", "url": "https://laravel.com/docs/11.x/deployment", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Laravel Forge", "url": "https://forge.laravel.com/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "laravel-1", "to": "laravel-2" },
+    { "id": "e2", "from": "laravel-1", "to": "laravel-3" },
+    { "id": "e3", "from": "laravel-2", "to": "laravel-4" },
+    { "id": "e4", "from": "laravel-3", "to": "laravel-4" },
+    { "id": "e5", "from": "laravel-2", "to": "laravel-5" },
+    { "id": "e6", "from": "laravel-4", "to": "laravel-6" },
+    { "id": "e7", "from": "laravel-5", "to": "laravel-7" },
+    { "id": "e8", "from": "laravel-6", "to": "laravel-7" }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "networking-basics",
+      "label": "Networking Fundamentals",
+      "description": "OSI model, TCP/IP, subnetting, DNS, DHCP, and network protocols",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Computer Networking - CS144 Stanford", "url": "https://cs144.github.io/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Cisco Networking Academy", "url": "https://www.netacad.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ccna",
+      "label": "CCNA Certification",
+      "description": "Cisco Certified Network Associate - routing, switching, and network fundamentals",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["networking-basics"],
+      "estimatedMinutes": 500,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "CCNA Study Guide - Cisco", "url": "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Packet Tracer - Cisco", "url": "https://www.netacad.com/courses/packet-tracer", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "routing-switching",
+      "label": "Routing & Switching",
+      "description": "BGP, OSPF, VLANs, STP, and advanced network switching",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 150,
+      "prerequisites": ["ccna"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Routing TCP/IP - Cisco Press", "url": "https://www.ciscopress.com/store/routing-tcp-ip-volume-1-9780134192772", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "GNS3 Network Simulator", "url": "https://gns3.com/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "firewalls",
+      "label": "Firewalls & Security",
+      "description": "Firewall configuration, ACLs, IDS/IPS, and network security appliances",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["ccna"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Palo Alto Documentation", "url": "https://docs.paloaltonetworks.com/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "pfSense Documentation", "url": "https://docs.netgate.com/pfsense/en/latest/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "wireless",
+      "label": "Wireless Networking",
+      "description": "Wi-Fi standards, wireless security, site surveys, and enterprise wireless",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["routing-switching"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "CWNP - Wireless Certification", "url": "https://www.cwnp.com/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Wi-Fi 6/6E Standards", "url": "https://www.wi-fi.org/discover-wi-fi/wi-fi-6", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "network-security",
+      "label": "Network Security",
+      "description": "VPNs, SSL/TLS, network segmentation, and zero trust architecture",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["firewalls"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "NIST Cybersecurity Framework", "url": "https://www.nist.gov/cyberframework", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "OpenVPN Documentation", "url": "https://openvpn.net/community-resources/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "wan",
+      "label": "WAN & SD-WAN",
+      "description": "Wide area networking, MPLS, SD-WAN technologies, and cloud connectivity",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 150,
+      "prerequisites": ["routing-switching"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "SD-WAN Overview - Cisco", "url": "https://www.cisco.com/c/en/us/solutions/what-is-sd-wan/index.html", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "VMware SD-WAN Documentation", "url": "https://docs.vmware.com/en/VMware-SD-WAN/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud-networking",
+      "label": "Cloud Networking",
+      "description": "AWS VPC, Azure Virtual Networks, cloud load balancers, and hybrid cloud",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 300,
+      "prerequisites": ["network-security"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "AWS VPC Documentation", "url": "https://docs.aws.amazon.com/vpc/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Azure Virtual Networking", "url": "https://learn.microsoft.com/en-us/azure/virtual-network/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "monitoring",
+      "label": "Network Monitoring",
+      "description": "SNMP, NetFlow, packet analysis, and network performance monitoring",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 450,
+      "prerequisites": ["firewalls"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Wireshark Documentation", "url": "https://www.wireshark.org/docs/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Nagios Documentation", "url": "https://www.nagios.org/documentation/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "automation",
+      "label": "Network Automation",
+      "description": "Ansible, Terraform, Python scripting, and infrastructure as code for networks",
+      "difficulty": "advanced",
+      "x": 1000,
+      "y": 200,
+      "prerequisites": ["wan", "cloud-networking"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Network Automation with Ansible", "url": "https://www.ansible.com/use-cases/network-automation", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Nornir - Python Network Automation", "url": "https://nornir.readthedocs.io/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "networking-basics", "to": "ccna" },
+    { "id": "e2", "from": "ccna", "to": "routing-switching" },
+    { "id": "e3", "from": "ccna", "to": "firewalls" },
+    { "id": "e4", "from": "routing-switching", "to": "wireless" },
+    { "id": "e5", "from": "routing-switching", "to": "wan" },
+    { "id": "e6", "from": "firewalls", "to": "network-security" },
+    { "id": "e7", "from": "firewalls", "to": "monitoring" },
+    { "id": "e8", "from": "network-security", "to": "cloud-networking" },
+    { "id": "e9", "from": "wan", "to": "automation" },
+    { "id": "e10", "from": "cloud-networking", "to": "automation" }
+  ]
+}

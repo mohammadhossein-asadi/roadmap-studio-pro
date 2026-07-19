@@ -1,0 +1,178 @@
+{
+  "nodes": [
+    {
+      "id": "kotlin",
+      "label": "Kotlin Programming",
+      "description": "Kotlin syntax, null safety, coroutines, extension functions, and DSLs",
+      "difficulty": "beginner",
+      "x": 50,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Kotlin Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=F5UCRiN0smM", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Kotlin Official Docs", "url": "https://kotlinlang.org/docs/home.html", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "Kotlin Playground", "url": "https://play.kotlinlang.org/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "android_fundamentals",
+      "label": "Android Fundamentals",
+      "description": "Activities, fragments, intents, lifecycle, and Android project structure",
+      "difficulty": "beginner",
+      "x": 50,
+      "y": 400,
+      "prerequisites": ["kotlin"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Android Development for Beginners - freeCodeCamp", "url": "https://www.youtube.com/watch?v=fis26exvKc4", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Android Basics with Compose - Google", "url": "https://developer.android.com/courses/android-basics-compose/course", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "Android Official Guides", "url": "https://developer.android.com/guide", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "jetpack",
+      "label": "Jetpack Libraries",
+      "description": "ViewModel, LiveData, Room, Navigation, WorkManager, and DataStore",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["kotlin", "android_fundamentals"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Jetpack Compose Course - Google", "url": "https://developer.android.com/courses/jetpack-compose/course", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "ViewModel Guide - Android Docs", "url": "https://developer.android.com/topic/libraries/architecture/viewmodel", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "Room Database Tutorial", "url": "https://developer.android.com/training/data-storage/room", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "compose",
+      "label": "Jetpack Compose",
+      "description": "Declarative UI, composables, state management, animations, and Material 3",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 400,
+      "prerequisites": ["jetpack", "android_fundamentals"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Jetpack Compose for Beginners - Philipp Lackner", "url": "https://www.youtube.com/playlist?list=PLQkwcJG4UTCVjHQW2f8j8wZN96T-c7Gy6", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Compose Codelabs", "url": "https://developer.android.com/courses/android-basics-compose/course", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "Compose Samples on GitHub", "url": "https://github.com/android/compose-samples", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "architecture",
+      "label": "App Architecture",
+      "description": "MVVM, Clean Architecture, dependency injection with Hilt, and modularization",
+      "difficulty": "advanced",
+      "x": 350,
+      "y": 150,
+      "prerequisites": ["jetpack"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Guide to App Architecture - Android", "url": "https://developer.android.com/topic/architecture", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Hilt Dependency Injection", "url": "https://developer.android.com/training/dependency-injection/hilt-android", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "MVVM Architecture - Philipp Lackner", "url": "https://www.youtube.com/watch?v=OmyYRzL2TzI", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "networking",
+      "label": "Networking & APIs",
+      "description": "Retrofit, OkHttp, REST APIs, GraphQL, and JSON parsing",
+      "difficulty": "intermediate",
+      "x": 350,
+      "y": 380,
+      "prerequisites": ["kotlin"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Retrofit Tutorial - Philipp Lackner", "url": "https://www.youtube.com/watch?v=kLb0z1qVfCI", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Retrofit Official Docs", "url": "https://square.github.io/retrofit/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "Testing",
+      "description": "Unit tests, UI tests, integration tests, Espresso, and testing best practices",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["architecture", "compose"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Testing in Android - Google Codelabs", "url": "https://developer.android.com/courses/courses/testing", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Espresso Documentation", "url": "https://developer.android.com/training/testing/espresso", "type": "docs", "rating": 4 },
+        { "id": "r3", "title": "MockK for Kotlin", "url": "https://mockk.io/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "data_layer",
+      "label": "Data & Storage",
+      "description": "Room, DataStore, file storage, encryption, and offline-first architecture",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 400,
+      "prerequisites": ["networking", "jetpack"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Room Database - Android Docs", "url": "https://developer.android.com/training/data-storage/room", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "DataStore Guide", "url": "https://developer.android.com/topic/libraries/architecture/datastore", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "performance",
+      "label": "Performance & Optimization",
+      "description": "Memory leaks, battery optimization, profiling, and app startup time",
+      "difficulty": "advanced",
+      "x": 650,
+      "y": 250,
+      "prerequisites": ["architecture", "testing"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Performance Overview - Android", "url": "https://developer.android.com/topic/performance", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Android Profiler Guide", "url": "https://developer.android.com/studio/profile/profiler", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "play_store",
+      "label": "Play Store & Release",
+      "description": "App signing, Play Store listing, release tracks, and store optimization (ASO)",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 300,
+      "prerequisites": ["testing", "performance", "data_layer"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Launch Your App - Google Play", "url": "https://developer.android.com/distribute", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Play Console Help", "url": "https://support.google.com/googleplay/android-developer/answer/9858701", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "kotlin", "to": "android_fundamentals" },
+    { "id": "e2", "from": "kotlin", "to": "jetpack" },
+    { "id": "e3", "from": "android_fundamentals", "to": "jetpack" },
+    { "id": "e4", "from": "jetpack", "to": "compose" },
+    { "id": "e5", "from": "android_fundamentals", "to": "compose" },
+    { "id": "e6", "from": "jetpack", "to": "architecture" },
+    { "id": "e7", "from": "kotlin", "to": "networking" },
+    { "id": "e8", "from": "architecture", "to": "testing" },
+    { "id": "e9", "from": "compose", "to": "testing" },
+    { "id": "e10", "from": "networking", "to": "data_layer" },
+    { "id": "e11", "from": "jetpack", "to": "data_layer" },
+    { "id": "e12", "from": "architecture", "to": "performance" },
+    { "id": "e13", "from": "testing", "to": "performance" },
+    { "id": "e14", "from": "testing", "to": "play_store" },
+    { "id": "e15", "from": "performance", "to": "play_store" },
+    { "id": "e16", "from": "data_layer", "to": "play_store" }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "id": "aws-1",
+      "label": "IAM",
+      "description": "Identity and Access Management for AWS security",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "AWS IAM Documentation", "url": "https://docs.aws.amazon.com/iam/index.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "AWS IAM Tutorial", "url": "https://aws.amazon.com/iam/getting-started/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "aws-2",
+      "label": "EC2",
+      "description": "Virtual servers in the cloud",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["aws-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Amazon EC2 Getting Started", "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/GettingStartedInstances.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "EC2 Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=6c3EIC0zBw4", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "aws-3",
+      "label": "S3",
+      "description": "Scalable object storage service",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["aws-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Amazon S3 Getting Started", "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/GettingStarted.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "S3 Tutorial", "url": "https://www.youtube.com/watch?v=3NFSjTRrjZg", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "aws-4",
+      "label": "RDS",
+      "description": "Managed relational database service",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["aws-2", "aws-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Amazon RDS Documentation", "url": "https://docs.aws.amazon.com/rds/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "RDS Getting Started", "url": "https://aws.amazon.com/rds/getting-started/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "aws-5",
+      "label": "Lambda",
+      "description": "Serverless compute functions",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["aws-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "AWS Lambda Documentation", "url": "https://docs.aws.amazon.com/lambda/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Lambda Getting Started", "url": "https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "aws-6",
+      "label": "VPC",
+      "description": "Virtual private cloud networking",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["aws-2"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Amazon VPC Documentation", "url": "https://docs.aws.amazon.com/vpc/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "VPC Tutorial", "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "aws-7",
+      "label": "CloudFront",
+      "description": "Content delivery network (CDN) service",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["aws-3", "aws-5"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Amazon CloudFront Documentation", "url": "https://docs.aws.amazon.com/cloudfront/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "CloudFront Getting Started", "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "aws-8",
+      "label": "DevOps",
+      "description": "AWS DevOps tools and CI/CD pipelines",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 500,
+      "prerequisites": ["aws-5", "aws-6", "aws-7"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "AWS DevOps Guide", "url": "https://aws.amazon.com/devops/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "CodePipeline Tutorial", "url": "https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-simple-s3.html", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "aws-1", "to": "aws-2" },
+    { "id": "e2", "from": "aws-1", "to": "aws-3" },
+    { "id": "e3", "from": "aws-2", "to": "aws-4" },
+    { "id": "e4", "from": "aws-3", "to": "aws-4" },
+    { "id": "e5", "from": "aws-2", "to": "aws-5" },
+    { "id": "e6", "from": "aws-2", "to": "aws-6" },
+    { "id": "e7", "from": "aws-3", "to": "aws-7" },
+    { "id": "e8", "from": "aws-5", "to": "aws-7" },
+    { "id": "e9", "from": "aws-5", "to": "aws-8" },
+    { "id": "e10", "from": "aws-6", "to": "aws-8" },
+    { "id": "e11", "from": "aws-7", "to": "aws-8" }
+  ]
+}

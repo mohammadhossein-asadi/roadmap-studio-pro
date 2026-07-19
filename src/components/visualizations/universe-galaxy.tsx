@@ -2,7 +2,7 @@
 
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, Stars, Text } from "@react-three/drei";
+import { Float, Stars, Text, Line } from "@react-three/drei";
 import * as THREE from "three";
 import constellationData from "@/data/tech-constellations.json";
 
@@ -49,35 +49,44 @@ function TechPlanet({
   );
 }
 
+function ConnectionLine({ start, end }: { start: [number, number, number]; end: [number, number, number] }) {
+  return (
+    <Line
+      points={[start, end]}
+      color="#8b5cf6"
+      lineWidth={1}
+      transparent
+      opacity={0.3}
+    />
+  );
+}
+
 function ConnectionLines() {
-  const lineObjects = useMemo(() => {
+  const edges = useMemo(() => {
     const nodeMap = new Map(
       constellationData.nodes.map((n) => [n.id, n])
     );
 
-    const lines: THREE.Line[] = [];
+    const result: { start: [number, number, number]; end: [number, number, number] }[] = [];
     constellationData.nodes.forEach((node) => {
       node.connections
         .filter((connId) => nodeMap.has(connId))
         .filter((connId) => node.id < connId)
         .forEach((connId) => {
           const target = nodeMap.get(connId)!;
-          const points = [
-            new THREE.Vector3(...node.position as [number, number, number]),
-            new THREE.Vector3(...target.position as [number, number, number]),
-          ];
-          const geometry = new THREE.BufferGeometry().setFromPoints(points);
-          const material = new THREE.LineBasicMaterial({ color: "#8b5cf6", transparent: true, opacity: 0.3 });
-          lines.push(new THREE.Line(geometry, material));
+          result.push({
+            start: node.position as [number, number, number],
+            end: target.position as [number, number, number],
+          });
         });
     });
-    return lines;
+    return result;
   }, []);
 
   return (
     <>
-      {lineObjects.map((line, i) => (
-        <primitive key={i} object={line} />
+      {edges.map((edge, i) => (
+        <ConnectionLine key={i} start={edge.start} end={edge.end} />
       ))}
     </>
   );
@@ -94,10 +103,10 @@ function RotatingGroup({ children }: { children: React.ReactNode }) {
 export function UniverseGalaxy() {
   return (
     <div className="h-full w-full">
-      <Canvas camera={{ position: [0, 2, 6], fov: 50 }}>
-        <ambientLight intensity={0.3} />
-        <pointLight position={[10, 10, 10]} intensity={1.5} />
-        <Stars radius={50} depth={50} count={3000} factor={3} saturation={0} fade speed={0.5} />
+      <Canvas camera={{ position: [0, 2, 6], fov: 50 }} style={{ background: "#050510" }}>
+        <ambientLight intensity={0.4} />
+        <pointLight position={[10, 10, 10]} intensity={2} color="#8b5cf6" />
+        <Stars radius={50} depth={50} count={3000} factor={3} saturation={0} fade={true} speed={0.5} />
 
         <RotatingGroup>
           <ConnectionLines />

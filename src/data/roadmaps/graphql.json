@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "id": "gql-1",
+      "label": "GraphQL Schema",
+      "description": "Define types, queries, and mutations in a schema",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "GraphQL Official Docs - Schema", "url": "https://graphql.org/learn/schema/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "How to GraphQL Tutorial", "url": "https://www.howtographql.com/basics/1-graphql-is-a-query-language-for-apis/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "gql-2",
+      "label": "Queries & Mutations",
+      "description": "Fetching and modifying data with GraphQL operations",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["gql-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "GraphQL Official Docs - Queries and Mutations", "url": "https://graphql.org/learn/queries/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "GraphQL Queries and Mutations Explained", "url": "https://www.apollographql.com/docs/react/schema/overview/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "gql-3",
+      "label": "Resolvers",
+      "description": "Functions that resolve fields in your schema",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["gql-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Apollo Server Resolvers Docs", "url": "https://www.apollographql.com/docs/apollo-server/schema/schema/#the-resolver-map", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Understanding GraphQL Resolvers", "url": "https://www.freecodecamp.org/news/graphql-resolvers-in-5-minutes/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "gql-4",
+      "label": "Apollo Client & Server",
+      "description": "Build full-stack GraphQL applications with Apollo",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["gql-2"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Apollo Server Tutorial", "url": "https://www.apollographql.com/docs/apollo-server/getting-started/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Apollo Client React Docs", "url": "https://www.apollographql.com/docs/react/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "gql-5",
+      "label": "Subscriptions",
+      "description": "Real-time data with GraphQL subscriptions",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["gql-3"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "GraphQL Subscriptions Docs", "url": "https://www.apollographql.com/docs/react/data/subscriptions/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Real-time with GraphQL Subscriptions", "url": "https://blog.apollographql.com/a-guide-to-graphql-subscriptions-2eddb26d1f3b", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "gql-6",
+      "label": "Federation",
+      "description": "Compose multiple GraphQL services into a unified graph",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["gql-4"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Apollo Federation Docs", "url": "https://www.apollographql.com/docs/federation/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Federation Workshop", "url": "https://www.apollographql.com/docs/federation/federation-workshop/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "gql-7",
+      "label": "Best Practices",
+      "description": "Production-ready patterns and performance optimization",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["gql-5", "gql-6"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "GraphQL Best Practices", "url": "https://graphql.org/learn/best-practices/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Production GraphQL Patterns", "url": "https://www.apollographql.com/blog/graphql/best-practices/setting-a-graphql-strategy/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "gql-1", "to": "gql-2" },
+    { "id": "e2", "from": "gql-2", "to": "gql-3" },
+    { "id": "e3", "from": "gql-2", "to": "gql-4" },
+    { "id": "e4", "from": "gql-3", "to": "gql-5" },
+    { "id": "e5", "from": "gql-4", "to": "gql-6" },
+    { "id": "e6", "from": "gql-5", "to": "gql-7" },
+    { "id": "e7", "from": "gql-6", "to": "gql-7" }
+  ]
+}

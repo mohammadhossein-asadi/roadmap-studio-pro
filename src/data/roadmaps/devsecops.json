@@ -1,0 +1,197 @@
+{
+  "nodes": [
+    {
+      "id": "linux",
+      "label": "Linux Fundamentals",
+      "description": "Master Linux command line, file systems, permissions, and shell scripting",
+      "difficulty": "beginner",
+      "x": 50,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Linux for Beginners - freeCodeCamp", "url": "https://www.youtube.com/watch?v=sWbUDq4S6Y8", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "The Linux Command Line", "url": "https://linuxcommand.org/tlcl.php", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "Linux Journey", "url": "https://linuxjourney.com/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "networking",
+      "label": "Networking Basics",
+      "description": "Understand TCP/IP, DNS, HTTP, firewalls, and network troubleshooting",
+      "difficulty": "beginner",
+      "x": 50,
+      "y": 400,
+      "prerequisites": ["linux"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Computer Networking Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=IPvYjXVsTmM", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Cisco Networking Academy", "url": "https://www.netacad.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "Networking Fundamentals - IBM", "url": "https://www.coursera.org/learn/computer-networking", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "docker",
+      "label": "Docker & Containers",
+      "description": "Containerization concepts, Dockerfile, Docker Compose, and image management",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["linux", "networking"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docker Tutorial for Beginners - TechWorld with Nana", "url": "https://www.youtube.com/watch?v=3c-iBn73dDE", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Docker Official Getting Started", "url": "https://docs.docker.com/get-started/", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "Play with Docker", "url": "https://labs.play-with-docker.com/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "label": "Kubernetes",
+      "description": "Container orchestration, pods, services, deployments, and cluster management",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 400,
+      "prerequisites": ["docker"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Kubernetes Tutorial for Beginners - TechWorld with Nana", "url": "https://www.youtube.com/watch?v=X48VuDVv5do", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Kubernetes Official Tutorials", "url": "https://kubernetes.io/docs/tutorials/", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "KodeKloud Kubernetes Course", "url": "https://kodekloud.com/courses/kubernetes-for-the-absolute-beginner-eks/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cicd",
+      "label": "CI/CD Pipelines",
+      "description": "Continuous integration and delivery with GitHub Actions, Jenkins, and GitLab CI",
+      "difficulty": "intermediate",
+      "x": 350,
+      "y": 200,
+      "prerequisites": ["docker", "linux"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "CI/CD Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=scEDHsr3APg", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "GitHub Actions Documentation", "url": "https://docs.github.com/en/actions", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "Jenkins Official Tutorial", "url": "https://www.jenkins.io/doc/tutorials/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cicd_advanced",
+      "label": "Advanced CI/CD",
+      "description": "Pipeline as code, artifact management, staging environments, and deployment strategies",
+      "difficulty": "advanced",
+      "x": 350,
+      "y": 400,
+      "prerequisites": ["cicd", "kubernetes"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "GitLab CI/CD Tutorial", "url": "https://docs.gitlab.com/ee/ci/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "ArgoCD Tutorial", "url": "https://argo-cd.readthedocs.io/en/stable/getting_started/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "security_tools",
+      "label": "Security Tools",
+      "description": "Network scanning, vulnerability assessment, and penetration testing basics",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 150,
+      "prerequisites": ["networking", "linux"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Nmap Tutorial - freeCodeCamp", "url": "https://www.youtube.com/watch?v=qt84L9rVhAo", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "OWASP Top 10", "url": "https://owasp.org/www-project-top-ten/", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "TryHackMe Free Rooms", "url": "https://tryhackme.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sast_dast",
+      "label": "SAST & DAST",
+      "description": "Static and dynamic application security testing with SonarQube, OWASP ZAP, and Snyk",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 350,
+      "prerequisites": ["security_tools", "cicd"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "SonarQube Official Docs", "url": "https://docs.sonarsource.com/sonarqube/latest/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "OWASP ZAP Getting Started", "url": "https://www.zaproxy.org/getting-started/", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "Snyk Learn", "url": "https://learn.snyk.io/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "secrets_management",
+      "label": "Secrets Management",
+      "description": "Vault, secrets rotation, credential management, and zero-trust principles",
+      "difficulty": "advanced",
+      "x": 650,
+      "y": 200,
+      "prerequisites": ["security_tools", "docker"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "HashiCorp Vault Getting Started", "url": "https://developer.hashicorp.com/vault/docs/getting-started", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "GitHub Actions Secrets", "url": "https://docs.github.com/en/actions/security-guides/encrypted-secrets", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "compliance",
+      "label": "Compliance & Governance",
+      "description": "SOC 2, GDPR, ISO 27001, audit trails, and compliance automation",
+      "difficulty": "advanced",
+      "x": 650,
+      "y": 400,
+      "prerequisites": ["sast_dast", "secrets_management"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "SOC 2 Explained - Vanta", "url": "https://www.vanta.com/blog/soc-2-compliance", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "GDPR Official Portal", "url": "https://gdpr.eu/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "secure_pipeline",
+      "label": "Secure Pipeline",
+      "description": "Building a complete secure DevSecOps pipeline with automated security gates and monitoring",
+      "difficulty": "expert",
+      "x": 800,
+      "y": 280,
+      "prerequisites": ["cicd_advanced", "compliance", "secrets_management"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "DevSecOps Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=9nJkz24tntc", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "OWASP DevSecOps Guideline", "url": "https://owasp.org/www-project-devsecops-guideline/", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "linux", "to": "networking" },
+    { "id": "e2", "from": "linux", "to": "docker" },
+    { "id": "e3", "from": "networking", "to": "docker" },
+    { "id": "e4", "from": "docker", "to": "kubernetes" },
+    { "id": "e5", "from": "docker", "to": "cicd" },
+    { "id": "e6", "from": "linux", "to": "cicd" },
+    { "id": "e7", "from": "cicd", "to": "cicd_advanced" },
+    { "id": "e8", "from": "kubernetes", "to": "cicd_advanced" },
+    { "id": "e9", "from": "networking", "to": "security_tools" },
+    { "id": "e10", "from": "linux", "to": "security_tools" },
+    { "id": "e11", "from": "security_tools", "to": "sast_dast" },
+    { "id": "e12", "from": "cicd", "to": "sast_dast" },
+    { "id": "e13", "from": "security_tools", "to": "secrets_management" },
+    { "id": "e14", "from": "docker", "to": "secrets_management" },
+    { "id": "e15", "from": "sast_dast", "to": "compliance" },
+    { "id": "e16", "from": "secrets_management", "to": "compliance" },
+    { "id": "e17", "from": "cicd_advanced", "to": "secure_pipeline" },
+    { "id": "e18", "from": "compliance", "to": "secure_pipeline" },
+    { "id": "e19", "from": "secrets_management", "to": "secure_pipeline" }
+  ]
+}

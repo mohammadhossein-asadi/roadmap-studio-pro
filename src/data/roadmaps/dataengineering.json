@@ -1,0 +1,220 @@
+{
+  "nodes": [
+    {
+      "id": "de-sql",
+      "label": "SQL & Relational Databases",
+      "description": "SELECT, JOIN, aggregation, subqueries, indexing, normalization, and PostgreSQL.",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "SQLBolt Interactive Tutorial", "url": "https://sqlbolt.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Mode Analytics SQL Tutorial", "url": "https://mode.com/sql-tutorial/", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "PostgreSQL Tutorial", "url": "https://www.postgresqltutorial.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "de-python",
+      "label": "Python for Data",
+      "description": "Pandas, NumPy, data manipulation, cleaning, and Python scripting for data pipelines.",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r4", "title": "Pandas Getting Started", "url": "https://pandas.pydata.org/docs/getting_started/index.html", "type": "docs", "rating": 5 },
+        { "id": "r5", "title": "Kaggle Pandas Course", "url": "https://www.kaggle.com/learn/pandas", "type": "tutorial", "rating": 5 },
+        { "id": "r6", "title": "Python for Data Science (freeCodeCamp)", "url": "https://www.youtube.com/watch?v=r-uOLxNrNk8", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "de-stats",
+      "label": "Statistics & Math",
+      "description": "Descriptive statistics, probability, distributions, hypothesis testing, and linear algebra basics.",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Khan Academy Statistics", "url": "https://www.khanacademy.org/math/statistics-probability", "type": "tutorial", "rating": 5 },
+        { "id": "r8", "title": "StatQuest YouTube", "url": "https://www.youtube.com/@statquest", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "de-etl",
+      "label": "ETL & Data Pipelines",
+      "description": "Extract-Transform-Load patterns, Apache Airflow, scheduling, and data quality checks.",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 300,
+      "prerequisites": ["de-sql", "de-python"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Apache Airflow Tutorial", "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "Astronomer Airflow 101", "url": "https://www.astronomer.io/events/airflow-101/", "type": "video", "rating": 4 },
+        { "id": "r11", "title": "dbt Fundamentals", "url": "https://courses.getdbt.com/courses/fundamentals", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "de-bigdata",
+      "label": "Big Data Fundamentals",
+      "description": "Hadoop ecosystem, HDFS, MapReduce, Spark, distributed computing concepts.",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 300,
+      "prerequisites": ["de-python"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r12", "title": "Apache Spark Official", "url": "https://spark.apache.org/docs/latest/", "type": "docs", "rating": 5 },
+        { "id": "r13", "title": "Big Data Full Course (freeCodeCamp)", "url": "https://www.youtube.com/watch?v=6kT6dvqL0kk", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "de-warehouse",
+      "label": "Data Warehousing",
+      "description": "Dimensional modeling, star/snowflake schemas, BigQuery, Snowflake, and Redshift.",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 300,
+      "prerequisites": ["de-sql", "de-etl"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r14", "title": "Google BigQuery Quickstart", "url": "https://cloud.google.com/bigquery/docs/bigquery-web-ui", "type": "docs", "rating": 5 },
+        { "id": "r15", "title": "Snowflake Free Trial", "url": "https://signup.snowflake.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "de-streaming",
+      "label": "Stream Processing",
+      "description": "Apache Kafka, Flink, real-time data pipelines, event sourcing, and stream analytics.",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["de-bigdata"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r16", "title": "Confluent Kafka Tutorials", "url": "https://developer.confluent.io/tutorials/", "type": "tutorial", "rating": 5 },
+        { "id": "r17", "title": "Apache Kafka Official Docs", "url": "https://kafka.apache.org/documentation/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "de-ml-data",
+      "label": "ML Data Pipelines",
+      "description": "Feature engineering, feature stores, MLflow, data versioning, and MLOps foundations.",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 500,
+      "prerequisites": ["de-etl", "de-stats"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r18", "title": "MLflow Getting Started", "url": "https://mlflow.org/docs/latest/getting-started/index.html", "type": "docs", "rating": 5 },
+        { "id": "r19", "title": "Feast Feature Store", "url": "https://feast.dev/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "de-lakehouse",
+      "label": "Data Lakehouse",
+      "description": "Delta Lake, Apache Iceberg, Apache Hudi, lakehouse architecture, and open table formats.",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 500,
+      "prerequisites": ["de-warehouse", "de-streaming"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r20", "title": "Delta Lake Docs", "url": "https://docs.delta.io/latest/", "type": "docs", "rating": 5 },
+        { "id": "r21", "title": "Apache Iceberg Docs", "url": "https://iceberg.apache.org/docs/latest/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "de-governance",
+      "label": "Data Governance",
+      "description": "Data cataloging, lineage tracking, quality frameworks, privacy (GDPR), and access control.",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["de-warehouse"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r22", "title": "Apache Atlas", "url": "https://atlas.apache.org/", "type": "docs", "rating": 4 },
+        { "id": "r23", "title": "OpenMetadata", "url": "https://docs.open-metadata.org/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "de-orchestration",
+      "label": "Advanced Orchestration",
+      "description": "Dagster, Prefect, complex DAG design, dependency management, and error recovery patterns.",
+      "difficulty": "expert",
+      "x": 300,
+      "y": 700,
+      "prerequisites": ["de-streaming", "de-governance"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r24", "title": "Dagster University", "url": "https://dagster.university/", "type": "tutorial", "rating": 5 },
+        { "id": "r25", "title": "Prefect Tutorials", "url": "https://docs.prefect.io/latest/tutorial/index.html", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "de-arch",
+      "label": "Data Architecture",
+      "description": "Domain-driven data design, data mesh, medallion architecture, and scalable platform design.",
+      "difficulty": "expert",
+      "x": 500,
+      "y": 700,
+      "prerequisites": ["de-lakehouse", "de-ml-data"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r26", "title": "Data Mesh (Zhamak Dehghani)", "url": "https://www.datamesh-architecture.com/", "type": "docs", "rating": 5 },
+        { "id": "r27", "title": "Databricks Lakehouse", "url": "https://www.databricks.com/product/data-lakehouse", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "de-platform",
+      "label": "Data Platform Engineering",
+      "description": "Building internal data platforms, self-service analytics, and infrastructure automation.",
+      "difficulty": "expert",
+      "x": 700,
+      "y": 700,
+      "prerequisites": ["de-arch", "de-orchestration"],
+      "estimatedMinutes": 350,
+      "completed": false,
+      "resources": [
+        { "id": "r28", "title": "Data Platform Design Patterns", "url": "https://www.databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "de-sql", "to": "de-etl" },
+    { "id": "e2", "from": "de-python", "to": "de-etl" },
+    { "id": "e3", "from": "de-python", "to": "de-bigdata" },
+    { "id": "e4", "from": "de-sql", "to": "de-warehouse" },
+    { "id": "e5", "from": "de-etl", "to": "de-warehouse" },
+    { "id": "e6", "from": "de-bigdata", "to": "de-streaming" },
+    { "id": "e7", "from": "de-etl", "to": "de-ml-data" },
+    { "id": "e8", "from": "de-stats", "to": "de-ml-data" },
+    { "id": "e9", "from": "de-warehouse", "to": "de-lakehouse" },
+    { "id": "e10", "from": "de-streaming", "to": "de-lakehouse" },
+    { "id": "e11", "from": "de-warehouse", "to": "de-governance" },
+    { "id": "e12", "from": "de-streaming", "to": "de-orchestration" },
+    { "id": "e13", "from": "de-governance", "to": "de-orchestration" },
+    { "id": "e14", "from": "de-lakehouse", "to": "de-arch" },
+    { "id": "e15", "from": "de-ml-data", "to": "de-arch" },
+    { "id": "e16", "from": "de-arch", "to": "de-platform" },
+    { "id": "e17", "from": "de-orchestration", "to": "de-platform" }
+  ]
+}

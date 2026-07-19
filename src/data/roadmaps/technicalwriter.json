@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "writing-basics",
+      "label": "Technical Writing Basics",
+      "description": "Clarity, conciseness, audience analysis, and technical communication fundamentals",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Google Technical Writing Course", "url": "https://developers.google.com/tech-writing", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Microsoft Writing Style Guide", "url": "https://learn.microsoft.com/en-us/style-guide/welcome/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "docs-tools",
+      "label": "Documentation Tools",
+      "description": "Markdown, Git, static site generators, and documentation platforms",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["writing-basics"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Markdown Tutorial", "url": "https://www.markdowntutorial.com/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Docusaurus Documentation", "url": "https://docusaurus.io/docs", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "api-docs",
+      "label": "API Documentation",
+      "description": "OpenAPI/Swagger, API reference docs, and developer experience design",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 150,
+      "prerequisites": ["docs-tools"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "OpenAPI Initiative", "url": "https://www.openapis.org/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "ReadMe Documentation", "url": "https://docs.readme.com/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "tutorials",
+      "label": "Tutorial Writing",
+      "description": "Step-by-step guides, task-based documentation, and learning-oriented content",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["docs-tools"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Write the Docs - Tutorial Guide", "url": "https://www.writethedocs.org/guide/writing/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Diataxis Framework", "url": "https://diataxis.fr/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "style-guides",
+      "label": "Style Guides",
+      "description": "Voice and tone, terminology management, and editorial guidelines",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["api-docs", "tutorials"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Google Developer Documentation Style Guide", "url": "https://developers.google.com/style", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Apple Style Guide", "url": "https://developer.apple.com/style/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "info-architecture",
+      "label": "Information Architecture",
+      "description": "Content organization, navigation design, taxonomy, and findability",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["style-guides"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "IA Institute", "url": "https://www.iainstitute.org/", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Information Architecture - NNGroup", "url": "https://www.nngroup.com/articles/information-architecture/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "content-strategy",
+      "label": "Content Strategy",
+      "description": "Content planning, audits, localization, and documentation lifecycle",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 50,
+      "prerequisites": ["writing-basics"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Content Strategy Alliance", "url": "https://www.contentstrategyalliance.com/", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Write the Docs Resources", "url": "https://www.writethedocs.org/resources/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "docs-as-code",
+      "label": "Docs as Code",
+      "description": "Version-controlled docs, CI/CD for documentation, and collaborative workflows",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 50,
+      "prerequisites": ["writing-basics"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docs as Code - Anne Gentle", "url": "https://www.docslikecode.com/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Antora Documentation", "url": "https://docs.antora.org/antora/latest/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "visual-docs",
+      "label": "Visual Documentation",
+      "description": "Diagrams, screenshots, videos, and visual communication in docs",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 350,
+      "prerequisites": ["writing-basics"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Mermaid Diagrams", "url": "https://mermaid.js.org/", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Excalidraw", "url": "https://excalidraw.com/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ux-writing",
+      "label": "UX Writing",
+      "description": "Microcopy, error messages, onboarding text, and in-app communication",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["style-guides"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Google UX Writing Course", "url": "https://grow.google/intl/ALL_pk/courses-and-collections/ux-writing/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "UX Writing Hub", "url": "https://uxwritinghub.com/", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "writing-basics", "to": "docs-tools" },
+    { "id": "e2", "from": "writing-basics", "to": "content-strategy" },
+    { "id": "e3", "from": "writing-basics", "to": "docs-as-code" },
+    { "id": "e4", "from": "writing-basics", "to": "visual-docs" },
+    { "id": "e5", "from": "docs-tools", "to": "api-docs" },
+    { "id": "e6", "from": "docs-tools", "to": "tutorials" },
+    { "id": "e7", "from": "api-docs", "to": "style-guides" },
+    { "id": "e8", "from": "tutorials", "to": "style-guides" },
+    { "id": "e9", "from": "style-guides", "to": "info-architecture" },
+    { "id": "e10", "from": "style-guides", "to": "ux-writing" }
+  ]
+}
