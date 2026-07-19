@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "java-syntax",
+      "label": "Java Syntax & Basics",
+      "description": "Variables, operators, control flow, methods, basic syntax",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Java Official Tutorial", "url": "https://docs.oracle.com/javase/tutorial/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Java for Beginners - Amigoscode", "url": "https://www.youtube.com/watch?v=eIrMbAQSU34", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "java-oop",
+      "label": "Object-Oriented Programming",
+      "description": "Classes, objects, inheritance, polymorphism, interfaces, abstract classes",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["java-syntax"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Java OOP Concepts - Oracle Docs", "url": "https://docs.oracle.com/javase/tutorial/java/concepts/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Java OOP Tutorial - Telusko", "url": "https://www.youtube.com/watch?v=K-5wGF3cPQo", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "java-collections",
+      "label": "Collections Framework",
+      "description": "List, Set, Map, Queue, iterators, Comparable, Comparator",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["java-oop"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Collections Tutorial - Oracle Docs", "url": "https://docs.oracle.com/javase/tutorial/collections/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Java Collections - Amigoscode", "url": "https://www.youtube.com/watch?v=Gd_tWZ6kUq8", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "java-streams",
+      "label": "Streams & Functional Programming",
+      "description": "Stream API, lambda expressions, functional interfaces, Optional",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["java-collections"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Streams API - Oracle Docs", "url": "https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Java Streams Tutorial - Baeldung", "url": "https://www.baeldung.com/java-streams", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "java-spring",
+      "label": "Spring Framework",
+      "description": "Dependency injection, annotations, Spring context, component scanning",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["java-streams"],
+      "estimatedMinutes": 160,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Spring Framework Docs", "url": "https://docs.spring.io/spring-framework/reference/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Spring Tutorial - Amigoscode", "url": "https://www.youtube.com/watch?v=9SGDpanrc8U", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "java-testing",
+      "label": "Testing with JUnit & Mockito",
+      "description": "JUnit 5, assertions, test lifecycle, mocking with Mockito",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["java-spring"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "JUnit 5 Official Guide", "url": "https://junit.org/junit5/docs/current/user-guide/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Mockito Tutorials - Baeldung", "url": "https://www.baeldung.com/mockito", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "java-patterns",
+      "label": "Design Patterns",
+      "description": "Singleton, Factory, Builder, Observer, Strategy, Decorator patterns",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["java-testing"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Design Patterns - Refactoring.Guru", "url": "https://refactoring.guru/design-patterns", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Java Design Patterns - Baeldung", "url": "https://www.baeldung.com/java-design-patterns", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "java-syntax", "to": "java-oop" },
+    { "id": "e2", "from": "java-oop", "to": "java-collections" },
+    { "id": "e3", "from": "java-collections", "to": "java-streams" },
+    { "id": "e4", "from": "java-streams", "to": "java-spring" },
+    { "id": "e5", "from": "java-spring", "to": "java-testing" },
+    { "id": "e6", "from": "java-testing", "to": "java-patterns" }
+  ]
+}

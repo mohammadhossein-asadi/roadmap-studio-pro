@@ -1,0 +1,238 @@
+{
+  "nodes": [
+    {
+      "id": "be-http",
+      "label": "HTTP & REST Fundamentals",
+      "description": "HTTP methods, status codes, RESTful design principles, and API conventions.",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": true,
+      "resources": [
+        { "id": "r1", "title": "MDN HTTP Overview", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "RESTful API Design", "url": "https://restfulapi.net/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "be-node",
+      "label": "Node.js Runtime",
+      "description": "Event loop, modules, streams, file system, child processes, and npm ecosystem.",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["be-http"],
+      "estimatedMinutes": 180,
+      "completed": true,
+      "resources": [
+        { "id": "r3", "title": "Node.js Docs", "url": "https://nodejs.org/docs/latest/api/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-express",
+      "label": "Express.js Framework",
+      "description": "Routing, middleware, error handling, template engines, and application structure.",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["be-node"],
+      "estimatedMinutes": 150,
+      "completed": true,
+      "resources": [
+        { "id": "r4", "title": "Express Docs", "url": "https://expressjs.com/en/guide/routing.html", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-typescript",
+      "label": "TypeScript for Backend",
+      "description": "Type safety, interfaces, decorators, DTOs, and compile-time error checking.",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 300,
+      "prerequisites": ["be-express"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-databases",
+      "label": "Database Design",
+      "description": "Relational vs NoSQL, SQL queries, indexing, normalization, and data modeling.",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 300,
+      "prerequisites": ["be-express"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r6", "title": "PostgreSQL Tutorial", "url": "https://www.postgresqltutorial.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-orm",
+      "label": "ORM & Data Access",
+      "description": "Prisma, Drizzle, TypeORM — schema definitions, migrations, queries, and relations.",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 300,
+      "prerequisites": ["be-databases", "be-typescript"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Prisma Docs", "url": "https://www.prisma.io/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-auth",
+      "label": "Authentication & Authorization",
+      "description": "JWT, OAuth 2.0, session management, RBAC, and security best practices.",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["be-typescript", "be-databases"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r8", "title": "Auth0 Docs", "url": "https://auth0.com/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-nestjs",
+      "label": "NestJS Framework",
+      "description": "Modular architecture, dependency injection, guards, pipes, and microservices support.",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 500,
+      "prerequisites": ["be-typescript"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "NestJS Docs", "url": "https://docs.nestjs.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-graphql",
+      "label": "GraphQL API Layer",
+      "description": "Schema definition, resolvers, subscriptions, Apollo Server, and code-first approach.",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 500,
+      "prerequisites": ["be-typescript"],
+      "estimatedMinutes": 280,
+      "completed": false,
+      "resources": [
+        { "id": "r10", "title": "GraphQL Docs", "url": "https://graphql.org/learn/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-caching",
+      "label": "Caching Strategies",
+      "description": "Redis, in-memory caching, CDN, cache invalidation patterns, and write-through strategies.",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 500,
+      "prerequisites": ["be-databases"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Redis Docs", "url": "https://redis.io/docs/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-testing",
+      "label": "API Testing",
+      "description": "Unit tests, integration tests, supertest, mocking, and test-driven development.",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 700,
+      "prerequisites": ["be-nestjs", "be-auth"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r12", "title": "Jest Docs", "url": "https://jestjs.io/docs/getting-started", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-websockets",
+      "label": "WebSockets & Real-time",
+      "description": "Socket.io, WebSocket protocol, pub/sub patterns, and real-time event handling.",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 700,
+      "prerequisites": ["be-nestjs", "be-caching"],
+      "estimatedMinutes": 220,
+      "completed": false,
+      "resources": [
+        { "id": "r13", "title": "Socket.io Docs", "url": "https://socket.io/docs/v4/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-microservices",
+      "label": "Microservices Architecture",
+      "description": "Service decomposition, message queues (RabbitMQ, Kafka), event-driven design, and sagas.",
+      "difficulty": "expert",
+      "x": 300,
+      "y": 900,
+      "prerequisites": ["be-testing", "be-websockets"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r14", "title": "Microservices Patterns", "url": "https://microservices.io/patterns/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-security",
+      "label": "Security Hardening",
+      "description": "OWASP Top 10, rate limiting, CORS, CSP headers, input validation, and encryption at rest.",
+      "difficulty": "expert",
+      "x": 500,
+      "y": 900,
+      "prerequisites": ["be-auth", "be-microservices"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r15", "title": "OWASP Guide", "url": "https://owasp.org/www-project-top-ten/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "be-performance",
+      "label": "Performance & Profiling",
+      "description": "Load testing, profiling, query optimization, connection pooling, and horizontal scaling.",
+      "difficulty": "expert",
+      "x": 700,
+      "y": 900,
+      "prerequisites": ["be-caching", "be-microservices"],
+      "estimatedMinutes": 350,
+      "completed": false,
+      "resources": [
+        { "id": "r16", "title": "Clinic.js Docs", "url": "https://clinicjs.org/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "be-http", "to": "be-node" },
+    { "id": "e2", "from": "be-node", "to": "be-express" },
+    { "id": "e3", "from": "be-express", "to": "be-typescript" },
+    { "id": "e4", "from": "be-express", "to": "be-databases" },
+    { "id": "e5", "from": "be-databases", "to": "be-orm" },
+    { "id": "e6", "from": "be-typescript", "to": "be-orm" },
+    { "id": "e7", "from": "be-typescript", "to": "be-auth" },
+    { "id": "e8", "from": "be-databases", "to": "be-auth" },
+    { "id": "e9", "from": "be-typescript", "to": "be-nestjs" },
+    { "id": "e10", "from": "be-typescript", "to": "be-graphql" },
+    { "id": "e11", "from": "be-databases", "to": "be-caching" },
+    { "id": "e12", "from": "be-nestjs", "to": "be-testing" },
+    { "id": "e13", "from": "be-auth", "to": "be-testing" },
+    { "id": "e14", "from": "be-nestjs", "to": "be-websockets" },
+    { "id": "e15", "from": "be-caching", "to": "be-websockets" },
+    { "id": "e16", "from": "be-testing", "to": "be-microservices" },
+    { "id": "e17", "from": "be-websockets", "to": "be-microservices" },
+    { "id": "e18", "from": "be-auth", "to": "be-security" },
+    { "id": "e19", "from": "be-microservices", "to": "be-security" },
+    { "id": "e20", "from": "be-caching", "to": "be-performance" },
+    { "id": "e21", "from": "be-microservices", "to": "be-performance" }
+  ]
+}

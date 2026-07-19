@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "basics",
+      "label": "Prompting Basics",
+      "description": "Zero-shot, few-shot, role prompting, system/user message structure",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Anthropic Prompt Engineering Guide", "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "OpenAI Prompt Engineering", "url": "https://platform.openai.com/docs/guides/prompt-engineering", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "techniques",
+      "label": "Advanced Techniques",
+      "description": "Chain-of-thought, self-consistency, tree-of-thought, ReAct",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["basics"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "LangChain Prompt Templates", "url": "https://python.langchain.com/docs/concepts/prompt-templates/", "type": "docs", "rating": 5 },
+        { "id": "r4", "title": "Prompt Engineering Guide", "url": "https://www.promptingguide.ai/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "chains",
+      "label": "Prompt Chains",
+      "description": "Multi-step prompt pipelines, output parsing, chaining LLM calls",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["techniques"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "LangChain Chains", "url": "https://python.langchain.com/docs/concepts/lcel/", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "DSPy Framework", "url": "https://dspy-docs.vercel.app/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "agents",
+      "label": "Agent Prompting",
+      "description": "Tool use, function calling, agent loops, system prompt design",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["chains"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Anthropic Tool Use Guide", "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "OpenAI Function Calling", "url": "https://platform.openai.com/docs/guides/function-calling", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "label": "Evaluation & Testing",
+      "description": "Prompt testing, A/B testing, benchmarking, prompt drift detection",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["agents"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Braintrust Prompt Eval", "url": "https://www.braintrust.dev/", "type": "docs", "rating": 4 },
+        { "id": "r10", "title": "Promptfoo Testing", "url": "https://www.promptfoo.dev/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "advanced",
+      "label": "Advanced Patterns",
+      "description": "Constitutional AI, meta-prompting, prompt optimization at scale",
+      "difficulty": "expert",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["evaluation"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Anthropic Research Papers", "url": "https://www.anthropic.com/research", "type": "article", "rating": 5 },
+        { "id": "r12", "title": "DSPy Optimizers", "url": "https://dspy-docs.vercel.app/docs/building-blocks/optimizers", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "basics", "to": "techniques" },
+    { "id": "e2", "from": "techniques", "to": "chains" },
+    { "id": "e3", "from": "chains", "to": "agents" },
+    { "id": "e4", "from": "agents", "to": "evaluation" },
+    { "id": "e5", "from": "evaluation", "to": "advanced" }
+  ]
+}

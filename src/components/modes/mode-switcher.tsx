@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Globe, Network, Dna, LayoutGrid } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -30,6 +29,7 @@ export function ModeSwitcher({ activeMode, onModeChange }: ModeSwitcherProps) {
           <button
             key={mode.id}
             onClick={() => onModeChange(mode.id)}
+            aria-pressed={isActive}
             className={cn(
               "relative flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition-colors",
               isActive ? "text-white" : "text-white/40 hover:text-white/70"

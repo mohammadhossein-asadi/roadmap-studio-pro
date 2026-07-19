@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "ts-types",
+      "label": "Basic Types & Annotations",
+      "description": "Primitive types, arrays, any, unknown, void, type assertions",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "TypeScript Handbook - Types", "url": "https://www.typescriptlang.org/docs/handbook/2/basic-types.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "TypeScript Tutorial - Traversy Media", "url": "https://www.youtube.com/watch?v=BwuLxPH8IDs", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ts-interfaces",
+      "label": "Interfaces & Type Aliases",
+      "description": "Interface declarations, type aliases, extending types, declaration merging",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["ts-types"],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Interfaces vs Type Aliases - TypeScript Docs", "url": "https://www.typescriptlang.org/docs/handbook/2/objects.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "TypeScript Interfaces - Matt Pocock", "url": "https://www.totaltypescript.com/tutorials/typescript-for-beginners", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ts-generics",
+      "label": "Generics",
+      "description": "Generic functions, classes, interfaces, constraints, utility generics",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["ts-interfaces"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Generics - TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/2/generics.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Generics in TypeScript - Fireship", "url": "https://www.youtube.com/watch?v=nVi7Tvlh2ps", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ts-utility",
+      "label": "Utility Types",
+      "description": "Partial, Required, Pick, Omit, Record, Mapped types, conditional types",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["ts-generics"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Utility Types - TypeScript Docs", "url": "https://www.typescriptlang.org/docs/handbook/utility-types.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Type Challenges - TypeScript", "url": "https://github.com/type-challenges/type-challenges", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ts-decorators",
+      "label": "Decorators & Metadata",
+      "description": "Class decorators, method decorators, property decorators, decorators proposal",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["ts-utility"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Decorators - TypeScript Docs", "url": "https://www.typescriptlang.org/docs/handbook/decorators.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "TypeScript Decorators - Dan Vanderkam", "url": "https://www.typescriptlang.org/docs/handbook/decorators.html", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ts-config",
+      "label": "Advanced Configuration",
+      "description": "tsconfig.json, compiler options, project references, declaration files",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["ts-decorators"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "TSConfig Reference", "url": "https://www.typescriptlang.org/tsconfig", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "TypeScript Configuration Guide - Matt Pocock", "url": "https://www.totaltypescript.com/tsconfig-cheat-sheet", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ts-advanced",
+      "label": "Advanced TypeScript",
+      "description": "Template literal types, type inference, const assertions, declaration merging",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["ts-config"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Advanced Types - TypeScript Docs", "url": "https://www.typescriptlang.org/docs/handbook/2/types-from-types.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Total TypeScript - Advanced Patterns", "url": "https://www.totaltypescript.com/", "type": "tutorial", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "ts-types", "to": "ts-interfaces" },
+    { "id": "e2", "from": "ts-interfaces", "to": "ts-generics" },
+    { "id": "e3", "from": "ts-generics", "to": "ts-utility" },
+    { "id": "e4", "from": "ts-utility", "to": "ts-decorators" },
+    { "id": "e5", "from": "ts-decorators", "to": "ts-config" },
+    { "id": "e6", "from": "ts-config", "to": "ts-advanced" }
+  ]
+}

@@ -14,7 +14,6 @@ export function useCanvasPhysics(initialState?: Partial<CanvasState>) {
 
   const isDragging = useRef(false);
   const lastPos = useRef({ x: 0, y: 0 });
-  const lastPinchDist = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const onPointerDown = useCallback((e: React.PointerEvent) => {
@@ -36,9 +35,8 @@ export function useCanvasPhysics(initialState?: Partial<CanvasState>) {
     isDragging.current = false;
   }, []);
 
-  const onWheel = useCallback((e: React.WheelEvent) => {
-    e.preventDefault();
-    const delta = -e.deltaY * CANVAS_LIMITS.zoomSpeed;
+  const zoom = useCallback((deltaY: number) => {
+    const delta = -deltaY * CANVAS_LIMITS.zoomSpeed;
     setState((prev) => ({
       ...prev,
       scale: clamp(prev.scale + delta * prev.scale, CANVAS_LIMITS.minScale, CANVAS_LIMITS.maxScale),
@@ -57,8 +55,25 @@ export function useCanvasPhysics(initialState?: Partial<CanvasState>) {
     setState({ x: 0, y: 0, scale: 1 });
   }, []);
 
+  // Native wheel listener with { passive: false } to allow preventDefault
   useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const handler = (e: WheelEvent) => {
+      e.preventDefault();
+      zoom(e.deltaY);
+    };
+    el.addEventListener("wheel", handler, { passive: false });
+    return () => el.removeEventListener("wheel", handler);
+  }, [zoom]);
+
+  // Keyboard navigation — only when canvas container or its children are focused
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Only handle if the event target is within the canvas
+      if (!(e.target instanceof Node) || !el.contains(e.target)) return;
       const step = 50;
       const zoomStep = 0.1;
       switch (e.key) {
@@ -89,9 +104,8 @@ export function useCanvasPhysics(initialState?: Partial<CanvasState>) {
           break;
       }
     };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    el.addEventListener("keydown", handleKeyDown);
+    return () => el.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   return {
@@ -101,9 +115,9 @@ export function useCanvasPhysics(initialState?: Partial<CanvasState>) {
       onPointerDown,
       onPointerMove,
       onPointerUp,
-      onWheel,
       onDoubleClick,
     },
+    zoom,
     resetView,
   };
 }

@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "ai-assistants",
+      "label": "AI Coding Assistants",
+      "description": "Overview of tools like Cursor, Copilot, Claude Code",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 30,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Cursor AI Editor", "url": "https://www.cursor.com/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "GitHub Copilot Docs", "url": "https://docs.github.com/en/copilot", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "prompting",
+      "label": "Prompting for Code",
+      "description": "Write effective prompts that generate quality code",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["ai-assistants"],
+      "estimatedMinutes": 45,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Prompt Engineering Guide", "url": "https://www.promptingguide.ai/", "type": "docs", "rating": 5 },
+        { "id": "r4", "title": "Cursor Prompting Tips", "url": "https://docs.cursor.com/get-started/readme", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "code-generation",
+      "label": "Code Generation",
+      "description": "Generate boilerplate, functions, and full features with AI",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["prompting"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "AI-Assisted Development", "url": "https://www.anthropic.com/engineering/claude-code-best-practices", "type": "article", "rating": 5 },
+        { "id": "r6", "title": "Vibe Coding Explained", "url": "https://en.wikipedia.org/wiki/Vibe_coding", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "iteration",
+      "label": "Iterative Refinement",
+      "description": "Refine AI output through conversation and context",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["code-generation"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Iterating with AI Coding", "url": "https://www.anthropic.com/engineering/claude-code-best-practices", "type": "article", "rating": 5 },
+        { "id": "r8", "title": "Cursor Rules Documentation", "url": "https://docs.cursor.com/context/rules", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "debugging",
+      "label": "AI-Assisted Debugging",
+      "description": "Use AI to find and fix bugs efficiently",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["iteration"],
+      "estimatedMinutes": 45,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Debugging with Claude Code", "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "Common Vibe Coding Pitfalls", "url": "https://newsletter.pragmaticengineer.com/p/ai-coding-tools", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "refactoring",
+      "label": "Refactoring with AI",
+      "description": "Refactor and improve existing code using AI assistance",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["debugging"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Refactoring Patterns", "url": "https://refactoring.guru/refactoring", "type": "docs", "rating": 5 },
+        { "id": "r12", "title": "AI Code Review", "url": "https://github.com/features/copilot", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "ai-assistants", "to": "prompting" },
+    { "id": "e2", "from": "prompting", "to": "code-generation" },
+    { "id": "e3", "from": "code-generation", "to": "iteration" },
+    { "id": "e4", "from": "iteration", "to": "debugging" },
+    { "id": "e5", "from": "debugging", "to": "refactoring" }
+  ]
+}

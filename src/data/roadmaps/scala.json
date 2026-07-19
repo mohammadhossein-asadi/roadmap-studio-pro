@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "scala-1",
+      "label": "Scala Basics",
+      "description": "Scala syntax and fundamental concepts",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Scala Documentation", "url": "https://docs.scala-lang.org/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Scala Tour", "url": "https://docs.scala-lang.org/tour/tour-of-scala.html", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "scala-2",
+      "label": "Object-Oriented Scala",
+      "description": "Classes, traits, and objects",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["scala-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Classes and Objects", "url": "https://docs.scala-lang.org/tour/classes.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Traits Guide", "url": "https://docs.scala-lang.org/tour/traits.html", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "scala-3",
+      "label": "Functional Programming",
+      "description": "Higher-order functions, immutability, and FP patterns",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["scala-1"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Functional Programming", "url": "https://docs.scala-lang.org/tour/higher-order-functions.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "FP in Scala", "url": "https://www.coursera.org/learn/progfun1", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "scala-4",
+      "label": "Akka",
+      "description": "Actor-based concurrency and distributed systems",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["scala-2", "scala-3"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Akka Documentation", "url": "https://doc.akka.io/docs/akka/current/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Akka Quickstart", "url": "https://doc.akka.io/docs/akka/current/quickstart-scala.html", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "scala-5",
+      "label": "Apache Spark",
+      "description": "Big data processing with Spark and Scala",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["scala-3"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Spark Documentation", "url": "https://spark.apache.org/docs/latest/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Spark Scala Tutorial", "url": "https://spark.apache.org/docs/latest/quick-start.html", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "scala-6",
+      "label": "Testing",
+      "description": "Unit testing with ScalaTest and Specs2",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["scala-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "ScalaTest Guide", "url": "https://www.scalatest.org/user_guide/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Testing in Scala", "url": "https://docs.scala-lang.org/tour/testing-with-scalatest.html", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "scala-1", "to": "scala-2" },
+    { "id": "e2", "from": "scala-1", "to": "scala-3" },
+    { "id": "e3", "from": "scala-2", "to": "scala-4" },
+    { "id": "e4", "from": "scala-3", "to": "scala-4" },
+    { "id": "e5", "from": "scala-3", "to": "scala-5" },
+    { "id": "e6", "from": "scala-2", "to": "scala-6" }
+  ]
+}

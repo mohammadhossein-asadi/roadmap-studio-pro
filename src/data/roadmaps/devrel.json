@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "community",
+      "label": "Developer Community",
+      "description": "Building communities, engagement strategies, and community platforms",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "DevRel Collective Resources", "url": "https://devrelcollective.fun/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Community Engagement Guide - CMX Hub", "url": "https://cmxhub.com/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "content",
+      "label": "Developer Content",
+      "description": "Blog posts, tutorials, video content, and technical writing for developers",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["community"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Dev.to Community", "url": "https://dev.to/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "FreeCodeCamp Publication", "url": "https://www.freecodecamp.org/news/how-to-write-a-great-dev-blog/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "speaking",
+      "label": "Public Speaking",
+      "description": "Conference talks, meetups, workshop facilitation, and presentation skills",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 150,
+      "prerequisites": ["content"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Public Speaking Resources - Toastmasters", "url": "https://www.toastmasters.org/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Conference Speaking Tips", "url": "https://blog.vcarl.com/conference-speaking/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "advocacy",
+      "label": "Developer Advocacy",
+      "description": "Evangelism, product advocacy, developer experience, and feedback loops",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["community", "content"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "The DevRel Guide", "url": "https://devrel.net/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Developer Relations Book - Mary Thengvall", "url": "https://www.oreilly.com/library/view/developer-relations/9781491982136/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "tech-writing",
+      "label": "Technical Writing",
+      "description": "Documentation, API docs, tutorials, and developer-focused writing",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["content"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Write the Docs Community", "url": "https://www.writethedocs.org/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Google Technical Writing Course", "url": "https://developers.google.com/tech-writing", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "social-media",
+      "label": "Social Media & Presence",
+      "description": "Twitter/X, LinkedIn, personal branding, and online developer presence",
+      "difficulty": "beginner",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["content"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "DevRel Social Media Guide", "url": "https://devrel.net/strategy/social-media", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Personal Branding for Developers", "url": "https://www.davidecervellin.com/posts/personal-branding-for-developers/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "events",
+      "label": "Event Organization",
+      "description": "Hackathons, meetups, conferences, and virtual events",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 350,
+      "prerequisites": ["community"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "DevFest Guide - Google Developers", "url": "https://developers.google.com/community/gdg/devfest", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Meetup Organizer Guide", "url": "https://help.meetup.com/hc/en-us", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "open-source",
+      "label": "Open Source Advocacy",
+      "description": "Contributing to OSS, maintaining projects, and building open source communities",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["advocacy", "tech-writing"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "First Timers Only", "url": "https://www.firsttimersonly.com/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "GitHub Open Source Guides", "url": "https://opensource.guide/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "metrics-devrel",
+      "label": "DevRel Metrics",
+      "description": "Measuring community health, content performance, and advocacy ROI",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["advocacy"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "DevRel Metrics Guide - DevRel.net", "url": "https://devrel.net/strategy/measurement", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Community Metrics - CMX Hub", "url": "https://cmxhub.com/resources", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "product-feedback",
+      "label": "Developer Feedback Loops",
+      "description": "Collecting and channeling developer feedback to product teams",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 50,
+      "prerequisites": ["advocacy"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "DevRel Feedback Loop", "url": "https://devrel.net/strategy/feedback", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Developer Survey Design", "url": "https://www.stackoverflow.co/company/developer-survey/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "community", "to": "content" },
+    { "id": "e2", "from": "community", "to": "events" },
+    { "id": "e3", "from": "community", "to": "advocacy" },
+    { "id": "e4", "from": "content", "to": "speaking" },
+    { "id": "e5", "from": "content", "to": "tech-writing" },
+    { "id": "e6", "from": "content", "to": "social-media" },
+    { "id": "e7", "from": "advocacy", "to": "open-source" },
+    { "id": "e8", "from": "advocacy", "to": "metrics-devrel" },
+    { "id": "e9", "from": "advocacy", "to": "product-feedback" },
+    { "id": "e10", "from": "tech-writing", "to": "open-source" }
+  ]
+}

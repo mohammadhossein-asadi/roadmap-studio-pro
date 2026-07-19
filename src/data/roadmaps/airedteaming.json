@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "llm-basics",
+      "label": "LLM Security Basics",
+      "description": "How LLMs process inputs, tokenization, context window attack surface",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "OWASP Top 10 for LLMs", "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "NIST AI Risk Management", "url": "https://airc.nist.gov/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "prompt-injection",
+      "label": "Prompt Injection",
+      "description": "Direct injection, indirect injection, data exfiltration via prompts",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["llm-basics"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Simon Willison on Prompt Injection", "url": "https://simonwillison.net/series/prompt-injection/", "type": "article", "rating": 5 },
+        { "id": "r4", "title": "Prompt Injection Examples", "url": "https://learnprompting.org/docs/basics/prompt_injection", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "jailbreaks",
+      "label": "Jailbreak Techniques",
+      "description": "DAN, role-play attacks, encoding tricks, multi-turn attacks",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["prompt-injection"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Jailbreak Paper by Shen et al.", "url": "https://arxiv.org/abs/2307.15043", "type": "article", "rating": 5 },
+        { "id": "r6", "title": "Anthropic Harmlessness Research", "url": "https://www.anthropic.com/research", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "label": "Red Team Evaluation",
+      "description": "Systematic testing frameworks, scoring, automated red teaming tools",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["jailbreaks"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Microsoft PyRIT", "url": "https://github.com/Azure/PyRIT", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "Harmony AI Red Teaming", "url": "https://github.com/AI Safety Benchmark/Harmony", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "defense",
+      "label": "Defense Strategies",
+      "description": "Input validation, output filtering, guardrails, constitutional AI",
+      "difficulty": "expert",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["evaluation"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "NeMo Guardrails", "url": "https://github.com/NVIDIA/NeMo-Guardrails", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "LLM Guard", "url": "https://github.com/protectai/llm-guard", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "llm-basics", "to": "prompt-injection" },
+    { "id": "e2", "from": "prompt-injection", "to": "jailbreaks" },
+    { "id": "e3", "from": "jailbreaks", "to": "evaluation" },
+    { "id": "e4", "from": "evaluation", "to": "defense" }
+  ]
+}

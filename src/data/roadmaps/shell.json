@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "id": "shell-1",
+      "label": "Shell Commands",
+      "description": "Essential shell commands for daily use",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Shell Command Reference", "url": "https://www.gnu.org/software/bash/manual/bash.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Linux Command Line Tutorial", "url": "https://linuxcommand.org/tlcl.php", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "shell-2",
+      "label": "Scripting",
+      "description": "Write bash scripts for automation",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["shell-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Advanced Bash Scripting Guide", "url": "https://tldp.org/LDP/abs/html/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Shell Scripting Tutorial", "url": "https://www.shellscript.sh/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "shell-3",
+      "label": "Pipes & Redirection",
+      "description": "Data flow with pipes, stdin, stdout, and stderr",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["shell-1"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Bash Pipes and Redirection", "url": "https://tldp.org/LDP/abs/html/io-redirection.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Understanding Pipes", "url": "https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-files", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "shell-4",
+      "label": "Automation",
+      "description": "Automate tasks with cron and shell scripts",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["shell-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Cron How-To", "url": "https://help.ubuntu.com/community/CronHowto", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Automation with Bash", "url": "https://www.linode.com/docs/guides/automate-task-with-cron/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "shell-5",
+      "label": "System Administration",
+      "description": "Process management, monitoring, and maintenance",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["shell-2", "shell-3"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Linux System Administration", "url": "https://www.redhat.com/en/topics/linux", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Linux Admin Guide", "url": "https://www.linode.com/docs/guides/linux-system-administration-basics/", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "shell-1", "to": "shell-2" },
+    { "id": "e2", "from": "shell-1", "to": "shell-3" },
+    { "id": "e3", "from": "shell-2", "to": "shell-4" },
+    { "id": "e4", "from": "shell-2", "to": "shell-5" },
+    { "id": "e5", "from": "shell-3", "to": "shell-5" }
+  ]
+}

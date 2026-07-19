@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "llms",
+      "label": "LLM Fundamentals",
+      "description": "How LLMs work, API usage, token limits, streaming responses",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Anthropic API Docs", "url": "https://docs.anthropic.com/en/api/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "LLM University by Cohere", "url": "https://docs.cohere.com/docs/llmu", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Tool Use & Function Calling",
+      "description": "Define tools, handle tool results, structured outputs",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["llms"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Anthropic Tool Use", "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use", "type": "docs", "rating": 5 },
+        { "id": "r4", "title": "OpenAI Function Calling", "url": "https://platform.openai.com/docs/guides/function-calling", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "planning",
+      "label": "Planning & Reasoning",
+      "description": "Chain-of-thought, task decomposition, ReAct pattern, plan-and-execute",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["tools"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "LangGraph Planning", "url": "https://langchain-ai.github.io/langgraph/how-tos/planning/", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "Lilian Weng Agent Blog", "url": "https://lilianweng.github.io/posts/2023-06-23-agent/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "memory",
+      "label": "Memory Systems",
+      "description": "Short-term, long-term memory, RAG, vector stores, summarization",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["planning"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "LangChain Memory Concepts", "url": "https://python.langchain.com/docs/concepts/memory/", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "Pinecone Vector DB", "url": "https://docs.pinecone.io/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "label": "Agent Frameworks",
+      "description": "LangChain, CrewAI, AutoGen, Semantic Kernel, building custom frameworks",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["memory"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "LangGraph Documentation", "url": "https://langchain-ai.github.io/langgraph/", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "CrewAI Docs", "url": "https://docs.crewai.com/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "label": "Agent Evaluation",
+      "description": "Benchmarking agents, success metrics, cost tracking, reliability",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["frameworks"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "LangSmith Tracing", "url": "https://docs.smith.langchain.com/", "type": "docs", "rating": 5 },
+        { "id": "r12", "title": "Agent Evaluation Guide", "url": "https://docs.anthropic.com/en/docs/build-with-claude/agentic-evaluation", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "llms", "to": "tools" },
+    { "id": "e2", "from": "tools", "to": "planning" },
+    { "id": "e3", "from": "planning", "to": "memory" },
+    { "id": "e4", "from": "memory", "to": "frameworks" },
+    { "id": "e5", "from": "frameworks", "to": "evaluation" }
+  ]
+}

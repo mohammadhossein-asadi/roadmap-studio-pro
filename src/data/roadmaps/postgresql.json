@@ -1,0 +1,167 @@
+{
+  "nodes": [
+    {
+      "id": "sql-basics",
+      "label": "SQL Basics",
+      "description": "Fundamental SQL syntax, SELECT, INSERT, UPDATE, DELETE, and basic queries",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "SQL Tutorial - W3Schools", "url": "https://www.w3schools.com/sql/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "SQL Tutorial - Mode Analytics", "url": "https://mode.com/sql-tutorial/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ps-setup",
+      "label": "PostgreSQL Setup",
+      "description": "Installing, configuring, and connecting to PostgreSQL",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["sql-basics"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PostgreSQL Tutorial", "url": "https://www.postgresqltutorial.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "PostgreSQL Official Docs - Getting Started", "url": "https://www.postgresql.org/docs/current/tutorial-start.html", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "advanced-queries",
+      "label": "Advanced Queries",
+      "description": "JOINs, subqueries, CTEs, window functions, and aggregate functions",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 200,
+      "prerequisites": ["ps-setup"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PostgreSQL Window Functions Tutorial", "url": "https://www.postgresqltutorial.com/postgresql-window-functions/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Using CTEs in PostgreSQL", "url": "https://www.postgresql.org/docs/current/queries-with.html", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "indexing",
+      "label": "Indexing",
+      "description": "B-tree, Hash, GiST indexes, partial indexes, and index optimization",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 100,
+      "prerequisites": ["advanced-queries"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PostgreSQL Indexing - Use The Index, Luke", "url": "https://use-the-index-luke.com/sql/anatomy", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "PostgreSQL Index Types", "url": "https://www.postgresql.org/docs/current/indexes-types.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "performance",
+      "label": "Performance Tuning",
+      "description": "Query optimization, EXPLAIN ANALYZE, connection pooling, and configuration tuning",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 300,
+      "prerequisites": ["advanced-queries", "indexing"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PostgreSQL Performance Optimization", "url": "https://www.postgresql.org/docs/current/performance-tips.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "PgBouncer - Connection Pooling", "url": "https://www.pgbouncer.org/config.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "replication",
+      "label": "Replication",
+      "description": "Streaming replication, logical replication, and high availability setups",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["performance"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PostgreSQL Replication Documentation", "url": "https://www.postgresql.org/docs/current/different-replication-solutions.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Citus - Distributed PostgreSQL", "url": "https://docs.citusdata.com/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "backup",
+      "label": "Backup & Recovery",
+      "description": "pg_dump, pg_basebackup, WAL archiving, PITR, and disaster recovery",
+      "difficulty": "intermediate",
+      "x": 1000,
+      "y": 200,
+      "prerequisites": ["replication"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PostgreSQL Backup and Restore", "url": "https://www.postgresql.org/docs/current/backup-dump.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "pgBackRest Documentation", "url": "https://pgbackrest.org/configuration.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "data-modeling",
+      "label": "Data Modeling",
+      "description": "Database schema design, normalization, and entity-relationship modeling",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["ps-setup"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Database Design Course - freeCodeCamp", "url": "https://www.freecodecamp.org/news/database-normalization-in-sql-1bcf0e0e40ca/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "PostgreSQL Data Types", "url": "https://www.postgresql.org/docs/current/datatype.html", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "stored-procedures",
+      "label": "Stored Procedures & Functions",
+      "description": "PL/pgSQL, triggers, stored procedures, and server-side programming",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 350,
+      "prerequisites": ["advanced-queries"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PL/pgSQL Tutorial", "url": "https://www.postgresqltutorial.com/plgresql/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "PostgreSQL Triggers", "url": "https://www.postgresql.org/docs/current/sql-createtrigger.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "extensions",
+      "label": "PostgreSQL Extensions",
+      "description": "PostGIS, pg_trgm, hstore, JSONB, and custom extensions",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 50,
+      "prerequisites": ["ps-setup"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PostgreSQL Extensions Documentation", "url": "https://www.postgresql.org/docs/current/external-extensions.html", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "PostGIS Documentation", "url": "https://postgis.net/documentation/", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "sql-basics", "to": "ps-setup" },
+    { "id": "e2", "from": "ps-setup", "to": "advanced-queries" },
+    { "id": "e3", "from": "advanced-queries", "to": "indexing" },
+    { "id": "e4", "from": "advanced-queries", "to": "performance" },
+    { "id": "e5", "from": "indexing", "to": "performance" },
+    { "id": "e6", "from": "performance", "to": "replication" },
+    { "id": "e7", "from": "replication", "to": "backup" },
+    { "id": "e8", "from": "ps-setup", "to": "data-modeling" },
+    { "id": "e9", "from": "ps-setup", "to": "extensions" },
+    { "id": "e10", "from": "advanced-queries", "to": "stored-procedures" },
+    { "id": "e11", "from": "data-modeling", "to": "stored-procedures" }
+  ]
+}

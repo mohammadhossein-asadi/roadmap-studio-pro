@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "id": "react-components",
+      "label": "Components & JSX",
+      "description": "Functional components, JSX syntax, component composition",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "React Official Tutorial", "url": "https://react.dev/learn", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "React Crash Course - Traversy Media", "url": "https://www.youtube.com/watch?v=LDB4uaJ87e0", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "react-jsx",
+      "label": "JSX Deep Dive",
+      "description": "Expressions, fragments, conditional rendering, lists & keys",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["react-components"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "JSX Introduction - React Docs", "url": "https://react.dev/learn/writing-markup-with-jsx", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "React JSX Patterns - Alligator.io", "url": "https://alligator.io/react/jsx-introduction/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "react-props",
+      "label": "Props & State",
+      "description": "Passing data, state management, lifting state up, controlled components",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["react-jsx"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Thinking in React", "url": "https://react.dev/learn/thinking-in-react", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "React State Management - Kent C. Dodds", "url": "https://kentcdodds.com/blog/application-state-management-with-react", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "react-hooks",
+      "label": "Hooks",
+      "description": "useState, useEffect, useRef, useCallback, useMemo, custom hooks",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["react-props"],
+      "estimatedMinutes": 160,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Hooks at a Glance - React Docs", "url": "https://react.dev/reference/react/hooks", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Hooks Course - Fireship", "url": "https://www.youtube.com/watch?v=dpw9EHDh2bM", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "react-context",
+      "label": "Context API & State Libraries",
+      "description": "React Context, Redux, Zustand, Jotai, global state patterns",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["react-hooks"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "React Context Docs", "url": "https://react.dev/reference/react/createContext", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Zustand Getting Started", "url": "https://docs.pmnd.rs/zustand/getting-started/introduction", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "react-router",
+      "label": "React Router",
+      "description": "Client-side routing, nested routes, route parameters, navigation",
+      "difficulty": "intermediate",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["react-hooks"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "React Router Docs", "url": "https://reactrouter.com/en/main/start/tutorial", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "React Router Tutorial - Net Ninja", "url": "https://www.youtube.com/watch?v=Ul3y1L3oNvM", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "react-testing",
+      "label": "Testing React Apps",
+      "description": "Unit tests with React Testing Library, integration tests",
+      "difficulty": "advanced",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["react-context"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Testing Overview - React Docs", "url": "https://react.dev/learn/testing", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "React Testing Library Docs", "url": "https://testing-library.com/docs/react-testing-library/intro/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "react-patterns",
+      "label": "Design Patterns",
+      "description": "Compound components, render props, higher-order components, patterns",
+      "difficulty": "expert",
+      "x": 1500,
+      "y": 200,
+      "prerequisites": ["react-testing"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Patterns.dev - React Patterns", "url": "https://www.patterns.dev/posts/react-patterns/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Advanced React Patterns - Kent C. Dodds", "url": "https://kentcdodds.com/blog/advanced-react-patterns", "type": "article", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "react-components", "to": "react-jsx" },
+    { "id": "e2", "from": "react-jsx", "to": "react-props" },
+    { "id": "e3", "from": "react-props", "to": "react-hooks" },
+    { "id": "e4", "from": "react-hooks", "to": "react-context" },
+    { "id": "e5", "from": "react-hooks", "to": "react-router" },
+    { "id": "e6", "from": "react-context", "to": "react-testing" },
+    { "id": "e7", "from": "react-testing", "to": "react-patterns" }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "nodes": [
+    {
+      "id": "design-patterns",
+      "label": "Design Patterns",
+      "description": "GoF patterns, SOLID principles, and architectural design fundamentals",
+      "difficulty": "intermediate",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Refactoring Guru - Design Patterns", "url": "https://refactoring.guru/design-patterns", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "SOLID Principles Explained", "url": "https://digital.ai/whitepapers/solid-principles-object-oriented-design", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "system-design",
+      "label": "System Design",
+      "description": "Distributed systems, scalability, load balancing, and system architecture",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["design-patterns"],
+      "estimatedMinutes": 500,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "System Design Primer - GitHub", "url": "https://github.com/donnemartin/system-design-primer", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "System Design Interview - Educative", "url": "https://www.educative.io/courses/grokking-the-system-design-interview", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "microservices",
+      "label": "Microservices Architecture",
+      "description": "Service decomposition, inter-service communication, and microservice patterns",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 150,
+      "prerequisites": ["system-design"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Microservices Patterns - Chris Richardson", "url": "https://microservices.io/patterns/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Microservices Documentation", "url": "https://microservices.io/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "arch-patterns",
+      "label": "Architecture Patterns",
+      "description": "Event-driven, CQRS, hexagonal architecture, and clean architecture",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["design-patterns"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Clean Architecture by Robert Martin", "url": "https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Event-Driven Architecture", "url": "https://www.confluent.io/learn/event-driven-architecture/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud Architecture",
+      "description": "AWS/GCP/Azure patterns, serverless, containerization, and cloud-native design",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["system-design", "microservices"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "AWS Architecture Center", "url": "https://aws.amazon.com/architecture/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Cloud Architecture Patterns - Microsoft", "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "leadership",
+      "label": "Technical Leadership",
+      "description": "Decision-making, stakeholder communication, and architectural governance",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["cloud"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "The Software Architect's Role", "url": "https://www.amazon.com/Software-Architects-Handbook-Joseph-Ingiulmentov/dp/1801816113", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Architecture Decision Records", "url": "https://www.thoughtworks.com/insights/blog/software-architecture/Architecture-Decision-Records", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "data-architecture",
+      "label": "Data Architecture",
+      "description": "Database design, data lakes, streaming, and data governance patterns",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["system-design"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Data Architecture Patterns", "url": "https://www.enterpriseintegrationpatterns.com/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Kafka Documentation", "url": "https://kafka.apache.org/documentation/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "api-design",
+      "label": "API Design",
+      "description": "REST, GraphQL, gRPC, API versioning, and API gateway patterns",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 350,
+      "prerequisites": ["design-patterns"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Microsoft REST API Guidelines", "url": "https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "GraphQL Documentation", "url": "https://graphql.org/learn/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "observability",
+      "label": "Observability & Monitoring",
+      "description": "Logging, metrics, tracing, alerting, and distributed tracing",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["cloud", "data-architecture"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "OpenTelemetry Documentation", "url": "https://opentelemetry.io/docs/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Prometheus Documentation", "url": "https://prometheus.io/docs/introduction/overview/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "security-arch",
+      "label": "Security Architecture",
+      "description": "Zero trust, authentication patterns, encryption, and security best practices",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 50,
+      "prerequisites": ["system-design"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "OWASP Architecture Documentation", "url": "https://owasp.org/www-project-secure-software-development-framework/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Zero Trust Architecture", "url": "https://pages.nist.gov/800-207/sp800-207.pdf", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "design-patterns", "to": "system-design" },
+    { "id": "e2", "from": "design-patterns", "to": "arch-patterns" },
+    { "id": "e3", "from": "design-patterns", "to": "api-design" },
+    { "id": "e4", "from": "system-design", "to": "microservices" },
+    { "id": "e5", "from": "system-design", "to": "cloud" },
+    { "id": "e6", "from": "system-design", "to": "data-architecture" },
+    { "id": "e7", "from": "system-design", "to": "security-arch" },
+    { "id": "e8", "from": "microservices", "to": "cloud" },
+    { "id": "e9", "from": "cloud", "to": "leadership" },
+    { "id": "e10", "from": "cloud", "to": "observability" },
+    { "id": "e11", "from": "data-architecture", "to": "observability" }
+  ]
+}

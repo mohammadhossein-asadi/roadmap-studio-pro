@@ -12,8 +12,30 @@ interface Neuron {
   active: boolean;
 }
 
+function NeuronParticle({
+  position,
+  color,
+  scale,
+}: {
+  position: THREE.Vector3;
+  color: string;
+  scale: number;
+}) {
+  return (
+    <mesh position={position} scale={scale}>
+      <sphereGeometry args={[1, 12, 12]} />
+      <meshStandardMaterial
+        color={color}
+        emissive={color}
+        emissiveIntensity={2}
+        toneMapped={false}
+      />
+    </mesh>
+  );
+}
+
 function NeuralParticles({ count = 40 }: { count?: number }) {
-  const meshRef = useRef<THREE.InstancedMesh>(null);
+  const groupRef = useRef<THREE.Group>(null);
   const neurons = useMemo(() => {
     const ns: Neuron[] = [];
     for (let i = 0; i < count; i++) {
@@ -47,50 +69,38 @@ function NeuralParticles({ count = 40 }: { count?: number }) {
     return ns;
   }, [count]);
 
-  const dummy = useMemo(() => new THREE.Object3D(), []);
-  const colorArray = useMemo(() => {
-    const colors = new Float32Array(count * 3);
-    neurons.forEach((n, i) => {
-      const c = new THREE.Color(n.active ? "#8b5cf6" : "#3b82f6");
-      colors[i * 3] = c.r;
-      colors[i * 3 + 1] = c.g;
-      colors[i * 3 + 2] = c.b;
-    });
-    return colors;
-  }, [neurons, count]);
+  const scales = useRef<number[]>(neurons.map(() => 1));
 
   useFrame((state) => {
-    if (!meshRef.current) return;
+    if (!groupRef.current) return;
     const t = state.clock.elapsedTime;
 
+    const children = groupRef.current.children;
     neurons.forEach((n, i) => {
       n.position.add(n.velocity);
       if (n.position.length() > 2.5) n.velocity.multiplyScalar(-1);
 
       const pulse = n.active ? Math.sin(t * 3 + i) * 0.1 + 1 : 0.8;
-      dummy.position.copy(n.position);
-      dummy.scale.setScalar(pulse * 0.06);
-      dummy.updateMatrix();
-      meshRef.current!.setMatrixAt(i, dummy.matrix);
-    });
+      scales.current[i] = pulse * 0.06;
 
-    meshRef.current.instanceMatrix.needsUpdate = true;
+      if (children[i]) {
+        children[i].position.copy(n.position);
+        children[i].scale.setScalar(scales.current[i]);
+      }
+    });
   });
 
   return (
-    <instancedMesh ref={meshRef} args={[undefined, undefined, count]}>
-      <sphereGeometry args={[1, 12, 12]} />
-      <meshStandardMaterial
-        vertexColors
-        emissive="#8b5cf6"
-        emissiveIntensity={2}
-        toneMapped={false}
-      />
-      <instancedBufferAttribute
-        attach="instanceColor"
-        args={[colorArray, 3]}
-      />
-    </instancedMesh>
+    <group ref={groupRef}>
+      {neurons.map((n, i) => (
+        <NeuronParticle
+          key={i}
+          position={n.position}
+          color={n.active ? "#8b5cf6" : "#3b82f6"}
+          scale={0.06}
+        />
+      ))}
+    </group>
   );
 }
 
@@ -136,9 +146,9 @@ function EnergyFlow() {
 export function NeuralNetwork() {
   return (
     <div className="h-full w-full">
-      <Canvas camera={{ position: [0, 0, 4], fov: 60 }}>
-        <ambientLight intensity={0.2} />
-        <pointLight position={[5, 5, 5]} intensity={1} />
+      <Canvas camera={{ position: [0, 0, 4], fov: 60 }} style={{ background: "#050510" }}>
+        <ambientLight intensity={0.3} />
+        <pointLight position={[5, 5, 5]} intensity={1.5} color="#8b5cf6" />
         <Float speed={0.5} rotationIntensity={0.1} floatIntensity={0.3}>
           <NeuralParticles />
           <EnergyFlow />

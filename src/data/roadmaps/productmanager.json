@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "product-thinking",
+      "label": "Product Thinking",
+      "description": "Product mindset, value propositions, and strategic product vision",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Inspired by Marty Cagan - Summary", "url": "https://www.svpg.com/books/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Product Management Basics - ProductPlan", "url": "https://www.productplan.com/glossary/product-management/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "user-research-pm",
+      "label": "User Research",
+      "description": "Customer interviews, surveys, personas, and data-driven insights",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 150,
+      "prerequisites": ["product-thinking"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "UX Research Guide - NNGroup", "url": "https://www.nngroup.com/articles/user-research-methods/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Product Management User Research", "url": "https://www.productplan.com/user-research-for-product-managers/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "roadmapping",
+      "label": "Roadmapping",
+      "description": "Product roadmaps, prioritization frameworks, and feature prioritization",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 200,
+      "prerequisites": ["product-thinking"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Product Roadmap Guide - ProductPlan", "url": "https://www.productplan.com/guides/product-roadmap/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Prioritization Frameworks - Intercom", "url": "https://www.intercom.com/blog/prioritization-frameworks/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "agile",
+      "label": "Agile & Scrum",
+      "description": "Agile methodologies, Scrum ceremonies, Kanban, and sprint planning",
+      "difficulty": "beginner",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["product-thinking"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Agile Manifesto", "url": "https://agilemanifesto.org/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Scrum Guide", "url": "https://scrumguides.org/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "metrics",
+      "label": "Metrics & Analytics",
+      "description": "KPIs, A/B testing, conversion funnels, and data-driven decision making",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["roadmapping", "user-research-pm"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Product Metrics Guide - Amplitude", "url": "https://amplitude.com/blog/product-metrics", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Lean Analytics Book", "url": "http://theleananalytics.com/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "strategy",
+      "label": "Product Strategy",
+      "description": "Market analysis, competitive positioning, go-to-market strategy, and vision",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["metrics"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Product Strategy - Intercom", "url": "https://www.intercom.com/blog/product-strategy/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Good Strategy Bad Strategy - Summary", "url": "https://www.strategy-business.com/article/ldp004?gko=d1e5d", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "communication",
+      "label": "Stakeholder Communication",
+      "description": "Executive presentations, cross-functional communication, and alignment",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["roadmapping"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Product Communication - Lenny's Newsletter", "url": "https://www.lennysnewsletter.com/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "How to Communicate Product Strategy", "url": "https://www.productplan.com/product-strategy-communication/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing & Monetization",
+      "description": "Pricing models, subscription strategies, and revenue optimization",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["metrics"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Pricing Strategy Guide - PriceIntelligently", "url": "https://www.priceintelligently.com/blog/psychology-of-pricing", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "SaaS Pricing Guide", "url": "https://openviewpartners.com/blog/saas-pricing-models/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "technical-pm",
+      "label": "Technical Product Management",
+      "description": "Working with engineering teams, technical trade-offs, and system understanding",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 50,
+      "prerequisites": ["product-thinking"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Technical PM Guide - Productboard", "url": "https://www.productboard.com/blog/technical-product-manager/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "TPM Skills - The Product Folks", "url": "https://theproductfolks.com/what-is-a-technical-product-manager", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "growth",
+      "label": "Product Growth",
+      "description": "Growth loops, acquisition, activation, retention, and viral mechanics",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 50,
+      "prerequisites": ["strategy"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Growth Hacker - Sean Ellis", "url": "https://growthhackers.com/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Product-Led Growth Guide", "url": "https://www.productled.org/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "product-thinking", "to": "user-research-pm" },
+    { "id": "e2", "from": "product-thinking", "to": "roadmapping" },
+    { "id": "e3", "from": "product-thinking", "to": "agile" },
+    { "id": "e4", "from": "product-thinking", "to": "technical-pm" },
+    { "id": "e5", "from": "roadmapping", "to": "metrics" },
+    { "id": "e6", "from": "user-research-pm", "to": "metrics" },
+    { "id": "e7", "from": "metrics", "to": "strategy" },
+    { "id": "e8", "from": "roadmapping", "to": "communication" },
+    { "id": "e9", "from": "metrics", "to": "pricing" },
+    { "id": "e10", "from": "strategy", "to": "growth" }
+  ]
+}

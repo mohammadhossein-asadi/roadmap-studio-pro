@@ -1,0 +1,287 @@
+{
+  "nodes": [
+    {
+      "id": "fs-html",
+      "label": "HTML & Semantic Markup",
+      "description": "Semantic elements, forms, accessibility (ARIA), and document structure.",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": true,
+      "resources": [
+        { "id": "r1", "title": "MDN HTML Guide", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-css",
+      "label": "CSS & Responsive Design",
+      "description": "Flexbox, Grid, media queries, custom properties, and responsive layouts.",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["fs-html"],
+      "estimatedMinutes": 150,
+      "completed": true,
+      "resources": [
+        { "id": "r2", "title": "CSS Tricks Grid", "url": "https://css-tricks.com/snippets/css/complete-guide-grid/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-js",
+      "label": "JavaScript Core",
+      "description": "ES6+ syntax, async/await, modules, DOM manipulation, and event handling.",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["fs-html", "fs-css"],
+      "estimatedMinutes": 240,
+      "completed": true,
+      "resources": [
+        { "id": "r3", "title": "JavaScript.info", "url": "https://javascript.info/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-node",
+      "label": "Node.js & npm",
+      "description": "Runtime environment, package management, modules, and build tooling.",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 300,
+      "prerequisites": ["fs-js"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r4", "title": "Node.js Docs", "url": "https://nodejs.org/docs/latest/api/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-express",
+      "label": "Express.js Backend",
+      "description": "Server setup, routing, middleware, error handling, and REST API development.",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["fs-node"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Express Docs", "url": "https://expressjs.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-react",
+      "label": "React Development",
+      "description": "Components, hooks, state management, context, and React ecosystem tools.",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["fs-js"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r6", "title": "React Docs", "url": "https://react.dev/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-typescript",
+      "label": "TypeScript Full Stack",
+      "description": "Type system, interfaces, generics, and type-safe code across frontend and backend.",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 500,
+      "prerequisites": ["fs-express", "fs-react"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-databases",
+      "label": "Database Integration",
+      "description": "PostgreSQL, MongoDB, Redis, schema design, and data access patterns.",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 500,
+      "prerequisites": ["fs-express"],
+      "estimatedMinutes": 220,
+      "completed": false,
+      "resources": [
+        { "id": "r8", "title": "PostgreSQL Tutorial", "url": "https://www.postgresqltutorial.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-nextjs",
+      "label": "Next.js Full Stack",
+      "description": "App Router, Server Components, Server Actions, API routes, and SSR/SSG.",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 700,
+      "prerequisites": ["fs-react", "fs-typescript", "fs-databases"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Next.js Docs", "url": "https://nextjs.org/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-auth",
+      "label": "Authentication Flows",
+      "description": "JWT, OAuth, NextAuth.js, session management, and protected routes.",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 700,
+      "prerequisites": ["fs-typescript", "fs-databases"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r10", "title": "NextAuth Docs", "url": "https://next-auth.js.org/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-orm",
+      "label": "ORM & Data Layer",
+      "description": "Prisma/Drizzle schema, migrations, relations, queries, and type-safe data access.",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 700,
+      "prerequisites": ["fs-databases", "fs-typescript"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Prisma Docs", "url": "https://www.prisma.io/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-styling",
+      "label": "UI Libraries & Styling",
+      "description": "Tailwind CSS, shadcn/ui, Radix primitives, and design system integration.",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 300,
+      "prerequisites": ["fs-css", "fs-react"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r12", "title": "Tailwind Docs", "url": "https://tailwindcss.com/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-testing",
+      "label": "Full Stack Testing",
+      "description": "Unit, integration, and E2E testing across frontend and backend with Vitest and Playwright.",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 900,
+      "prerequisites": ["fs-nextjs", "fs-auth"],
+      "estimatedMinutes": 280,
+      "completed": false,
+      "resources": [
+        { "id": "r13", "title": "Playwright Docs", "url": "https://playwright.dev/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-deploy",
+      "label": "Deployment & DevOps",
+      "description": "Vercel, Docker, CI/CD pipelines, environment management, and production monitoring.",
+      "difficulty": "expert",
+      "x": 300,
+      "y": 900,
+      "prerequisites": ["fs-nextjs"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r14", "title": "Vercel Docs", "url": "https://vercel.com/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-perf",
+      "label": "Performance Optimization",
+      "description": "Core Web Vitals, caching, bundle optimization, image optimization, and profiling.",
+      "difficulty": "expert",
+      "x": 100,
+      "y": 900,
+      "prerequisites": ["fs-nextjs", "fs-orm"],
+      "estimatedMinutes": 280,
+      "completed": false,
+      "resources": [
+        { "id": "r15", "title": "Web.dev Performance", "url": "https://web.dev/performance", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-state",
+      "label": "State Management",
+      "description": "React Query, Zustand, Jotai, server state vs client state, and caching patterns.",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 500,
+      "prerequisites": ["fs-react"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r16", "title": "TanStack Query Docs", "url": "https://tanstack.com/query/latest", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fs-api-design",
+      "label": "API Design Patterns",
+      "description": "REST best practices, OpenAPI/Swagger, versioning, pagination, and error handling.",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 500,
+      "prerequisites": ["fs-express", "fs-typescript"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r17", "title": "OpenAPI Spec", "url": "https://swagger.io/specification/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "fs-system",
+      "label": "Architecture & System Design",
+      "description": "Monolith vs microservices, domain-driven design, and scalable system architecture.",
+      "difficulty": "expert",
+      "x": 400,
+      "y": 1100,
+      "prerequisites": ["fs-testing", "fs-deploy", "fs-perf"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r18", "title": "System Design Primer", "url": "https://github.com/donnemartin/system-design-primer", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "fs-html", "to": "fs-css" },
+    { "id": "e2", "from": "fs-html", "to": "fs-js" },
+    { "id": "e3", "from": "fs-css", "to": "fs-js" },
+    { "id": "e4", "from": "fs-js", "to": "fs-node" },
+    { "id": "e5", "from": "fs-node", "to": "fs-express" },
+    { "id": "e6", "from": "fs-js", "to": "fs-react" },
+    { "id": "e7", "from": "fs-express", "to": "fs-typescript" },
+    { "id": "e8", "from": "fs-react", "to": "fs-typescript" },
+    { "id": "e9", "from": "fs-express", "to": "fs-databases" },
+    { "id": "e10", "from": "fs-react", "to": "fs-nextjs" },
+    { "id": "e11", "from": "fs-typescript", "to": "fs-nextjs" },
+    { "id": "e12", "from": "fs-databases", "to": "fs-nextjs" },
+    { "id": "e13", "from": "fs-typescript", "to": "fs-auth" },
+    { "id": "e14", "from": "fs-databases", "to": "fs-auth" },
+    { "id": "e15", "from": "fs-databases", "to": "fs-orm" },
+    { "id": "e16", "from": "fs-typescript", "to": "fs-orm" },
+    { "id": "e17", "from": "fs-css", "to": "fs-styling" },
+    { "id": "e18", "from": "fs-react", "to": "fs-styling" },
+    { "id": "e19", "from": "fs-nextjs", "to": "fs-testing" },
+    { "id": "e20", "from": "fs-auth", "to": "fs-testing" },
+    { "id": "e21", "from": "fs-nextjs", "to": "fs-deploy" },
+    { "id": "e22", "from": "fs-nextjs", "to": "fs-perf" },
+    { "id": "e23", "from": "fs-orm", "to": "fs-perf" },
+    { "id": "e24", "from": "fs-react", "to": "fs-state" },
+    { "id": "e25", "from": "fs-express", "to": "fs-api-design" },
+    { "id": "e26", "from": "fs-typescript", "to": "fs-api-design" },
+    { "id": "e27", "from": "fs-testing", "to": "fs-system" },
+    { "id": "e28", "from": "fs-deploy", "to": "fs-system" },
+    { "id": "e29", "from": "fs-perf", "to": "fs-system" }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "id": "rn-1",
+      "label": "Expo",
+      "description": "Set up React Native projects with Expo",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 45,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Expo Getting Started", "url": "https://docs.expo.dev/get-started/installation/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Expo Tutorial for Beginners", "url": "https://docs.expo.dev/tutorial/introduction/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "rn-2",
+      "label": "Core Components",
+      "description": "View, Text, Image, ScrollView, and other core components",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["rn-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "React Native Core Components", "url": "https://reactnative.dev/docs/components-and-apis", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "React Native Essentials", "url": "https://www.freecodecamp.org/news/react-native-for-beginners/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rn-3",
+      "label": "Navigation",
+      "description": "React Navigation for stack, tab, and drawer navigators",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["rn-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "React Navigation Docs", "url": "https://reactnavigation.org/docs/getting-started/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Navigation in React Native", "url": "https://www.youtube.com/watch?v=nurdyG6mEeM8", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "rn-4",
+      "label": "State Management",
+      "description": "Manage state with Context, Redux, or Zustand",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["rn-2"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "React Native State Management", "url": "https://reactnative.dev/docs/state", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Redux Toolkit with React Native", "url": "https://redux-toolkit.js.org/tutorials/overview", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rn-5",
+      "label": "Native Modules",
+      "description": "Bridge native iOS/Android functionality",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["rn-3"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Native Modules Guide", "url": "https://reactnative.dev/docs/native-modules-intro", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Creating Native Modules", "url": "https://docs.expo.dev/modules/overview/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rn-6",
+      "label": "Testing",
+      "description": "Unit and integration testing with Jest and React Native Testing Library",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["rn-4"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Testing React Native Apps", "url": "https://reactnative.dev/docs/testing-overview", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "React Native Testing Library", "url": "https://callstack.github.io/react-native-testing-library/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rn-7",
+      "label": "Publishing",
+      "description": "Build and publish to App Store and Google Play",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["rn-5", "rn-6"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Expo App Publishing", "url": "https://docs.expo.dev/deploy/build-project/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "React Native Deployment Guide", "url": "https://reactnative.dev/docs/publishing-your-app", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "rn-1", "to": "rn-2" },
+    { "id": "e2", "from": "rn-2", "to": "rn-3" },
+    { "id": "e3", "from": "rn-2", "to": "rn-4" },
+    { "id": "e4", "from": "rn-3", "to": "rn-5" },
+    { "id": "e5", "from": "rn-4", "to": "rn-6" },
+    { "id": "e6", "from": "rn-5", "to": "rn-7" },
+    { "id": "e7", "from": "rn-6", "to": "rn-7" }
+  ]
+}

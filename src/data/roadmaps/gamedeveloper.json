@@ -1,0 +1,183 @@
+{
+  "nodes": [
+    {
+      "id": "programming-basics",
+      "label": "Programming Basics",
+      "description": "Variables, loops, conditionals, functions, and fundamental programming concepts",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "CS50 - Introduction to Computer Science", "url": "https://cs50.harvard.edu/x/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "freeCodeCamp - JavaScript Algorithms", "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "game-engines",
+      "label": "Game Engines",
+      "description": "Understanding game engines, renderers, and the game development pipeline",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["programming-basics"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unity Learn - Getting Started", "url": "https://learn.unity.com/pathway/unity-essentials", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Unreal Engine Documentation", "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "unity",
+      "label": "Unity Development",
+      "description": "Unity editor, C# scripting, components, prefabs, and scene management",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 150,
+      "prerequisites": ["game-engines"],
+      "estimatedMinutes": 500,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unity Manual", "url": "https://docs.unity3d.com/Manual/index.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Unity Tutorials - Brackeys (YouTube)", "url": "https://www.youtube.com/@Brackeys", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "unreal",
+      "label": "Unreal Engine Development",
+      "description": "Blueprints, C++, material editor, and Unreal's component system",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["game-engines"],
+      "estimatedMinutes": 500,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unreal Engine Learning", "url": "https://dev.epicgames.com/community/learning/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Unreal Engine Blueprint Tutorial", "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/blueprints-visual-scripting-in-unreal-engine", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "2d-games",
+      "label": "2D Game Development",
+      "description": "Sprites, tilemaps, 2D physics, animation, and 2D game mechanics",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 100,
+      "prerequisites": ["unity"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unity 2D Documentation", "url": "https://docs.unity3d.com/Manual/Unity2D.html", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Unity 2D Game Tutorial", "url": "https://learn.unity.com/tutorial/2d-game-play-and-mechanics", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "3d-games",
+      "label": "3D Game Development",
+      "description": "3D modeling concepts, terrain, lighting, shaders, and 3D game mechanics",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 300,
+      "prerequisites": ["unreal"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unreal Engine 3D Docs", "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/3d-modeling-in-unreal-engine", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Learn Unreal Engine - Udemy", "url": "https://www.udemy.com/topic/unreal-engine/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "physics",
+      "label": "Game Physics",
+      "description": "Rigid bodies, collision detection, physics engines, and particle systems",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 450,
+      "prerequisites": ["unreal"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unity Physics Manual", "url": "https://docs.unity3d.com/Manual/class-Physics.html", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "PhysX Documentation", "url": "https://nvidia-omniverse.github.io/PhysX/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "multiplayer",
+      "label": "Multiplayer & Networking",
+      "description": "Netcode, client-server architecture, synchronization, and lag compensation",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["unity", "unreal"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unity Netcode for GameObjects", "url": "https://docs-multiplayer.unity3d.com/", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Gabriel Gambetta - Fast-Paced Multiplayer", "url": "https://www.gabrielgambetta.com/client-server-game-architecture.html", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "publishing",
+      "label": "Game Publishing",
+      "description": "Steam, App Store, console certification, and marketing your game",
+      "difficulty": "intermediate",
+      "x": 1000,
+      "y": 200,
+      "prerequisites": ["multiplayer"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Steamworks Documentation", "url": "https://partner.steamgames.com/doc/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Indie Game Marketing Guide", "url": "https://howtomarketagame.com/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ai-games",
+      "label": "Game AI",
+      "description": "Behavior trees, pathfinding, state machines, and NPC intelligence",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["unity", "unreal"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unity NavMesh Documentation", "url": "https://docs.unity3d.com/Manual/NavMesh.html", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Game AI Pro - Free Book", "url": "http://gameaipro.com/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "procedural",
+      "label": "Procedural Generation",
+      "description": "Randomized content, terrain generation, and algorithmic level design",
+      "difficulty": "expert",
+      "x": 800,
+      "y": 50,
+      "prerequisites": ["3d-games"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Procedural Generation in Game Design", "url": "https://www.redblobgames.com/maps/terrain-from-noise/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "PCG Wiki", "url": "https://pcg.wikidot.com/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "programming-basics", "to": "game-engines" },
+    { "id": "e2", "from": "game-engines", "to": "unity" },
+    { "id": "e3", "from": "game-engines", "to": "unreal" },
+    { "id": "e4", "from": "unity", "to": "2d-games" },
+    { "id": "e5", "from": "unreal", "to": "3d-games" },
+    { "id": "e6", "from": "unreal", "to": "physics" },
+    { "id": "e7", "from": "unity", "to": "multiplayer" },
+    { "id": "e8", "from": "unreal", "to": "multiplayer" },
+    { "id": "e9", "from": "multiplayer", "to": "publishing" },
+    { "id": "e10", "from": "unity", "to": "ai-games" },
+    { "id": "e11", "from": "unreal", "to": "ai-games" },
+    { "id": "e12", "from": "3d-games", "to": "procedural" }
+  ]
+}

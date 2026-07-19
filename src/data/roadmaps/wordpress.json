@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "wp-1",
+      "label": "Themes",
+      "description": "Customize WordPress themes and appearance",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "WordPress Theme Handbook", "url": "https://developer.wordpress.org/themes/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Theme Development Tutorial", "url": "https://developer.wordpress.org/themes/getting-started/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "wp-2",
+      "label": "Plugins",
+      "description": "Develop and manage WordPress plugins",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["wp-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Plugin Handbook", "url": "https://developer.wordpress.org/plugins/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Plugin Development Tutorial", "url": "https://developer.wordpress.org/plugins/getting-started/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "wp-3",
+      "label": "Custom Post Types",
+      "description": "Create custom content types",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["wp-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Custom Post Types Docs", "url": "https://developer.wordpress.org/plugins/post-types/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "CPT Tutorial", "url": "https://developer.wordpress.org/plugins/post-types/registering-custom-post-types/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "wp-4",
+      "label": "REST API",
+      "description": "Interact with WordPress data via REST API",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["wp-2", "wp-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "REST API Handbook", "url": "https://developer.wordpress.org/rest-api/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "REST API Reference", "url": "https://developer.wordpress.org/rest-api/reference/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "wp-5",
+      "label": "Security",
+      "description": "WordPress security best practices",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["wp-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "WordPress Security Guide", "url": "https://developer.wordpress.org/plugins/security/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "WordPress Security Handbook", "url": "https://developer.wordpress.org/apis/security/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "wp-6",
+      "label": "Optimization",
+      "description": "Performance and caching optimization",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["wp-4"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Performance Guide", "url": "https://developer.wordpress.org/advanced-administration/performance/", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Caching in WordPress", "url": "https://developer.wordpress.org/advanced-administration/server/caching/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "wp-1", "to": "wp-2" },
+    { "id": "e2", "from": "wp-2", "to": "wp-3" },
+    { "id": "e3", "from": "wp-2", "to": "wp-4" },
+    { "id": "e4", "from": "wp-3", "to": "wp-4" },
+    { "id": "e5", "from": "wp-2", "to": "wp-5" },
+    { "id": "e6", "from": "wp-4", "to": "wp-6" }
+  ]
+}
