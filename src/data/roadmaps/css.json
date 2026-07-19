@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "css-1",
+      "label": "CSS Selectors",
+      "description": "Target HTML elements with CSS selectors",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MDN CSS Selectors", "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "CSS Selector Cheat Sheet", "url": "https://css-tricks.com/multiple-class-id/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "css-2",
+      "label": "Flexbox",
+      "description": "One-dimensional layout with Flexbox",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["css-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Flexbox Guide", "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Flexbox Froggy", "url": "https://flexboxfroggy.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "css-3",
+      "label": "CSS Grid",
+      "description": "Two-dimensional layout with CSS Grid",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["css-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Grid Guide", "url": "https://css-tricks.com/snippets/css/complete-guide-grid/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Grid Garden", "url": "https://cssgridgarden.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "css-4",
+      "label": "Responsive Design",
+      "description": "Media queries and responsive layouts",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["css-2", "css-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MDN Responsive Design", "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Responsive Web Design", "url": "https://web.dev/responsive-web-design-basics/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "css-5",
+      "label": "Animations",
+      "description": "CSS transitions and keyframe animations",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["css-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MDN CSS Animations", "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "CSS Animation Tutorial", "url": "https://www.w3schools.com/css/css3_animations.asp", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "css-6",
+      "label": "Preprocessors",
+      "description": "SASS and CSS architecture patterns",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["css-4"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Sass Documentation", "url": "https://sass-lang.com/documentation/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Sass Tutorial", "url": "https://sass-lang.com/guide/", "type": "tutorial", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "css-1", "to": "css-2" },
+    { "id": "e2", "from": "css-1", "to": "css-3" },
+    { "id": "e3", "from": "css-2", "to": "css-4" },
+    { "id": "e4", "from": "css-3", "to": "css-4" },
+    { "id": "e5", "from": "css-2", "to": "css-5" },
+    { "id": "e6", "from": "css-4", "to": "css-6" }
+  ]
+}

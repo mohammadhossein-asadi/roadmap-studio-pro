@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "syntax",
+      "label": "C# Syntax",
+      "description": "Variables, types, control flow, string interpolation, null operators",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "C# Language Reference", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "C# 12 New Features", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "oop",
+      "label": "Object-Oriented Programming",
+      "description": "Classes, interfaces, inheritance, polymorphism, encapsulation",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["syntax"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "C# OOP Tutorial", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop", "type": "tutorial", "rating": 5 },
+        { "id": "r4", "title": "Design Patterns in C#", "url": "https://www.exceptionnotfound.net/series/design-patterns-in-c/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "linq",
+      "label": "LINQ",
+      "description": "Query syntax, method syntax, expression trees, deferred execution",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["oop"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "LINQ Tutorial", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/linq/", "type": "tutorial", "rating": 5 },
+        { "id": "r6", "title": "101 LINQ Samples", "url": "https://learn.microsoft.com/en-us/samples/dotnet/linq/101-linq-samples/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "async",
+      "label": "Async/Await",
+      "description": "Task-based async pattern, cancellation tokens, parallel processing",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["linq"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Async-Await Docs", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/", "type": "tutorial", "rating": 5 },
+        { "id": "r8", "title": "Stephen Cleary Async Best Practices", "url": "https://blog.stephencleary.com/2012/07/dont-block-on-async-code.html", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "dotnet-core",
+      "label": ".NET Core / .NET 8",
+      "description": "Runtime, SDK, dependency injection, configuration, hosting",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["async"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": ".NET Documentation", "url": "https://learn.microsoft.com/en-us/dotnet/", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": ".NET 8 What's New", "url": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ef-core",
+      "label": "Entity Framework Core",
+      "description": "ORM, migrations, DbContext, LINQ queries, relationship mapping",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["dotnet-core"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "EF Core Getting Started", "url": "https://learn.microsoft.com/en-us/ef/core/get-started/", "type": "tutorial", "rating": 5 },
+        { "id": "r12", "title": "EF Core in Depth", "url": "https://learn.microsoft.com/en-us/ef/core/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "Testing in C#",
+      "description": "xUnit, NUnit, Moq, integration testing, test containers",
+      "difficulty": "advanced",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["ef-core"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r13", "title": "xUnit Documentation", "url": "https://xunit.net/docs/getting-started/", "type": "tutorial", "rating": 5 },
+        { "id": "r14", "title": "Moq GitHub", "url": "https://github.com/moq/moq4", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "syntax", "to": "oop" },
+    { "id": "e2", "from": "oop", "to": "linq" },
+    { "id": "e3", "from": "linq", "to": "async" },
+    { "id": "e4", "from": "async", "to": "dotnet-core" },
+    { "id": "e5", "from": "dotnet-core", "to": "ef-core" },
+    { "id": "e6", "from": "ef-core", "to": "testing" }
+  ]
+}

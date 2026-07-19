@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "sb-setup",
+      "label": "Spring Boot Setup",
+      "description": "Project initialization, auto-configuration, Spring Initializr, application properties",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Spring Boot Getting Started", "url": "https://spring.io/guides/gs/spring-boot", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Spring Boot Tutorial - Amigoscode", "url": "https://www.youtube.com/watch?v=9SGDpanrc8U", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sb-rest",
+      "label": "REST APIs & Controllers",
+      "description": "@RestController, @RequestMapping, request/response handling, validation",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["sb-setup"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Building REST APIs - Spring Guide", "url": "https://spring.io/guides/gs/rest-service", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "REST API with Spring Boot - Amigoscode", "url": "https://www.youtube.com/watch?v=-0xN2cT3y7I", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sb-data",
+      "label": "Data Access & JPA",
+      "description": "Spring Data JPA, repositories, entity relationships, migrations with Flyway",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["sb-rest"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Spring Data JPA Guide", "url": "https://spring.io/guides/gs/accessing-data-jpa", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Spring Data JPA - Baeldung", "url": "https://www.baeldung.com/spring-data-jpa", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sb-security",
+      "label": "Spring Security",
+      "description": "Authentication, authorization, JWT, OAuth2, method-level security",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["sb-data"],
+      "estimatedMinutes": 160,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Spring Security Guide", "url": "https://spring.io/guides/gs/securing-web", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Spring Security JWT Tutorial - Baeldung", "url": "https://www.baeldung.com/spring-security-jwt", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sb-testing",
+      "label": "Testing",
+      "description": "Spring Boot Test, @WebMvcTest, @DataJpaTest, integration tests, TestContainers",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["sb-security"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Testing in Spring Boot - Official Docs", "url": "https://docs.spring.io/s-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Testing Spring Boot - Baeldung", "url": "https://www.baeldung.com/spring-boot-testing", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sb-microservices",
+      "label": "Microservices Architecture",
+      "description": "Service discovery, API gateway, circuit breaker, distributed tracing",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["sb-testing"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Spring Cloud Documentation", "url": "https://spring.io/projects/spring-cloud", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Microservices with Spring Boot - Amigoscode", "url": "https://www.youtube.com/watch?v=4wUk3bA3hZw", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sb-deploy",
+      "label": "Deployment & Production",
+      "description": "Docker containerization, Kubernetes, CI/CD, monitoring with Actuator",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["sb-microservices"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Spring Boot Docker Guide", "url": "https://spring.io/guides/gs/spring-boot-docker", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Spring Boot Actuator Docs", "url": "https://docs.spring.io/s-boot/docs/current/reference/html/actuator.html", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "sb-setup", "to": "sb-rest" },
+    { "id": "e2", "from": "sb-rest", "to": "sb-data" },
+    { "id": "e3", "from": "sb-data", "to": "sb-security" },
+    { "id": "e4", "from": "sb-security", "to": "sb-testing" },
+    { "id": "e5", "from": "sb-testing", "to": "sb-microservices" },
+    { "id": "e6", "from": "sb-microservices", "to": "sb-deploy" }
+  ]
+}

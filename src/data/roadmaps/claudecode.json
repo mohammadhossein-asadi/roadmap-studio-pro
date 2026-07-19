@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "setup",
+      "label": "Installation & Setup",
+      "description": "Install Claude Code CLI and configure your environment",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 30,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Claude Code Documentation", "url": "https://docs.anthropic.com/en/docs/claude-code", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Claude Code Quick Start", "url": "https://docs.anthropic.com/en/docs/claude-code/quickstart", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "basics",
+      "label": "Basic Commands",
+      "description": "Learn core commands: read, write, edit, bash, grep, glob",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["setup"],
+      "estimatedMinutes": 45,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Claude Code CLI Reference", "url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference", "type": "docs", "rating": 5 },
+        { "id": "r4", "title": "Getting Started with Claude Code", "url": "https://www.youtube.com/watch?v=oTBbSIKJMhQ", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "prompts",
+      "label": "Effective Prompting",
+      "description": "Write clear, effective prompts for Claude Code",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["basics"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Claude Code Best Practices", "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "Prompt Engineering Guide", "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Tool Integration",
+      "description": "Use MCP servers, custom tools, and external integrations",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["prompts"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "MCP in Claude Code", "url": "https://docs.anthropic.com/en/docs/claude-code/mcp", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "Model Context Protocol Docs", "url": "https://modelcontextprotocol.io/introduction", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "automation",
+      "label": "Automation & Hooks",
+      "description": "Automate repetitive tasks with hooks and scripts",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["tools"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Claude Code Hooks", "url": "https://docs.anthropic.com/en/docs/claude-code/hooks", "type": "docs", "rating": 4 },
+        { "id": "r10", "title": "Automating with Claude Code", "url": "https://www.anthropic.com/engineering/claude-code-best-practices", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "workflows",
+      "label": "Multi-file Workflows",
+      "description": "Handle complex multi-file changes and refactoring",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["automation"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Claude Code Workflows", "url": "https://docs.anthropic.com/en/docs/claude-code/workflows", "type": "docs", "rating": 4 },
+        { "id": "r12", "title": "Composing Agent Workflows", "url": "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/composing-workflows", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "best-practices",
+      "label": "Best Practices",
+      "description": "Security, performance, and productivity tips",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["workflows"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r13", "title": "Claude Code Security", "url": "https://docs.anthropic.com/en/docs/claude-code/security", "type": "docs", "rating": 5 },
+        { "id": "r14", "title": "Scaling Claude Code Teams", "url": "https://docs.anthropic.com/en/docs/claude-code/team-deployment", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "setup", "to": "basics" },
+    { "id": "e2", "from": "basics", "to": "prompts" },
+    { "id": "e3", "from": "prompts", "to": "tools" },
+    { "id": "e4", "from": "tools", "to": "automation" },
+    { "id": "e5", "from": "automation", "to": "workflows" },
+    { "id": "e6", "from": "workflows", "to": "best-practices" }
+  ]
+}

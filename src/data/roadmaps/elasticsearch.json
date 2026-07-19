@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "es-1",
+      "label": "Indexing",
+      "description": "Create and manage Elasticsearch indices",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Elasticsearch Docs", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Elasticsearch Tutorial", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "es-2",
+      "label": "Queries",
+      "description": "Search and filter data with query DSL",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["es-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Query DSL Reference", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Search Queries Tutorial", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "es-3",
+      "label": "Aggregations",
+      "description": "Analytics and statistical aggregations",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["es-2"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Aggregations Reference", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Aggregations Tutorial", "url": "https://www.elastic.co/blog/aggregate-your-data-with-elasticsearch-aggregations", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "es-4",
+      "label": "Mapping",
+      "description": "Define field mappings and types",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["es-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Mapping Reference", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Field Data Types", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "es-5",
+      "label": "Cluster Management",
+      "description": "Manage Elasticsearch clusters and nodes",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["es-4"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Cluster Health", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Cluster Management Guide", "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "es-6",
+      "label": "Kibana",
+      "description": "Visualization and dashboard tool",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["es-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Kibana Documentation", "url": "https://www.elastic.co/guide/en/kibana/current/index.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Kibana Getting Started", "url": "https://www.elastic.co/guide/en/kibana/current/get-started.html", "type": "tutorial", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "es-1", "to": "es-2" },
+    { "id": "e2", "from": "es-2", "to": "es-3" },
+    { "id": "e3", "from": "es-1", "to": "es-4" },
+    { "id": "e4", "from": "es-4", "to": "es-5" },
+    { "id": "e5", "from": "es-2", "to": "es-6" }
+  ]
+}

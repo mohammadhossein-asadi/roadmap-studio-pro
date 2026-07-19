@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "html-1",
+      "label": "HTML Elements",
+      "description": "Basic HTML elements and structure",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MDN HTML Reference", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "HTML Tutorial", "url": "https://www.w3schools.com/html/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "html-2",
+      "label": "Forms",
+      "description": "HTML forms and input elements",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["html-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MDN Forms Guide", "url": "https://developer.mozilla.org/en-US/docs/Learn/Forms", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "HTML Forms Tutorial", "url": "https://www.w3schools.com/html/html_forms.asp", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "html-3",
+      "label": "Semantic HTML",
+      "description": "Meaningful HTML with semantic elements",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["html-1"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MDN Semantic HTML", "url": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Why Use Semantic HTML", "url": "https://www.freecodecamp.org/news/semantic-html5-elements/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "html-4",
+      "label": "Accessibility",
+      "description": "Make HTML accessible to all users",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["html-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MDN Accessibility", "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Web Accessibility Guide", "url": "https://www.w3.org/WAI/standards-guidelines/wcag/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "html-5",
+      "label": "SEO",
+      "description": "Search engine optimization with HTML",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["html-3"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Google SEO Guide", "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "HTML SEO Best Practices", "url": "https://www.semrush.com/blog/html-for-seo/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "html-6",
+      "label": "Performance",
+      "description": "Optimize HTML for better performance",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["html-4", "html-5"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Web Performance Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/Performance", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "HTML Performance Tips", "url": "https://web.dev/fast/", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "html-1", "to": "html-2" },
+    { "id": "e2", "from": "html-1", "to": "html-3" },
+    { "id": "e3", "from": "html-3", "to": "html-4" },
+    { "id": "e4", "from": "html-3", "to": "html-5" },
+    { "id": "e5", "from": "html-4", "to": "html-6" },
+    { "id": "e6", "from": "html-5", "to": "html-6" }
+  ]
+}

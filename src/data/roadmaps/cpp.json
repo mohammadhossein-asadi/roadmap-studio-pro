@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "cpp-basics",
+      "label": "C++ Basics & Syntax",
+      "description": "Variables, control flow, functions, references, const, stdio",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "C++ Tutorial - LearnCpp", "url": "https://www.learncpp.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "C++ Crash Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=RUBIb1Gz5t4", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cpp-oop",
+      "label": "Object-Oriented C++",
+      "description": "Classes, inheritance, polymorphism, virtual functions, destructors",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["cpp-basics"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "OOP in C++ - LearnCpp", "url": "https://www.learncpp.com/cpp-tutorial/classes-and-object-oriented-programming/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "C++ OOP - The Cherno", "url": "https://www.youtube.com/watch?v=ZQ6uaZ4LzWE", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cpp-stl",
+      "label": "Standard Template Library",
+      "description": "Vectors, maps, sets, algorithms, iterators, strings",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["cpp-oop"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "STL Tutorial - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/the-c-standard-template-library-stl/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "STL Full Course - Codeforces", "url": "https://codeforces.com/blog/entry/84505", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cpp-templates",
+      "label": "Templates & Generic Programming",
+      "description": "Function templates, class templates, template specialization, SFINAE",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["cpp-stl"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "C++ Templates - cppreference", "url": "https://en.cppreference.com/w/cpp/language/templates", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "C++ Templates Book - Josuttis", "url": "https://www.amazon.com/C-Templates-Complete-Guide-2nd/dp/0321714125", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cpp-memory",
+      "label": "Memory Management",
+      "description": "Smart pointers, RAII, move semantics, allocators, memory pools",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["cpp-templates"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Smart Pointers - CPP Reference", "url": "https://en.cppreference.com/w/cpp/memory", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "C++ Smart Pointers - The Cherno", "url": "https://www.youtube.com/watch?v=UOB0OBfOW7I", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cpp-modern",
+      "label": "Modern C++ (C++11/14/17/20)",
+      "description": "Auto, range-based for, lambdas, constexpr, structured bindings, concepts",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["cpp-memory"],
+      "estimatedMinutes": 160,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Modern C++ Features - CppReference", "url": "https://en.cppreference.com/w/cpp/17", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "C++20 Features - CppCon", "url": "https://www.youtube.com/watch?v=YZH2BFkKqyU", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cpp-concurrency",
+      "label": "Concurrency & Multithreading",
+      "description": "Threads, mutexes, condition variables, atomics, async, futures",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["cpp-modern"],
+      "estimatedMinutes": 170,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "C++ Concurrency in Action (Book)", "url": "https://www.manning.com/books/c-plus-plus-concurrency-in-action-second-edition", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "C++ Threading - The Cherno", "url": "https://www.youtube.com/watch?v=TPpFlwq1pBQ", "type": "video", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "cpp-basics", "to": "cpp-oop" },
+    { "id": "e2", "from": "cpp-oop", "to": "cpp-stl" },
+    { "id": "e3", "from": "cpp-stl", "to": "cpp-templates" },
+    { "id": "e4", "from": "cpp-templates", "to": "cpp-memory" },
+    { "id": "e5", "from": "cpp-memory", "to": "cpp-modern" },
+    { "id": "e6", "from": "cpp-modern", "to": "cpp-concurrency" }
+  ]
+}

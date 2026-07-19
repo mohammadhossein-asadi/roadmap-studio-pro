@@ -3,12 +3,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import { Search, Menu, X, Compass, BarChart3, Users } from "lucide-react";
+import { Search, Menu, X, Compass, BarChart3 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SPRING_CONFIG } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 
-const navIcons = [Compass, BarChart3, Users];
+const navLinks = [
+  { label: "Roadmaps", href: "/dashboard", icon: Compass },
+  { label: "Dashboard", href: "/dashboard", icon: BarChart3 },
+];
 
 export function GlobalNav() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,6 +35,15 @@ export function GlobalNav() {
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
+  useEffect(() => {
+    if (!cmdOpen) return;
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setCmdOpen(false);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [cmdOpen]);
+
   return (
     <>
       <motion.header
@@ -54,20 +66,16 @@ export function GlobalNav() {
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
-            {["Roadmaps", "Dashboard", "Community"].map((label, i) => {
-              const Icon = navIcons[i];
-              const href = label === "Roadmaps" ? "/roadmap/frontend" : label === "Dashboard" ? "/dashboard" : "#";
-              return (
-                <Link
-                  key={label}
-                  href={href}
-                  className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm text-white/70 transition-colors hover:bg-white/10 hover:text-white"
-                >
-                  <Icon className="h-4 w-4" />
-                  {label}
-                </Link>
-              );
-            })}
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+              >
+                <link.icon className="h-4 w-4" />
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           <div className="flex items-center gap-3">
@@ -88,6 +96,7 @@ export function GlobalNav() {
               variant="ghost"
               size="icon"
               className="md:hidden"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -103,23 +112,22 @@ export function GlobalNav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 top-16 z-40 bg-black/95 backdrop-blur-xl md:hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
           >
             <div className="flex flex-col gap-2 p-6">
-              {["Roadmaps", "Dashboard", "Community"].map((label, i) => {
-                const Icon = navIcons[i];
-                const href = label === "Roadmaps" ? "/roadmap/frontend" : label === "Dashboard" ? "/dashboard" : "#";
-                return (
-                  <Link
-                    key={label}
-                    href={href}
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
-                  >
-                    <Icon className="h-5 w-5" />
-                    {label}
-                  </Link>
-                );
-              })}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-3 rounded-xl px-4 py-3 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+                >
+                  <link.icon className="h-5 w-5" />
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </motion.div>
         )}
@@ -133,6 +141,9 @@ export function GlobalNav() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[60] flex items-start justify-center pt-[20vh] bg-black/60 backdrop-blur-sm"
             onClick={() => setCmdOpen(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Search command palette"
           >
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
@@ -146,6 +157,7 @@ export function GlobalNav() {
                 <Search className="h-5 w-5 text-white/40" />
                 <input
                   autoFocus
+                  aria-label="Search roadmaps and topics"
                   placeholder="Search roadmaps, topics, resources..."
                   className="flex-1 bg-transparent text-white placeholder-white/40 outline-none"
                 />

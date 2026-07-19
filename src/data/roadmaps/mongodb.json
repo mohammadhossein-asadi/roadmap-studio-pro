@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "mongo-1",
+      "label": "CRUD Operations",
+      "description": "Create, read, update, and delete documents",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MongoDB CRUD Operations", "url": "https://www.mongodb.com/docs/manual/crud/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "MongoDB University - M001", "url": "https://university.mongodb.com/courses/M001/about", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mongo-2",
+      "label": "Schema Design",
+      "description": "Design efficient document schemas and data models",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["mongo-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Data Modeling Concepts", "url": "https://www.mongodb.com/docs/manual/core/data-model-design/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "MongoDB Schema Design Best Practices", "url": "https://www.mongodb.com/blog/post/building-with-patterns-a-summary", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mongo-3",
+      "label": "Indexing",
+      "description": "Create indexes for query performance optimization",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["mongo-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Indexes Overview", "url": "https://www.mongodb.com/docs/manual/indexes/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "MongoDB Indexing Strategies", "url": "https://www.mongodb.com/blog/post/performance-best-practices-indexing", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mongo-4",
+      "label": "Aggregation Framework",
+      "description": "Process and transform data with aggregation pipelines",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["mongo-2", "mongo-3"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Aggregation Pipeline Tutorial", "url": "https://www.mongodb.com/docs/manual/core/aggregation-pipeline/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Aggregation Framework Examples", "url": "https://www.mongodb.com/blog/post/aggregation-framework-examples", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mongo-5",
+      "label": "Replica Sets",
+      "description": "High availability and data redundancy with replica sets",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["mongo-3"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Replica Sets Guide", "url": "https://www.mongodb.com/docs/manual/replication/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "MongoDB Replica Set Tutorial", "url": "https://www.mongodb.com/docs/manual/tutorial/deploy-replica-set/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mongo-6",
+      "label": "MongoDB Atlas",
+      "description": "Cloud database service for MongoDB",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["mongo-4"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MongoDB Atlas Documentation", "url": "https://www.mongodb.com/docs/atlas/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Getting Started with Atlas", "url": "https://www.mongodb.com/docs/atlas/getting-started/", "type": "tutorial", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "mongo-1", "to": "mongo-2" },
+    { "id": "e2", "from": "mongo-1", "to": "mongo-3" },
+    { "id": "e3", "from": "mongo-2", "to": "mongo-4" },
+    { "id": "e4", "from": "mongo-3", "to": "mongo-4" },
+    { "id": "e5", "from": "mongo-3", "to": "mongo-5" },
+    { "id": "e6", "from": "mongo-4", "to": "mongo-6" }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "nodes": [
+    {
+      "id": "django-1",
+      "label": "Models",
+      "description": "Define database models and migrations",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Django Models Docs", "url": "https://docs.djangoproject.com/en/stable/topics/db/models/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Django Tutorial Part 2", "url": "https://docs.djangoproject.com/en/stable/intro/tutorial02/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "django-2",
+      "label": "Views",
+      "description": "Handle HTTP requests and return responses",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["django-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Django Views Docs", "url": "https://docs.djangoproject.com/en/stable/topics/http/views/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Class-Based Views", "url": "https://docs.djangoproject.com/en/stable/topics/class-based-views/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "django-3",
+      "label": "Templates",
+      "description": "Django template engine for rendering HTML",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["django-2"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Django Templates Docs", "url": "https://docs.djangoproject.com/en/stable/topics/templates/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Template Language Guide", "url": "https://docs.djangoproject.com/en/stable/ref/templates/language/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "django-4",
+      "label": "Forms",
+      "description": "Form handling and validation",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["django-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Django Forms Docs", "url": "https://docs.djangoproject.com/en/stable/topics/forms/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "ModelForms Guide", "url": "https://docs.djangoproject.com/en/stable/topics/forms/modelforms/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "django-5",
+      "label": "Authentication",
+      "description": "User authentication and permissions",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["django-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Django Auth Docs", "url": "https://docs.djangoproject.com/en/stable/topics/auth/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Authentication Views", "url": "https://docs.djangoproject.com/en/stable/topics/auth/default/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "django-6",
+      "label": "REST API",
+      "description": "Build APIs with Django REST Framework",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["django-4", "django-5"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "DRF Documentation", "url": "https://www.django-rest-framework.org/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "DRF Tutorial", "url": "https://www.django-rest-framework.org/tutorial/1-serialization/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "django-7",
+      "label": "Testing",
+      "description": "Write and run tests in Django",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["django-4", "django-5"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Django Testing Docs", "url": "https://docs.djangoproject.com/en/stable/topics/testing/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Testing Guide", "url": "https://docs.djangoproject.com/en/stable/topics/testing/overview/", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "django-1", "to": "django-2" },
+    { "id": "e2", "from": "django-2", "to": "django-3" },
+    { "id": "e3", "from": "django-2", "to": "django-4" },
+    { "id": "e4", "from": "django-2", "to": "django-5" },
+    { "id": "e5", "from": "django-4", "to": "django-6" },
+    { "id": "e6", "from": "django-5", "to": "django-6" },
+    { "id": "e7", "from": "django-4", "to": "django-7" },
+    { "id": "e8", "from": "django-5", "to": "django-7" }
+  ]
+}

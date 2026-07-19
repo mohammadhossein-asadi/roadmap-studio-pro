@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "python",
+      "label": "Python for Data Science",
+      "description": "NumPy, Pandas, Jupyter notebooks, data structures",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python Data Science Handbook", "url": "https://jakevdp.github.io/PythonDataScienceHandbook/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Kaggle Python Course", "url": "https://www.kaggle.com/learn/python", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "statistics",
+      "label": "Statistics & Probability",
+      "description": "Distributions, hypothesis testing, A/B testing, Bayesian inference",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["python"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "StatQuest YouTube", "url": "https://www.youtube.com/c/joshstarmer", "type": "video", "rating": 5 },
+        { "id": "r4", "title": "Think Stats Book", "url": "https://greenteapress.com/thinkstats2/html/index.html", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "label": "Machine Learning",
+      "description": "Regression, classification, clustering, scikit-learn, model evaluation",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["statistics"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "scikit-learn Tutorials", "url": "https://scikit-learn.org/stable/tutorial/index.html", "type": "tutorial", "rating": 5 },
+        { "id": "r6", "title": "Kaggle ML Course", "url": "https://www.kaggle.com/learn/intro-to-machine-learning", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "visualization",
+      "label": "Data Visualization",
+      "description": "Matplotlib, Seaborn, Plotly, dashboarding with Streamlit",
+      "difficulty": "beginner",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["python"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Matplotlib Tutorials", "url": "https://matplotlib.org/stable/tutorials/index.html", "type": "tutorial", "rating": 5 },
+        { "id": "r8", "title": "From Data to Viz", "url": "https://www.data-to-viz.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "storytelling",
+      "label": "Data Storytelling",
+      "description": "Communicating insights, creating reports, narrative structure",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["visualization"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Storytelling with Data", "url": "https://www.storytellingwithdata.com/", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "Google Data Analytics Certificate", "url": "https://www.coursera.org/professional-certificates/google-data-analytics", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ethics",
+      "label": "Data Ethics",
+      "description": "Privacy, bias, fairness, responsible AI, GDPR compliance",
+      "difficulty": "intermediate",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["storytelling"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "AI Ethics Guidelines", "url": "https://www.oecd.org/en/topics/sub-issues/responsible-business-conduct-and-ai.html", "type": "docs", "rating": 4 },
+        { "id": "r12", "title": "Fairlearn Documentation", "url": "https://fairlearn.org/", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "python", "to": "statistics" },
+    { "id": "e2", "from": "python", "to": "visualization" },
+    { "id": "e3", "from": "statistics", "to": "machine-learning" },
+    { "id": "e4", "from": "visualization", "to": "storytelling" },
+    { "id": "e5", "from": "storytelling", "to": "ethics" }
+  ]
+}

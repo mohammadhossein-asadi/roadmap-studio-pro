@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "llms",
+      "label": "LLM Fundamentals",
+      "description": "How LLMs work, tokenizer, context window, temperature, top-p",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Anthropic API Documentation", "url": "https://docs.anthropic.com/en/api/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "OpenAI API Docs", "url": "https://platform.openai.com/docs/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "rag",
+      "label": "RAG Systems",
+      "description": "Retrieval Augmented Generation, embeddings, vector databases, chunking",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["llms"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Pinecone RAG Guide", "url": "https://www.pinecone.io/learn/retrieval-augmented-generation/", "type": "tutorial", "rating": 5 },
+        { "id": "r4", "title": "LangChain RAG Tutorial", "url": "python.langchain.com/docs/tutorials/rag/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "agents",
+      "label": "AI Agents",
+      "description": "Tool use, function calling, autonomous agent loops, multi-agent systems",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["rag"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Anthropic Agent Guide", "url": "https://docs.anthropic.com/en/docs/build-with-claude/agentic", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "CrewAI Documentation", "url": "https://docs.crewai.com/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ui",
+      "label": "AI Product UI",
+      "description": "Chat interfaces, streaming responses, loading states, user feedback loops",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["agents"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Vercel AI SDK", "url": "https://sdk.vercel.ai/docs", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "Streamlit for LLMs", "url": "https://docs.streamlit.io/develop/api-reference/write-magic/st.write_stream", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "deployment",
+      "label": "Deployment & Infra",
+      "description": "Model serving, edge functions, rate limiting, cost optimization",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["ui"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Hugging Face Inference", "url": "https://huggingface.co/docs/inference-providers/index", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "Vercel AI SDK Deployment", "url": "https://sdk.vercel.ai/docs/guides/deploying", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "monetization",
+      "label": "Monetization",
+      "description": "Usage-based pricing, subscription tiers, API quotas, freemium models",
+      "difficulty": "intermediate",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["deployment"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Stripe Billing Docs", "url": "https://stripe.com/docs/billing", "type": "docs", "rating": 5 },
+        { "id": "r12", "title": "OpenAI Pricing Page", "url": "https://openai.com/api/pricing/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "llms", "to": "rag" },
+    { "id": "e2", "from": "rag", "to": "agents" },
+    { "id": "e3", "from": "agents", "to": "ui" },
+    { "id": "e4", "from": "ui", "to": "deployment" },
+    { "id": "e5", "from": "deployment", "to": "monetization" }
+  ]
+}

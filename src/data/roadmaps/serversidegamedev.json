@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "networking",
+      "label": "Networking Fundamentals",
+      "description": "TCP/IP, UDP, sockets, protocols, and network programming basics",
+      "difficulty": "intermediate",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Beej's Guide to Network Programming", "url": "https://beej.us/guide/bgnet/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Computer Networking - CS144 Stanford", "url": "https://cs144.github.io/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "server-architecture",
+      "label": "Server Architecture",
+      "description": "Game server models, authoritative servers, and dedicated server setup",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["networking"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Gabriel Gambetta - Game Server Architecture", "url": "https://www.gabrielgambetta.com/client-server-game-architecture.html", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Valve Developer - Dedicated Server", "url": "https://developer.valvesoftware.com/wiki/Source_Dedicated_Server", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "multiplayer",
+      "label": "Multiplayer Systems",
+      "description": "Lobbies, matchmaking, synchronization, and real-time state management",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 150,
+      "prerequisites": ["server-architecture"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Valve Source Multiplayer", "url": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Gabriel Gambetta - Fast-Paced Multiplayer", "url": "https://www.gabrielgambetta.com/client-server-game-architecture.html", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "databases",
+      "label": "Game Databases",
+      "description": "Player data storage, leaderboards, inventory systems, and NoSQL vs SQL",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["server-architecture"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Redis Documentation", "url": "https://redis.io/docs/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "MongoDB for Games", "url": "https://www.mongodb.com/use-cases/gaming", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "scaling",
+      "label": "Scaling & Performance",
+      "description": "Load balancing, horizontal scaling, CDN, and server optimization",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["multiplayer"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Scalable Game Server Architecture", "url": "https://aws.amazon.com/gaming/solutions/", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Multiplayer Game Scaling - Google Cloud", "url": "https://cloud.google.com/solutions/gaming/multiplayer-game-scaling", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "server-security",
+      "label": "Server Security",
+      "description": "Anti-cheat, packet validation, DDoS protection, and server-side trust",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["multiplayer"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Game Security - Anti-Cheat", "url": "https://www.easy.ac/en-US/blog/guide/anti-cheat-systems/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "OWASP Game Security", "url": "https://owasp.org/www-project-game-security-framework/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "realtime",
+      "label": "Real-Time Communication",
+      "description": "WebSocket, UDP, WebRTC, and low-latency game networking",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 350,
+      "prerequisites": ["networking"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "WebSocket Documentation", "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "WebRTC for Game Developers", "url": "https://webrtc.org/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud-gaming",
+      "label": "Cloud Game Infrastructure",
+      "description": "Cloud gaming services, containerized game servers, and edge computing",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["scaling"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Agones - Game Server Hosting", "url": "https://agones.dev/site/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Amazon GameLift", "url": "https://docs.aws.amazon.com/gamelift/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "analytics",
+      "label": "Game Analytics",
+      "description": "Player behavior tracking, telemetry, metrics dashboards, and A/B testing",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["databases"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unity Analytics", "url": "https://docs.unity3d.com/Manual/UnityAnalytics.html", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Game Analytics Documentation", "url": "https://gameanalytics.com/docs/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "devops",
+      "label": "Server DevOps",
+      "description": "CI/CD for game servers, monitoring, logging, and deployment automation",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 50,
+      "prerequisites": ["scaling"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Kubernetes for Game Servers", "url": "https://kubernetes.io/blog/tag/gaming/", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Grafana Documentation", "url": "https://grafana.com/docs/", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "networking", "to": "server-architecture" },
+    { "id": "e2", "from": "networking", "to": "realtime" },
+    { "id": "e3", "from": "server-architecture", "to": "multiplayer" },
+    { "id": "e4", "from": "server-architecture", "to": "databases" },
+    { "id": "e5", "from": "multiplayer", "to": "scaling" },
+    { "id": "e6", "from": "multiplayer", "to": "server-security" },
+    { "id": "e7", "from": "scaling", "to": "cloud-gaming" },
+    { "id": "e8", "from": "scaling", "to": "devops" },
+    { "id": "e9", "from": "databases", "to": "analytics" },
+    { "id": "e10", "from": "cloud-gaming", "to": "devops" }
+  ]
+}

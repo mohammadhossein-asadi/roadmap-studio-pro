@@ -1,0 +1,217 @@
+{
+  "nodes": [
+    {
+      "id": "mob-js",
+      "label": "JavaScript Fundamentals",
+      "description": "ES6+ syntax, async/await, modules, and core language features.",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 180,
+      "completed": true,
+      "resources": [
+        { "id": "r1", "title": "JavaScript.info", "url": "https://javascript.info/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-react",
+      "label": "React Core",
+      "description": "Components, hooks, JSX, state, props, and component lifecycle.",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["mob-js"],
+      "estimatedMinutes": 240,
+      "completed": true,
+      "resources": [
+        { "id": "r2", "title": "React Docs", "url": "https://react.dev/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-typescript",
+      "label": "TypeScript",
+      "description": "Type system, interfaces, generics, and type-safe mobile development.",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["mob-js"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-rn-basics",
+      "label": "React Native Fundamentals",
+      "description": "Core components, styling, flexbox, platform API differences, and Expo CLI.",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 300,
+      "prerequisites": ["mob-react", "mob-typescript"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r4", "title": "React Native Docs", "url": "https://reactnative.dev/docs/getting-started", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-navigation",
+      "label": "Navigation & Routing",
+      "description": "React Navigation, deep linking, tab navigators, stack navigators, and drawer menus.",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 300,
+      "prerequisites": ["mob-rn-basics"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "React Navigation Docs", "url": "https://reactnavigation.org/docs/getting-started", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-state",
+      "label": "State Management",
+      "description": "Redux Toolkit, Zustand, Context API, and server state with TanStack Query.",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 300,
+      "prerequisites": ["mob-rn-basics"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r6", "title": "Redux Toolkit Docs", "url": "https://redux-toolkit.js.org/introduction/getting-started", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-styling",
+      "label": "Mobile Styling",
+      "description": "StyleSheet, NativeWind, responsive design, platform-specific styles, and theming.",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["mob-rn-basics"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "NativeWind Docs", "url": "https://www.nativewind.dev/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mob-native-modules",
+      "label": "Native Modules & APIs",
+      "description": "Platform-specific code, native modules, camera, geolocation, and device APIs.",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["mob-rn-basics"],
+      "estimatedMinutes": 280,
+      "completed": false,
+      "resources": [
+        { "id": "r8", "title": "Expo Modules API", "url": "https://docs.expo.dev/modules/module-api/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-offline",
+      "label": "Offline-First & Storage",
+      "description": "AsyncStorage, SQLite, MMKV, watermelondb, sync strategies, and conflict resolution.",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 500,
+      "prerequisites": ["mob-rn-basics", "mob-state"],
+      "estimatedMinutes": 220,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "WatermelonDB Docs", "url": "https://watermelondb/docs/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mob-auth",
+      "label": "Mobile Authentication",
+      "description": "Biometrics, secure storage, OAuth flows, session tokens, and Keychain/Keystore.",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 500,
+      "prerequisites": ["mob-rn-basics"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r10", "title": "Expo AuthSession", "url": "https://docs.expo.dev/versions/latest/sdk/auth-session/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-performance",
+      "label": "Performance Optimization",
+      "description": "FlatList optimization, image caching, Hermes engine, memory profiling, and FPS monitoring.",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 700,
+      "prerequisites": ["mob-rn-basics", "mob-native-modules"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "React Native Performance", "url": "https://reactnative.dev/docs/performance", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-testing",
+      "label": "Mobile Testing",
+      "description": "Detox, Jest, component testing, E2E testing, and device simulation.",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 700,
+      "prerequisites": ["mob-rn-basics"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r12", "title": "Detox Docs", "url": "https://wix.github.io/Detox/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mob-ci-cd",
+      "label": "Mobile CI/CD",
+      "description": "EAS Build, Fastlane, App Store/Play Store deployment, and OTA updates.",
+      "difficulty": "expert",
+      "x": 300,
+      "y": 900,
+      "prerequisites": ["mob-testing", "mob-performance"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r13", "title": "EAS Build Docs", "url": "https://docs.expo.dev/build/introduction/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mob-codepush",
+      "label": "Over-the-Air Updates",
+      "description": "EAS Update, CodePush, rollout strategies, and OTA deployment pipelines.",
+      "difficulty": "expert",
+      "x": 500,
+      "y": 900,
+      "prerequisites": ["mob-ci-cd"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r14", "title": "EAS Update Docs", "url": "https://docs.expo.dev/eas-update/introduction/", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "mob-js", "to": "mob-react" },
+    { "id": "e2", "from": "mob-js", "to": "mob-typescript" },
+    { "id": "e3", "from": "mob-react", "to": "mob-rn-basics" },
+    { "id": "e4", "from": "mob-typescript", "to": "mob-rn-basics" },
+    { "id": "e5", "from": "mob-rn-basics", "to": "mob-navigation" },
+    { "id": "e6", "from": "mob-rn-basics", "to": "mob-state" },
+    { "id": "e7", "from": "mob-rn-basics", "to": "mob-styling" },
+    { "id": "e8", "from": "mob-rn-basics", "to": "mob-native-modules" },
+    { "id": "e9", "from": "mob-rn-basics", "to": "mob-auth" },
+    { "id": "e10", "from": "mob-state", "to": "mob-offline" },
+    { "id": "e11", "from": "mob-native-modules", "to": "mob-performance" },
+    { "id": "e12", "from": "mob-rn-basics", "to": "mob-testing" },
+    { "id": "e13", "from": "mob-testing", "to": "mob-ci-cd" },
+    { "id": "e14", "from": "mob-performance", "to": "mob-ci-cd" },
+    { "id": "e15", "from": "mob-ci-cd", "to": "mob-codepush" }
+  ]
+}

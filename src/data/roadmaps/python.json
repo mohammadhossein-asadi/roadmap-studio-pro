@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "id": "py-syntax",
+      "label": "Python Syntax & Basics",
+      "description": "Variables, data types, operators, control flow, and basic syntax",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python Official Tutorial", "url": "https://docs.python.org/3/tutorial/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Python for Beginners - freeCodeCamp", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "py-datatypes",
+      "label": "Data Types & Collections",
+      "description": "Strings, lists, dictionaries, sets, tuples, and type conversions",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["py-syntax"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python Data Structures", "url": "https://docs.python.org/3/tutorial/datastructures.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Real Python - Data Types", "url": "https://realpython.com/python-data-types/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "py-oop",
+      "label": "Object-Oriented Programming",
+      "description": "Classes, objects, inheritance, polymorphism, encapsulation",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["py-datatypes"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python OOP Tutorial - Real Python", "url": "https://realpython.com/python3-object-oriented-programming/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Python Classes Official Docs", "url": "https://docs.python.org/3/tutorial/classes.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "py-fileio",
+      "label": "File I/O & Error Handling",
+      "description": "Reading/writing files, context managers, exceptions",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["py-oop"],
+      "estimatedMinutes": 80,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python File I/O - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/file-handling-python/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Real Python - Exceptions", "url": "https://realpython.com/python-exceptions/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "py-libraries",
+      "label": "Standard Library & pip",
+      "description": "Working with modules, packages, pip, and virtual environments",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["py-fileio"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python Standard Library Docs", "url": "https://docs.python.org/3/library/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Real Python - Virtual Environments", "url": "https://realpython.com/python-virtual-environments-a-primer/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "py-web",
+      "label": "Web Frameworks (Flask/Django)",
+      "description": "Building web applications with Python frameworks",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["py-libraries"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Flask Official Tutorial", "url": "https://flask.palletsprojects.com/en/3.0.x/tutorial/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Django Getting Started", "url": "https://docs.djangoproject.com/en/5.0/intro/tutorial01/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "py-testing",
+      "label": "Testing & Debugging",
+      "description": "Unit testing with unittest/pytest, debugging techniques",
+      "difficulty": "advanced",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["py-web"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "pytest Official Docs", "url": "https://docs.pytest.org/en/stable/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Real Python - Testing", "url": "https://realpython.com/python-testing/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "py-advanced",
+      "label": "Advanced Python",
+      "description": "Decorators, generators, context managers, metaclasses, async/await",
+      "difficulty": "expert",
+      "x": 1500,
+      "y": 200,
+      "prerequisites": ["py-testing"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Fluent Python (Book Summary)", "url": "https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Advanced Python Concepts - Real Python", "url": "https://realpython.com/learning-paths/python-intermediate/", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "py-syntax", "to": "py-datatypes" },
+    { "id": "e2", "from": "py-datatypes", "to": "py-oop" },
+    { "id": "e3", "from": "py-oop", "to": "py-fileio" },
+    { "id": "e4", "from": "py-fileio", "to": "py-libraries" },
+    { "id": "e5", "from": "py-libraries", "to": "py-web" },
+    { "id": "e6", "from": "py-web", "to": "py-testing" },
+    { "id": "e7", "from": "py-testing", "to": "py-advanced" }
+  ]
+}

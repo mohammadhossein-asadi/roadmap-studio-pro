@@ -15,10 +15,16 @@ interface InfiniteCanvasProps {
 }
 
 export function InfiniteCanvas({ nodes, edges, onSelectNode }: InfiniteCanvasProps) {
-  const { state, containerRef, handlers, resetView } = useCanvasPhysics();
+  const { state, containerRef, handlers, zoom, resetView } = useCanvasPhysics();
 
   return (
-    <div className="relative h-full w-full overflow-hidden bg-black/20" ref={containerRef}>
+    <div
+      className="relative h-full w-full overflow-hidden bg-black/20"
+      ref={containerRef}
+      tabIndex={0}
+      role="application"
+      aria-label="Interactive roadmap canvas. Use scroll to zoom, drag to pan."
+    >
       <div
         className="absolute inset-0"
         style={{
@@ -43,13 +49,13 @@ export function InfiniteCanvas({ nodes, edges, onSelectNode }: InfiniteCanvasPro
       </div>
 
       <div className="absolute bottom-6 right-6 flex items-center gap-2">
-        <Button variant="glass" size="icon" onClick={() => handlers.onWheel({ deltaY: -100 } as React.WheelEvent)}>
+        <Button variant="glass" size="icon" onClick={() => zoom(-100)} aria-label="Zoom in">
           <ZoomIn className="h-4 w-4" />
         </Button>
-        <Button variant="glass" size="icon" onClick={() => handlers.onWheel({ deltaY: 100 } as React.WheelEvent)}>
+        <Button variant="glass" size="icon" onClick={() => zoom(100)} aria-label="Zoom out">
           <ZoomOut className="h-4 w-4" />
         </Button>
-        <Button variant="glass" size="icon" onClick={resetView}>
+        <Button variant="glass" size="icon" onClick={resetView} aria-label="Reset view">
           <RotateCcw className="h-4 w-4" />
         </Button>
         <div className="ml-2 rounded-lg border border-white/10 bg-black/40 backdrop-blur-xl px-3 py-1.5 text-xs text-white/40">
