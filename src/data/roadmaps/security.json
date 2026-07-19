@@ -1,0 +1,224 @@
+{
+  "nodes": [
+    {
+      "id": "sec-networking",
+      "label": "Networking Fundamentals",
+      "description": "TCP/IP, DNS, HTTP/S, OSI model, packet analysis, and network protocols.",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Professor Messer Networking", "url": "https://www.professormesser.com/networking/n10-008/n10-008-video/n10-008-networking-fundamentals/", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Cisco Packet Tracer Labs", "url": "https://www.netacad.com/courses/packet-tracer", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "NetworkChuck YouTube", "url": "https://www.youtube.com/@NetworkChuck", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sec-linux",
+      "label": "Linux for Security",
+      "description": "Linux commands, file permissions, process management, Bash scripting, and log analysis.",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r4", "title": "Linux Survival", "url": "https://linuxsurvival.com/", "type": "tutorial", "rating": 4 },
+        { "id": "r5", "title": "OverTheWire: Bandit", "url": "https://overthewire.org/wargames/bandit/", "type": "tutorial", "rating": 5 },
+        { "id": "r6", "title": "Linux for Hackers (freeCodeCamp)", "url": "https://www.youtube.com/watch?v=skKfBMEJ5oY", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sec-python",
+      "label": "Python for Security",
+      "description": "Scripting, automation, socket programming, Scapy, and security tool development.",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Python for Cybersecurity (Coursera free audit)", "url": "https://www.coursero.org/learn/python-for-cybersecurity", "type": "tutorial", "rating": 5 },
+        { "id": "r8", "title": "Automate the Boring Stuff", "url": "https://automatetheboringstuff.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sec-comp-tia",
+      "label": "CompTIA Security+",
+      "description": "Threats, vulnerabilities, risk management, cryptography, identity management, and compliance.",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["sec-networking", "sec-linux"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Professor Messer Security+", "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/", "type": "video", "rating": 5 },
+        { "id": "r10", "title": "PowerCert Security+", "url": "https://www.youtube.com/playlist?list=PLG49S3nxzKkVqFvopI8p6Wkl0A9K3bMCN", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sec-web",
+      "label": "Web Application Security",
+      "description": "OWASP Top 10, XSS, SQL injection, CSRF, SSRF, and web penetration testing.",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 300,
+      "prerequisites": ["sec-networking"],
+      "estimatedMinutes": 280,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "OWASP Top 10", "url": "https://owasp.org/www-project-top-ten/", "type": "docs", "rating": 5 },
+        { "id": "r12", "title": "PortSwigger Web Security Academy", "url": "https://portswigger.net/web-security", "type": "tutorial", "rating": 5 },
+        { "id": "r13", "title": "OWASP Juice Shop", "url": "https://owasp.org/www-project-juice-shop/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sec-crypto",
+      "label": "Cryptography",
+      "description": "Symmetric/asymmetric encryption, hashing, PKI, TLS/SSL, and key management.",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["sec-python"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r14", "title": "Cryptography I (Coursera free audit)", "url": "https://www.coursero.org/learn/crypto", "type": "tutorial", "rating": 5 },
+        { "id": "r15", "title": "Crypto101", "url": "https://www.crypto101.io/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sec-pentest",
+      "label": "Penetration Testing",
+      "description": "Reconnaissance, scanning, exploitation, post-exploitation, and reporting.",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 500,
+      "prerequisites": ["sec-web", "sec-comp-tia"],
+      "estimatedMinutes": 350,
+      "completed": false,
+      "resources": [
+        { "id": "r16", "title": "TryHackMe (free rooms)", "url": "https://tryhackme.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r17", "title": "Hack The Box Academy", "url": "https://academy.hackthebox.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r18", "title": "PTES Technical Guidelines", "url": "http://www.pentest-standard.org/index.php/Main_Page", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sec-forensics",
+      "label": "Digital Forensics",
+      "description": "Disk forensics, memory analysis, network forensics, malware analysis, and chain of custody.",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 500,
+      "prerequisites": ["sec-linux", "sec-crypto"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r19", "title": "Autopsy Digital Forensics", "url": "https://www.autopsy.com/", "type": "docs", "rating": 5 },
+        { "id": "r20", "title": "SANS Forensics Poster", "url": "https://www.sans.org/posters/", "type": "docs", "rating": 4 },
+        { "id": "r21", "title": "13Cubed YouTube", "url": "https://www.youtube.com/@13Cubed", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sec-blue",
+      "label": "Blue Team / SOC",
+      "description": "SIEM (Splunk, ELK), log analysis, incident response, threat hunting, and SOC operations.",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 500,
+      "prerequisites": ["sec-comp-tia"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r22", "title": "LetsDefend (free tier)", "url": "https://letsdefend.io/", "type": "tutorial", "rating": 5 },
+        { "id": "r23", "title": "Splunk Fundamentals (free)", "url": "https://education.splunk.com/learning_path_fundamentals", "type": "tutorial", "rating": 5 },
+        { "id": "r24", "title": "CyberDefenders", "url": "https://cyberdefenders.org/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sec-cloud",
+      "label": "Cloud Security",
+      "description": "AWS/Azure/GCP security services, cloud-native threat detection, and container security.",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 500,
+      "prerequisites": ["sec-pentest", "sec-blue"],
+      "estimatedMinutes": 280,
+      "completed": false,
+      "resources": [
+        { "id": "r25", "title": "AWS Security Specialty Path", "url": "https://explore.skillbuilder.aws/learn/path/60688/", "type": "tutorial", "rating": 5 },
+        { "id": "r26", "title": "Cloud Security Alliance", "url": "https://cloudsecurityalliance.org/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sec-incident",
+      "label": "Incident Response",
+      "description": "IR frameworks, containment strategies, eradication, recovery, and post-incident review.",
+      "difficulty": "expert",
+      "x": 400,
+      "y": 700,
+      "prerequisites": ["sec-blue", "sec-forensics"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r27", "title": "NIST IR Framework", "url": "https://www.nist.gov/cyberframework", "type": "docs", "rating": 5 },
+        { "id": "r28", "title": "SANS IR Process", "url": "https://www.sans.org/white-papers/incident-handlers-process/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "sec-governance",
+      "label": "GRC & Compliance",
+      "description": "Risk assessment, compliance frameworks (NIST, ISO 27001, SOC 2), auditing, and policy writing.",
+      "difficulty": "expert",
+      "x": 200,
+      "y": 700,
+      "prerequisites": ["sec-comp-tia", "sec-pentest"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r29", "title": "NIST Cybersecurity Framework", "url": "https://www.nist.gov/cyberframework", "type": "docs", "rating": 5 },
+        { "id": "r30", "title": "ISO 27001 Overview", "url": "https://www.iso.org/iso-27001-information-security.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sec-red",
+      "label": "Red Team Operations",
+      "description": "Advanced exploitation, evasion, C2 frameworks, social engineering, and adversary simulation.",
+      "difficulty": "expert",
+      "x": 600,
+      "y": 700,
+      "prerequisites": ["sec-pentest", "sec-cloud"],
+      "estimatedMinutes": 350,
+      "completed": false,
+      "resources": [
+        { "id": "r31", "title": "MITRE ATT&CK", "url": "https://attack.mitre.org/", "type": "docs", "rating": 5 },
+        { "id": "r32", "title": "Cobalt Strike Documentation", "url": "https://www.cobaltstrike.com/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "sec-networking", "to": "sec-comp-tia" },
+    { "id": "e2", "from": "sec-linux", "to": "sec-comp-tia" },
+    { "id": "e3", "from": "sec-networking", "to": "sec-web" },
+    { "id": "e4", "from": "sec-python", "to": "sec-crypto" },
+    { "id": "e5", "from": "sec-web", "to": "sec-pentest" },
+    { "id": "e6", "from": "sec-comp-tia", "to": "sec-pentest" },
+    { "id": "e7", "from": "sec-linux", "to": "sec-forensics" },
+    { "id": "e8", "from": "sec-crypto", "to": "sec-forensics" },
+    { "id": "e9", "from": "sec-comp-tia", "to": "sec-blue" },
+    { "id": "e10", "from": "sec-pentest", "to": "sec-cloud" },
+    { "id": "e11", "from": "sec-blue", "to": "sec-cloud" },
+    { "id": "e12", "from": "sec-blue", "to": "sec-incident" },
+    { "id": "e13", "from": "sec-forensics", "to": "sec-incident" },
+    { "id": "e14", "from": "sec-comp-tia", "to": "sec-governance" },
+    { "id": "e15", "from": "sec-pentest", "to": "sec-governance" },
+    { "id": "e16", "from": "sec-pentest", "to": "sec-red" },
+    { "id": "e17", "from": "sec-cloud", "to": "sec-red" }
+  ]
+}

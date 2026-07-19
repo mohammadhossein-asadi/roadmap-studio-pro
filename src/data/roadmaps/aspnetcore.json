@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "mvc",
+      "label": "MVC Pattern",
+      "description": "Controllers, views, models, routing, model binding",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "ASP.NET Core MVC Tutorial", "url": "https://learn.microsoft.com/en-us/aspnet/core/mvc/overview", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Microsoft Learn MVC Path", "url": "https://learn.microsoft.com/en-us/training/paths/build-web-apps-with-aspnet-core/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "api",
+      "label": "Web APIs",
+      "description": "RESTful APIs, content negotiation, model validation, API versioning",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["mvc"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "ASP.NET Core Web API", "url": "https://learn.microsoft.com/en-us/aspnet/core/web-api/", "type": "tutorial", "rating": 5 },
+        { "id": "r4", "title": "Minimal APIs Guide", "url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "identity",
+      "label": "Authentication & Identity",
+      "description": "JWT, OAuth, Identity UI, ASP.NET Identity, policy-based auth",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["api"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Authentication Docs", "url": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "JWT Bearer Auth", "url": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ef-core",
+      "label": "Entity Framework Core",
+      "description": "Database context, migrations, relationships, raw SQL, performance",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["identity"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "EF Core with ASP.NET Core", "url": "https://learn.microsoft.com/en-us/ef/core/get-started/aspnetcore/", "type": "tutorial", "rating": 5 },
+        { "id": "r8", "title": "EF Core Performance Tips", "url": "https://learn.microsoft.com/en-us/ef/core/performance/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "Testing",
+      "description": "Integration tests, WebApplicationFactory, test fixtures, mocking",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["ef-core"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Integration Tests Guide", "url": "https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests", "type": "tutorial", "rating": 5 },
+        { "id": "r10", "title": "xUnit with ASP.NET Core", "url": "https://xunit.net/docs/getting-started/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "deploy",
+      "label": "Deployment",
+      "description": "Azure App Service, Docker, self-hosted, Kestrel, IIS, CI/CD",
+      "difficulty": "intermediate",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["testing"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Deploy ASP.NET Core to Azure", "url": "https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore", "type": "tutorial", "rating": 5 },
+        { "id": "r12", "title": "Docker with .NET", "url": "https://learn.microsoft.com/en-us/dotnet/core/docker/", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "mvc", "to": "api" },
+    { "id": "e2", "from": "api", "to": "identity" },
+    { "id": "e3", "from": "identity", "to": "ef-core" },
+    { "id": "e4", "from": "ef-core", "to": "testing" },
+    { "id": "e5", "from": "testing", "to": "deploy" }
+  ]
+}

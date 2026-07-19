@@ -1,0 +1,103 @@
+{
+  "nodes": [
+    {
+      "id": "linux-1",
+      "label": "Basic Commands",
+      "description": "Essential Linux commands for daily use",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Linux Command Line Basics", "url": "https://ubuntu.com/tutorials/command-line-for-beginners", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "The Linux Command Line Book", "url": "https://linuxcommand.org/tlcl.php", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "linux-2",
+      "label": "File System",
+      "description": "Understand Linux directory structure and file permissions",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["linux-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Linux File System Hierarchy", "url": "https://www.pathname.com/fhs/pub/fhs-2.3.html", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Linux File Permissions Guide", "url": "https://www.linux.com/trust-ed/2018/05/how-to-change-linux-file-permissions-with-chmod/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "linux-3",
+      "label": "Shell Scripting",
+      "description": "Write bash scripts for automation",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["linux-1"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Advanced Bash Scripting Guide", "url": "https://tldp.org/LDP/abs/html/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Shell Scripting Tutorial", "url": "https://www.shellscript.sh/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "linux-4",
+      "label": "Networking",
+      "description": "Network configuration and troubleshooting in Linux",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["linux-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Linux Networking Commands", "url": "https://www.redhat.com/sysadmin/linux-networking-tools", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Linux Network Configuration", "url": "https://www.baeldung.com/linux/network-configuration", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "linux-5",
+      "label": "Security",
+      "description": "User management, firewalls, and security best practices",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["linux-3", "linux-4"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Linux Security Guide", "url": "https://www.linuxfoundation.org/resource-library/open-source-security", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "UFW Firewall Tutorial", "url": "https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "linux-6",
+      "label": "System Administration",
+      "description": "Service management, monitoring, and troubleshooting",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["linux-4", "linux-5"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Linux Administration Guide", "url": "https://www.redhat.com/en/topics/linux", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Linux System Administration Basics", "url": "https://www.linode.com/docs/guides/linux-system-administration-basics/", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "linux-1", "to": "linux-2" },
+    { "id": "e2", "from": "linux-1", "to": "linux-3" },
+    { "id": "e3", "from": "linux-2", "to": "linux-4" },
+    { "id": "e4", "from": "linux-3", "to": "linux-5" },
+    { "id": "e5", "from": "linux-4", "to": "linux-5" },
+    { "id": "e6", "from": "linux-4", "to": "linux-6" },
+    { "id": "e7", "from": "linux-5", "to": "linux-6" }
+  ]
+}

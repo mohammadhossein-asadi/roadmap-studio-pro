@@ -35,11 +35,11 @@ export function LiquidHeadline() {
         style={{ filter: "url(#liquid)" }}
       >
         <span className="bg-gradient-to-r from-white via-white/90 to-white/60 bg-clip-text text-transparent">
-          Reimagine
+          Every Skill.
         </span>
         <br />
         <span className="bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-          the Way You Learn
+          One Map. Zero Guesswork.
         </span>
       </motion.h1>
 
@@ -49,8 +49,8 @@ export function LiquidHeadline() {
         transition={{ type: "spring", ...SPRING_CONFIG, delay: 0.4 }}
         className="mt-6 max-w-2xl text-lg text-white/60"
       >
-        Transform your learning journey into an immersive visual adventure.
-        Track progress, master skills, and explore the tech universe.
+        Visual roadmaps for Frontend, Backend, Full Stack, DevOps, Mobile, Cloud, Security, and Data Engineering.
+        See what to learn next, track your progress, and level up as you go.
       </motion.p>
     </div>
   );

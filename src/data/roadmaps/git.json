@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "git-1",
+      "label": "Git Basics",
+      "description": "Commits, clones, and basic operations",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Git Documentation", "url": "https://git-scm.com/doc", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "GitHub Skills", "url": "https://skills.github.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "git-2",
+      "label": "Branching",
+      "description": "Create and manage branches",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["git-1"],
+      "estimatedMinutes": 45,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Branching Tutorial", "url": "https://git-scm.com/book/en/v2/Git-Branching-Branching-in-a-Nutshell", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Git Branching Guide", "url": "https://www.atlassian.com/git/tutorials/using-branches", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "git-3",
+      "label": "Merging",
+      "description": "Merge branches and resolve conflicts",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["git-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Git Merge", "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Merge Conflicts Guide", "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "git-4",
+      "label": "Rebasing",
+      "description": "Rebase branches for linear history",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["git-2"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Git Rebase", "url": "https://git-scm.com/book/en/v2/Git-Branching-Rebasing", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Interactive Rebase Guide", "url": "https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "git-5",
+      "label": "GitHub",
+      "description": "GitHub features: PRs, issues, and code review",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["git-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "GitHub Documentation", "url": "https://docs.github.com/en", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "GitHub Flow", "url": "https://docs.github.com/en/get-started/using-github/github-flow", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "git-6",
+      "label": "GitHub Actions",
+      "description": "CI/CD automation with GitHub Actions",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["git-5"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "GitHub Actions Docs", "url": "https://docs.github.com/en/actions", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Actions Tutorial", "url": "https://docs.github.com/en/actions/quickstart", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "git-7",
+      "label": "Workflows",
+      "description": "Define automated workflows with YAML",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 500,
+      "prerequisites": ["git-6"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Workflow Syntax", "url": "https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Workflow Examples", "url": "https://docs.github.com/en/actions/examples", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "git-1", "to": "git-2" },
+    { "id": "e2", "from": "git-2", "to": "git-3" },
+    { "id": "e3", "from": "git-2", "to": "git-4" },
+    { "id": "e4", "from": "git-1", "to": "git-5" },
+    { "id": "e5", "from": "git-5", "to": "git-6" },
+    { "id": "e6", "from": "git-6", "to": "git-7" }
+  ]
+}

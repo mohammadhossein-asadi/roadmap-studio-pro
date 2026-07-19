@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "node-modules",
+      "label": "Node.js Modules & Core APIs",
+      "description": "require/import, fs, path, os, events, streams",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Node.js Official Docs", "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Node.js Crash Course - Traversy Media", "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "node-http",
+      "label": "HTTP & Networking",
+      "description": "http/https module, creating servers, middleware concepts",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["node-modules"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "HTTP Module - Node Docs", "url": "https://nodejs.org/api/http.html", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Node.js HTTP Server - MDN", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "node-express",
+      "label": "Express.js",
+      "description": "Routing, middleware, error handling, template engines, static files",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["node-http"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Express Official Guide", "url": "https://expressjs.com/en/guide/routing.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Express.js Tutorial - The Net Ninja", "url": "https://www.youtube.com/watch?v=CnH3kAXSrmU", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "node-database",
+      "label": "Database Integration",
+      "description": "MongoDB with Mongoose, PostgreSQL with Prisma, ORMs, connection pooling",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["node-express"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Prisma Getting Started", "url": "https://www.prisma.io/docs/getting-started", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "MongoDB Node.js Driver Docs", "url": "https://www.mongodb.com/docs/drivers/node/current/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "node-auth",
+      "label": "Authentication & Security",
+      "description": "JWT, session management, OAuth, helmet, CORS, rate limiting",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["node-database"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "JWT.io Introduction", "url": "https://jwt.io/introduction", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Node.js Security Best Practices - OWASP", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "node-testing",
+      "label": "Testing",
+      "description": "Jest, Mocha, Supertest, test-driven development, mocking",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["node-auth"],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Jest Official Docs", "url": "https://jestjs.io/docs/getting-started", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Testing Node.js APIs - Fireship", "url": "https://www.youtube.com/watch?v=ZDlJiBmR5BY", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "node-deploy",
+      "label": "Deployment & DevOps",
+      "description": "PM2, Docker, CI/CD, process management, logging, monitoring",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["node-testing"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PM2 Official Docs", "url": "https://pm2.keymetrics.io/docs/usage/quick-start/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Docker for Node Developers", "url": "https://www.docker.com/blog/docker-node-js-application/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "node-modules", "to": "node-http" },
+    { "id": "e2", "from": "node-http", "to": "node-express" },
+    { "id": "e3", "from": "node-express", "to": "node-database" },
+    { "id": "e4", "from": "node-database", "to": "node-auth" },
+    { "id": "e5", "from": "node-auth", "to": "node-testing" },
+    { "id": "e6", "from": "node-testing", "to": "node-deploy" }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    {
+      "id": "swift",
+      "label": "Swift Language",
+      "description": "Swift fundamentals, syntax, optionals, protocols, and language features",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "The Swift Programming Language", "url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Swift.org - Getting Started", "url": "https://www.swift.org/getting-started/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "uikit",
+      "label": "UIKit",
+      "description": "UIKit framework, storyboards, Auto Layout, and interface builder",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 100,
+      "prerequisites": ["swift"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Apple UIKit Documentation", "url": "https://developer.apple.com/documentation/uikit", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Ray Wenderlich - UIKit Tutorial", "url": "https://www.kodeco.com/ios", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "swiftui",
+      "label": "SwiftUI",
+      "description": "Declarative UI framework, views, modifiers, and state management",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 300,
+      "prerequisites": ["swift"],
+      "estimatedMinutes": 350,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Apple SwiftUI Tutorials", "url": "https://developer.apple.com/tutorials/swiftui", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "SwiftUI by Tutorials - Kodeco", "url": "https://www.kodeco.com/books/swiftui-by-tutorials/v3.0", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "combine",
+      "label": "Combine Framework",
+      "description": "Reactive programming, publishers, subscribers, and async/await integration",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 200,
+      "prerequisites": ["swift"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Combine Documentation - Apple", "url": "https://developer.apple.com/documentation/combine", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Combine: Asynchronous Programming", "url": "https://www.objc.io/books/combine/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "coredata",
+      "label": "Core Data",
+      "description": "Persistence framework, managed objects, fetch requests, and data modeling",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 100,
+      "prerequisites": ["uikit", "swiftui"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Core Data Documentation", "url": "https://developer.apple.com/documentation/coredata", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Core Data with SwiftUI", "url": "https://developer.apple.com/tutorials/core-data", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "Testing iOS Apps",
+      "description": "Unit testing, UI testing, XCTest, and test-driven development",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 300,
+      "prerequisites": ["uikit", "swiftui"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Testing with Xcode", "url": "https://developer.apple.com/xcode/testing/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "iOS Unit Testing Tutorial", "url": "https://www.raywenderlich.com/books/ios-app-distribution-best-practices/v1.0.1/chapters/ios-unit-testing", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "appstore",
+      "label": "App Store Deployment",
+      "description": "App Store guidelines, provisioning profiles, TestFlight, and submission",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["testing"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "App Store Review Guidelines", "url": "https://developer.apple.com/app-store/review/guidelines/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "TestFlight Documentation", "url": "https://developer.apple.com/testflight/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "networking",
+      "label": "Networking",
+      "description": "URLSession, REST APIs, JSON decoding, and network layer architecture",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["swift"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "URLSession Documentation", "url": "https://developer.apple.com/documentation/foundation/urlsession", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Networking with Swift", "url": "https://www.hackingwithswift.com/articles/99/how-to-create-a-basic-urlsession-scraper", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "asyncawait",
+      "label": "Swift Concurrency",
+      "description": "Async/await, actors, structured concurrency, and task management",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 50,
+      "prerequisites": ["swift"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Swift Concurrency Documentation", "url": "https://developer.apple.com/documentation/swift/concurrency", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Swift 5.5 Concurrency", "url": "https://www.swift.org/blog/swift-concurrency/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "design-patterns",
+      "label": "iOS Design Patterns",
+      "description": "MVC, MVVM, Coordinator pattern, and dependency injection",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["uikit", "swiftui"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "iOS Design Patterns - Soroush Khanlou", "url": "https://khanlou.com/2020/01/coordinators/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "MVVM in Swift", "url": "https://www.swiftjectivec.com/mvvm-in-swift/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "swift", "to": "uikit" },
+    { "id": "e2", "from": "swift", "to": "swiftui" },
+    { "id": "e3", "from": "swift", "to": "combine" },
+    { "id": "e4", "from": "swift", "to": "networking" },
+    { "id": "e5", "from": "swift", "to": "asyncawait" },
+    { "id": "e6", "from": "uikit", "to": "coredata" },
+    { "id": "e7", "from": "swiftui", "to": "coredata" },
+    { "id": "e8", "from": "uikit", "to": "testing" },
+    { "id": "e9", "from": "swiftui", "to": "testing" },
+    { "id": "e10", "from": "testing", "to": "appstore" },
+    { "id": "e11", "from": "uikit", "to": "design-patterns" },
+    { "id": "e12", "from": "swiftui", "to": "design-patterns" }
+  ]
+}

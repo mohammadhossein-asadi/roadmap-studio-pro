@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "arrays",
+      "label": "Arrays & Hashing",
+      "description": "Two pointers, sliding window, array manipulation",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "NeetCode Arrays & Hashing", "url": "https://neetcode.io/roadmaps", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "LeetCode Array Problems", "url": "https://leetcode.com/tag/array/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "strings",
+      "label": "Strings",
+      "description": "String manipulation, pattern matching, anagrams",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["arrays"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "LeetCode String Problems", "url": "https://leetcode.com/tag/string/", "type": "docs", "rating": 5 },
+        { "id": "r4", "title": "String Algorithms Course", "url": "https://www.coursera.org/learn/algorithms-on-strings", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "hashmaps",
+      "label": "Hash Maps & Sets",
+      "description": "HashMap, HashSet, frequency counting, two-sum patterns",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["strings"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "NeetCode Hash Maps", "url": "https://neetcode.io/roadmaps", "type": "tutorial", "rating": 5 },
+        { "id": "r6", "title": "LeetCode HashMap Problems", "url": "https://leetcode.com/tag/hash-table/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "trees",
+      "label": "Trees & Graphs",
+      "description": "Binary trees, BST, BFS, DFS, tree traversal",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["hashmaps"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "NeetCode Trees", "url": "https://neetcode.io/roadmaps", "type": "tutorial", "rating": 5 },
+        { "id": "r8", "title": "Visualgo Tree Animations", "url": "https://visualgo.net/en/bst", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "graphs",
+      "label": "Graph Algorithms",
+      "description": "BFS, DFS, Dijkstra, topological sort, union-find",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["trees"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "NeetCode Graphs", "url": "https://neetcode.io/roadmaps", "type": "tutorial", "rating": 5 },
+        { "id": "r10", "title": "MIT Graph Algorithms", "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "dp",
+      "label": "Dynamic Programming",
+      "description": "Memoization, tabulation, knapsack, LIS, subsequence problems",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["graphs"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "NeetCode DP Playlist", "url": "https://www.youtube.com/playlist?list=PLot-Xp2yKCZj5t0kPnLkH3zJmKd1PdMf", "type": "video", "rating": 5 },
+        { "id": "r12", "title": "LeetCode DP Problems", "url": "https://leetcode.com/tag/dynamic-programming/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "practice",
+      "label": "Structured Practice",
+      "description": "Daily problem solving, timed contests, pattern recognition",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["dp"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r13", "title": "NeetCode 150 Roadmap", "url": "https://neetcode.io/roadmaps", "type": "tutorial", "rating": 5 },
+        { "id": "r14", "title": "Grind 75 LeetCode List", "url": "https://www.techinterviewhandbook.org/grind75", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "arrays", "to": "strings" },
+    { "id": "e2", "from": "strings", "to": "hashmaps" },
+    { "id": "e3", "from": "hashmaps", "to": "trees" },
+    { "id": "e4", "from": "trees", "to": "graphs" },
+    { "id": "e5", "from": "graphs", "to": "dp" },
+    { "id": "e6", "from": "dp", "to": "practice" }
+  ]
+}

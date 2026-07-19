@@ -1,0 +1,119 @@
+{
+  "nodes": [
+    {
+      "id": "tf-1",
+      "label": "HCL Syntax",
+      "description": "HashiCorp Configuration Language basics",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "HCL Language Docs", "url": "https://developer.hashicorp.com/terraform/language", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Terraform HCL Tutorial", "url": "https://developer.hashicorp.com/terraform/tutorials/cli-getting-started", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "tf-2",
+      "label": "Providers",
+      "description": "Configure providers for different cloud platforms",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["tf-1"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Terraform Providers Docs", "url": "https://developer.hashicorp.com/terraform/language/providers", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Terraform Registry", "url": "https://registry.terraform.io/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "tf-3",
+      "label": "Resources",
+      "description": "Define infrastructure resources",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["tf-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Terraform Resources", "url": "https://developer.hashicorp.com/terraform/language/resources", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Terraform AWS Provider Tutorial", "url": "https://developer.hashicorp.com/terraform/tutorials/aws-get-started", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "tf-4",
+      "label": "Modules",
+      "description": "Reusable infrastructure components",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["tf-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Terraform Modules", "url": "https://developer.hashicorp.com/terraform/language/modules", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Create a Terraform Module", "url": "https://developer.hashicorp.com/terraform/tutorials/cli-getting-started/modules-create", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "tf-5",
+      "label": "State Management",
+      "description": "Manage Terraform state files and remote backends",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["tf-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "State Documentation", "url": "https://developer.hashicorp.com/terraform/language/state", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Remote State Backend", "url": "https://developer.hashicorp.com/terraform/language/settings/backends/s3", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "tf-6",
+      "label": "Workspaces",
+      "description": "Manage multiple environments with workspaces",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["tf-5"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Terraform Workspaces", "url": "https://developer.hashicorp.com/terraform/language/state/workspaces", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Workspaces Guide", "url": "https://developer.hashicorp.com/terraform/cli/workspaces", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "tf-7",
+      "label": "CI/CD Integration",
+      "description": "Automate Terraform with CI/CD pipelines",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["tf-4", "tf-5", "tf-6"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Terraform in CI/CD", "url": "https://developer.hashicorp.com/terraform/cloud-docs/vcs", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "GitHub Actions with Terraform", "url": "https://github.com/hashicorp/setup-terraform", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "tf-1", "to": "tf-2" },
+    { "id": "e2", "from": "tf-2", "to": "tf-3" },
+    { "id": "e3", "from": "tf-3", "to": "tf-4" },
+    { "id": "e4", "from": "tf-3", "to": "tf-5" },
+    { "id": "e5", "from": "tf-5", "to": "tf-6" },
+    { "id": "e6", "from": "tf-4", "to": "tf-7" },
+    { "id": "e7", "from": "tf-5", "to": "tf-7" },
+    { "id": "e8", "from": "tf-6", "to": "tf-7" }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "kt-1",
+      "label": "Kotlin Syntax",
+      "description": "Variables, functions, null safety, and extension functions",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Kotlin Official Docs", "url": "https://kotlinlang.org/docs/home.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Kotlin Koans", "url": "https://play.kotlinlang.org/koans/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "kt-2",
+      "label": "Object-Oriented Kotlin",
+      "description": "Classes, interfaces, data classes, and sealed classes",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["kt-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Classes and Objects", "url": "https://kotlinlang.org/docs/classes.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Data Classes Guide", "url": "https://kotlinlang.org/docs/data-classes.html", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "kt-3",
+      "label": "Coroutines",
+      "description": "Asynchronous programming with Kotlin coroutines",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["kt-1"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Coroutines Guide", "url": "https://kotlinlang.org/docs/coroutines-guide.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Kotlin Coroutines Tutorial", "url": "https://play.kotlinlang.org/coroutines/official-docs/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "kt-4",
+      "label": "Android Development",
+      "description": "Build Android apps with Kotlin and Jetpack",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["kt-2"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Android Kotlin Guide", "url": "https://developer.android.com/kotlin", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Android Codelabs", "url": "https://developer.android.com/courses/android-basics-kotlin/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "kt-5",
+      "label": "Spring Boot",
+      "description": "Build enterprise applications with Spring Boot",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["kt-2"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Spring Boot Kotlin Guide", "url": "https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-kotlin", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Spring Boot Tutorial", "url": "https://spring.io/guides/tutorials/spring-boot-kotlin/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "kt-6",
+      "label": "Testing",
+      "description": "Unit and integration testing with JUnit and MockK",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["kt-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "JUnit 5 Kotlin Guide", "url": "https://kotlinlang.org/docs/jvm-test.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "MockK Documentation", "url": "https://mockk.io/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "kt-1", "to": "kt-2" },
+    { "id": "e2", "from": "kt-1", "to": "kt-3" },
+    { "id": "e3", "from": "kt-2", "to": "kt-4" },
+    { "id": "e4", "from": "kt-2", "to": "kt-5" },
+    { "id": "e5", "from": "kt-2", "to": "kt-6" }
+  ]
+}

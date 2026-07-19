@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "swift-1",
+      "label": "Swift Syntax",
+      "description": "Swift language basics and syntax",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Swift Programming Language", "url": "https://docs.swift.org/swift-book/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Swift Tutorial for Beginners", "url": "https://www.hackingwithswift.com/100/swiftui", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "swift-2",
+      "label": "Object-Oriented Swift",
+      "description": "Classes, protocols, and extensions in Swift",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["swift-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Swift OOP Concepts", "url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/inheritance/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Protocols in Swift", "url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "swift-3",
+      "label": "SwiftUI",
+      "description": "Declarative UI framework for Apple platforms",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["swift-2"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "SwiftUI Documentation", "url": "https://developer.apple.com/xcode/swiftui/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "SwiftUI Tutorials", "url": "https://developer.apple.com/tutorials/swiftui", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "swift-4",
+      "label": "Combine",
+      "description": "Reactive programming with Combine framework",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["swift-2"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Combine Framework Docs", "url": "https://developer.apple.com/documentation/combine", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Combine Tutorial", "url": "https://www.kodeco.com/17410498-combine-supercharge-your-reactive-code", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "swift-5",
+      "label": "Networking",
+      "description": "URLSession and API integration in Swift",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["swift-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "URLSession Documentation", "url": "https://developer.apple.com/documentation/foundation/urlsession", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Networking in SwiftUI", "url": "https://developer.apple.com/documentation/swiftui/loading-and-displaying-remote-data", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "swift-6",
+      "label": "Testing",
+      "description": "Unit and UI testing in Swift",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["swift-3"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Xcode Testing Docs", "url": "https://developer.apple.com/documentation/xcode/testing-your-apps", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Swift Testing Framework", "url": "https://developer.apple.com/documentation/testing", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "swift-1", "to": "swift-2" },
+    { "id": "e2", "from": "swift-2", "to": "swift-3" },
+    { "id": "e3", "from": "swift-2", "to": "swift-4" },
+    { "id": "e4", "from": "swift-3", "to": "swift-5" },
+    { "id": "e5", "from": "swift-3", "to": "swift-6" }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "networking",
+      "label": "Networking Fundamentals",
+      "description": "TCP/IP, DNS, HTTP, firewalls, subnetting, OSI model",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "CompTIA Network+ Study Guide", "url": "https://www.comptia.org/certifications/network", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Computer Networking Course", "url": "https://www.youtube.com/playlist?list=PLowKtXNTBypFAR4E8wysuIfYUkJ0c0nOH", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "linux",
+      "label": "Linux Administration",
+      "description": "Shell scripting, file permissions, services, networking, hardening",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["networking"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Linux Journey", "url": "https://linuxjourney.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r4", "title": "OverTheWire Bandit", "url": "https://overthewire.org/wargames/bandit/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "pentest",
+      "label": "Penetration Testing",
+      "description": "Recon, scanning, exploitation, Metasploit, Burp Suite, ethical hacking",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["linux"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "TryHackMe Free Rooms", "url": "https://tryhackme.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r6", "title": "HackTheBox Academy", "url": "https://academy.hackthebox.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "forensics",
+      "label": "Digital Forensics",
+      "description": "Disk analysis, memory forensics, network packet analysis, incident evidence",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["pentest"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Autopsy Forensics Tool", "url": "https://www.autopsy.com/", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "Wireshark User Guide", "url": "https://www.wireshark.org/docs/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "defense",
+      "label": "Defense & Hardening",
+      "description": "Firewall rules, IDS/IPS, SIEM, endpoint protection, zero trust",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["forensics"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "NIST Cybersecurity Framework", "url": "https://www.nist.gov/cyberframework", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "Security Onion", "url": "https://docs.securityonion.net/en/latest/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "compliance",
+      "label": "Compliance & Governance",
+      "description": "ISO 27001, SOC 2, GDPR, risk assessment, security policies",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["defense"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "ISO 27001 Overview", "url": "https://www.iso.org/iso-27001-information-security.html", "type": "docs", "rating": 4 },
+        { "id": "r12", "title": "SOC 2 Compliance Guide", "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "networking", "to": "linux" },
+    { "id": "e2", "from": "linux", "to": "pentest" },
+    { "id": "e3", "from": "pentest", "to": "forensics" },
+    { "id": "e4", "from": "forensics", "to": "defense" },
+    { "id": "e5", "from": "defense", "to": "compliance" }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "id": "k8s-1",
+      "label": "Pods",
+      "description": "Smallest deployable units in Kubernetes",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Kubernetes Pods Docs", "url": "https://kubernetes.io/docs/concepts/workloads/pods/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Kubernetes Basics Tutorial", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "k8s-2",
+      "label": "Deployments",
+      "description": "Manage replica sets and rolling updates",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["k8s-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Deployments Guide", "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Kubernetes Deployment Tutorial", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/deployment-intro/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "k8s-3",
+      "label": "Services",
+      "description": "Expose applications within and outside the cluster",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["k8s-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Services Overview", "url": "https://kubernetes.io/docs/concepts/services-networking/service/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Connecting Apps with Services", "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/expose-intro/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "k8s-4",
+      "label": "Ingress",
+      "description": "HTTP routing and load balancing for services",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["k8s-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Ingress Controllers", "url": "https://kubernetes.io/docs/concepts/services-networking/ingress/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "NGINX Ingress Controller", "url": "https://kubernetes.github.io/ingress-nginx/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "k8s-5",
+      "label": "Helm",
+      "description": "Package manager for Kubernetes applications",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["k8s-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Helm Docs", "url": "https://helm.sh/docs/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Creating Your First Helm Chart", "url": "https://helm.sh/docs/chart_template_guide/getting_started/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "k8s-6",
+      "label": "RBAC",
+      "description": "Role-based access control for cluster security",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["k8s-4"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "RBAC Authorization", "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Kubernetes RBAC Tutorial", "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "k8s-7",
+      "label": "Monitoring",
+      "description": "Metrics, logging, and observability with Prometheus and Grafana",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["k8s-4", "k8s-5"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Prometheus Operator Docs", "url": "https://prometheus-operator.dev/docs/user/getting-started.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Kubernetes Monitoring with Prometheus", "url": "https://sysdig.com/blog/kubernetes-monitoring-prometheus/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "k8s-1", "to": "k8s-2" },
+    { "id": "e2", "from": "k8s-2", "to": "k8s-3" },
+    { "id": "e3", "from": "k8s-3", "to": "k8s-4" },
+    { "id": "e4", "from": "k8s-2", "to": "k8s-5" },
+    { "id": "e5", "from": "k8s-4", "to": "k8s-6" },
+    { "id": "e6", "from": "k8s-4", "to": "k8s-7" },
+    { "id": "e7", "from": "k8s-5", "to": "k8s-7" }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "nodes": [
+    {
+      "id": "do-linux",
+      "label": "Linux Fundamentals",
+      "description": "File system, shell scripting, permissions, process management, and system administration.",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 180,
+      "completed": true,
+      "resources": [
+        { "id": "r1", "title": "Linux Journey", "url": "https://linuxjourney.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-networking",
+      "label": "Networking Basics",
+      "description": "TCP/IP, DNS, HTTP/HTTPS, load balancing, firewalls, and network troubleshooting.",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["do-linux"],
+      "estimatedMinutes": 150,
+      "completed": true,
+      "resources": [
+        { "id": "r2", "title": "Computer Networking", "url": "https://www.practiceit.io/objectives/1", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "do-git",
+      "label": "Git & Version Control",
+      "description": "Branching strategies, rebasing, cherry-picking, and Git workflow patterns.",
+      "difficulty": "beginner",
+      "x": 500,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": true,
+      "resources": [
+        { "id": "r3", "title": "Pro Git Book", "url": "https://git-scm.com/book/en/v2", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-docker",
+      "label": "Docker Containers",
+      "description": "Images, containers, Dockerfile, volumes, networks, and Docker Compose.",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 300,
+      "prerequisites": ["do-linux"],
+      "estimatedMinutes": 240,
+      "completed": false,
+      "resources": [
+        { "id": "r4", "title": "Docker Docs", "url": "https://docs.docker.com/get-started/overview/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-ci-cd",
+      "label": "CI/CD Pipelines",
+      "description": "GitHub Actions, GitLab CI, Jenkins, pipeline design, and deployment automation.",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 300,
+      "prerequisites": ["do-git"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "GitHub Actions Docs", "url": "https://docs.github.com/en/actions", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-k8s",
+      "label": "Kubernetes Orchestration",
+      "description": "Pods, deployments, services, ingress, ConfigMaps, secrets, and Helm charts.",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["do-docker"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r6", "title": "Kubernetes Docs", "url": "https://kubernetes.io/docs/home/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-terraform",
+      "label": "Infrastructure as Code",
+      "description": "Terraform, Pulumi, resource provisioning, state management, and drift detection.",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["do-docker"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Terraform Docs", "url": "https://developer.hashicorp.com/terraform/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-aws",
+      "label": "Cloud Platforms (AWS)",
+      "description": "EC2, S3, RDS, Lambda, VPC, IAM, and cost optimization strategies.",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["do-networking"],
+      "estimatedMinutes": 350,
+      "completed": false,
+      "resources": [
+        { "id": "r8", "title": "AWS Docs", "url": "https://docs.aws.amazon.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-monitoring",
+      "label": "Monitoring & Observability",
+      "description": "Prometheus, Grafana, ELK stack, distributed tracing, and alerting strategies.",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 500,
+      "prerequisites": ["do-k8s"],
+      "estimatedMinutes": 280,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Prometheus Docs", "url": "https://prometheus.io/docs/introduction/overview/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-ansible",
+      "label": "Configuration Management",
+      "description": "Ansible playbooks, roles, idempotency, and automated server provisioning.",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 700,
+      "prerequisites": ["do-terraform"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r10", "title": "Ansible Docs", "url": "https://docs.ansible.com/ansible/latest/index.html", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-helm",
+      "label": "Helm & Package Management",
+      "description": "Chart development, values templating, release management, and Helm repositories.",
+      "difficulty": "advanced",
+      "x": 400,
+      "y": 700,
+      "prerequisites": ["do-k8s"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Helm Docs", "url": "https://helm.sh/docs/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-secrets",
+      "label": "Secrets Management",
+      "description": "Vault, Sealed Secrets, external secrets operator, and zero-trust security.",
+      "difficulty": "expert",
+      "x": 300,
+      "y": 900,
+      "prerequisites": ["do-k8s", "do-terraform"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r12", "title": "Vault Docs", "url": "https://developer.hashicorp.com/vault/docs", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-sre",
+      "label": "SRE Practices",
+      "description": "SLIs/SLOs, error budgets, incident response, postmortems, and reliability engineering.",
+      "difficulty": "expert",
+      "x": 500,
+      "y": 900,
+      "prerequisites": ["do-monitoring"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r13", "title": "SRE Book", "url": "https://sre.google/sre-book/table-of-contents/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "do-platform",
+      "label": "Platform Engineering",
+      "description": "Internal developer platforms, self-service infrastructure, and golden paths.",
+      "difficulty": "expert",
+      "x": 100,
+      "y": 900,
+      "prerequisites": ["do-ansible", "do-secrets"],
+      "estimatedMinutes": 350,
+      "completed": false,
+      "resources": [
+        { "id": "r14", "title": "Platform Engineering", "url": "https://platformengineering.org/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "do-cost",
+      "label": "Cost Optimization",
+      "description": "Resource rightsizing, spot instances, reserved capacity, and FinOps practices.",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 700,
+      "prerequisites": ["do-aws"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r15", "title": "FinOps Foundation", "url": "https://finops.org/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "do-linux", "to": "do-networking" },
+    { "id": "e2", "from": "do-linux", "to": "do-docker" },
+    { "id": "e3", "from": "do-git", "to": "do-ci-cd" },
+    { "id": "e4", "from": "do-docker", "to": "do-k8s" },
+    { "id": "e5", "from": "do-docker", "to": "do-terraform" },
+    { "id": "e6", "from": "do-networking", "to": "do-aws" },
+    { "id": "e7", "from": "do-k8s", "to": "do-monitoring" },
+    { "id": "e8", "from": "do-terraform", "to": "do-ansible" },
+    { "id": "e9", "from": "do-k8s", "to": "do-helm" },
+    { "id": "e10", "from": "do-k8s", "to": "do-secrets" },
+    { "id": "e11", "from": "do-terraform", "to": "do-secrets" },
+    { "id": "e12", "from": "do-monitoring", "to": "do-sre" },
+    { "id": "e13", "from": "do-ansible", "to": "do-platform" },
+    { "id": "e14", "from": "do-secrets", "to": "do-platform" },
+    { "id": "e15", "from": "do-aws", "to": "do-cost" }
+  ]
+}

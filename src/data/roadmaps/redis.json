@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "redis-1",
+      "label": "Data Types",
+      "description": "Redis data structures: strings, lists, sets, hashes, sorted sets",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Redis Data Types Overview", "url": "https://redis.io/docs/latest/develop/data-types/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Redis Tutorial for Beginners", "url": "https://www.tutorialspoint.com/redis/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "redis-2",
+      "label": "Pub/Sub",
+      "description": "Publish/Subscribe messaging system",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["redis-1"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Redis Pub/Sub Docs", "url": "https://redis.io/docs/latest/develop/interact/pubsub/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Pub/Sub Patterns in Redis", "url": "https://redis.io/learn/develop/java/pubsub", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "redis-3",
+      "label": "Caching",
+      "description": "Implement caching strategies with Redis",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["redis-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Redis Caching Patterns", "url": "https://redis.io/learn/develop/caching", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Redis Caching Strategies", "url": "https://www.digitalocean.com/community/tutorials/redis-caching-patterns", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "redis-4",
+      "label": "Lua Scripting",
+      "description": "Write atomic scripts with Lua in Redis",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["redis-2"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "EVAL Scripting Docs", "url": "https://redis.io/docs/latest/develop/interact/programmability/eval-intro/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Redis Lua Scripting Tutorial", "url": "https://redis.io/learn/develop/advanced/lua-scripting", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "redis-5",
+      "label": "Cluster",
+      "description": "Distributed Redis cluster for scalability",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["redis-3"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Redis Cluster Docs", "url": "https://redis.io/docs/latest/develop/cluster/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Redis Cluster Tutorial", "url": "https://redis.io/learn/develop/cluster/getting-started", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "redis-6",
+      "label": "Persistence",
+      "description": "RDB snapshots and AOF persistence",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["redis-3"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Redis Persistence", "url": "https://redis.io/docs/latest/develop/operate/oss_and_stack/management/persistence/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "RDB and AOF Guide", "url": "https://redis.io/learn/develop/oss/admin/persistence", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "redis-1", "to": "redis-2" },
+    { "id": "e2", "from": "redis-1", "to": "redis-3" },
+    { "id": "e3", "from": "redis-2", "to": "redis-4" },
+    { "id": "e4", "from": "redis-3", "to": "redis-5" },
+    { "id": "e5", "from": "redis-3", "to": "redis-6" }
+  ]
+}

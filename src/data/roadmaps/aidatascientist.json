@@ -1,0 +1,159 @@
+{
+  "nodes": [
+    {
+      "id": "stats",
+      "label": "Statistics & Probability",
+      "description": "Probability theory, distributions, hypothesis testing, Bayesian inference, and regression",
+      "difficulty": "beginner",
+      "x": 50,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Statistics Course - Khan Academy", "url": "https://www.khanacademy.org/math/statistics-probability", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "StatQuest Statistics Playlist", "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9", "type": "video", "rating": 5 },
+        { "id": "r3", "title": "Think Stats (Free Book)", "url": "https://greenteapress.com/thinkstats2/html/index.html", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "python",
+      "label": "Python Programming",
+      "description": "Python fundamentals, NumPy, data structures, and scientific computing",
+      "difficulty": "beginner",
+      "x": 50,
+      "y": 400,
+      "prerequisites": ["stats"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python for Data Science - freeCodeCamp", "url": "https://www.youtube.com/watch?v=GPDA5O1rN1I", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Python NumPy Tutorial", "url": "https://numpy.org/doc/stable/user/absolute_beginners.html", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ml",
+      "label": "Machine Learning",
+      "description": "Supervised/unsupervised learning, scikit-learn, model selection, and evaluation",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["python", "stats"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Machine Learning - Andrew Ng", "url": "https://www.coursera.org/learn/machine-learning", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Scikit-learn Tutorials", "url": "https://scikit-learn.org/stable/tutorial/index.html", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "Hands-on ML with Scikit-Learn (Free Chapter)", "url": "https://github.com/ageron/handson-ml2", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "deep_learning",
+      "label": "Deep Learning",
+      "description": "Neural networks, CNNs, RNNs, transformers, PyTorch/TensorFlow",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 400,
+      "prerequisites": ["ml"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Fast.ai Practical Deep Learning", "url": "https://course.fast.ai/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Deep Learning Specialization", "url": "https://www.coursera.org/specializations/deep-learning", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "PyTorch Tutorials", "url": "https://pytorch.org/tutorials/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "nlp",
+      "label": "Natural Language Processing",
+      "description": "Text processing, tokenization, embeddings, transformers, and language modeling",
+      "difficulty": "advanced",
+      "x": 350,
+      "y": 150,
+      "prerequisites": ["deep_learning", "ml"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "NLP Course - Hugging Face", "url": "https://huggingface.co/learn/nlp-course", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Stanford CS224N - NLP with Deep Learning", "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ", "type": "video", "rating": 5 },
+        { "id": "r3", "title": "spaCy Course", "url": "https://course.spacy.io/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cv",
+      "label": "Computer Vision",
+      "description": "Image classification, object detection, segmentation, and vision transformers",
+      "difficulty": "advanced",
+      "x": 350,
+      "y": 380,
+      "prerequisites": ["deep_learning"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "CS231n - CNNs for Visual Recognition", "url": "https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "OpenCV Tutorials", "url": "https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html", "type": "tutorial", "rating": 4 },
+        { "id": "r3", "title": "Ultralytics YOLO Docs", "url": "https://docs.ultralytics.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "data_engineering",
+      "label": "Data Engineering",
+      "description": "SQL, data pipelines, ETL processes, and working with large datasets",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 150,
+      "prerequisites": ["python"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Data Engineering Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=eirUyhr2CwI", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "SQL for Data Science - Kaggle", "url": "https://www.kaggle.com/learn/intro-to-sql", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "research",
+      "label": "Research Methods",
+      "description": "Reading papers, experimental design, reproducibility, and scientific writing",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 350,
+      "prerequisites": ["ml", "nlp"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "How to Read a Research Paper - Andrew Ng", "url": "https://www.youtube.com/watch?v=73MYlBzJbHk", "type": "video", "rating": 4 },
+        { "id": "r2", "title": "Papers With Code", "url": "https://paperswithcode.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mlops",
+      "label": "MLOps & Deployment",
+      "description": "Experiment tracking, model serving, CI/CD for ML, and monitoring",
+      "difficulty": "advanced",
+      "x": 650,
+      "y": 250,
+      "prerequisites": ["data_engineering", "deep_learning"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Made With ML", "url": "https://madewithml.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "MLflow Documentation", "url": "https://mlflow.org/docs/latest/index.html", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "MLOps Zoomcamp", "url": "https://github.com/DataTalksClub/mlops-zoomcamp", "type": "tutorial", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "stats", "to": "python" },
+    { "id": "e2", "from": "python", "to": "ml" },
+    { "id": "e3", "from": "stats", "to": "ml" },
+    { "id": "e4", "from": "ml", "to": "deep_learning" },
+    { "id": "e5", "from": "deep_learning", "to": "nlp" },
+    { "id": "e6", "from": "ml", "to": "nlp" },
+    { "id": "e7", "from": "deep_learning", "to": "cv" },
+    { "id": "e8", "from": "python", "to": "data_engineering" },
+    { "id": "e9", "from": "ml", "to": "research" },
+    { "id": "e10", "from": "nlp", "to": "research" },
+    { "id": "e11", "from": "data_engineering", "to": "mlops" },
+    { "id": "e12", "from": "deep_learning", "to": "mlops" }
+  ]
+}

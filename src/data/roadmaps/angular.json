@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "id": "ang-ts",
+      "label": "TypeScript Fundamentals",
+      "description": "Types, interfaces, classes, modules, decorators basics",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "TypeScript Official Handbook", "url": "https://www.typescriptlang.org/docs/handbook/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "TypeScript Tutorial - The Net Ninja", "url": "https://www.youtube.com/watch?v=BwuLxPH8IDs", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ang-components",
+      "label": "Components & Templates",
+      "description": "Component architecture, template syntax, data binding, lifecycle",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["ang-ts"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Angular Components Guide", "url": "https://angular.dev/guide/components", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Angular Components - Traversy Media", "url": "https://www.youtube.com/watch?v=3dHNOWTI7H8", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ang-services",
+      "label": "Services & Dependency Injection",
+      "description": "DI system, services, providers, injection tokens",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["ang-components"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Dependency Injection Guide", "url": "https://angular.dev/guide/di", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Angular Services - Angular University", "url": "https://blog.angular-university.io/angular-dependency-injection/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ang-routing",
+      "label": "Routing & Navigation",
+      "description": "Router configuration, route guards, lazy loading, resolvers",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["ang-services"],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Angular Router Guide", "url": "https://angular.dev/guide/routing", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Angular Routing Tutorial - Academind", "url": "https://www.youtube.com/watch?v=QS9mZVX0veQ", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ang-forms",
+      "label": "Forms (Template & Reactive)",
+      "description": "Template-driven forms, reactive forms, validation, dynamic forms",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["ang-routing"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Angular Forms Guide", "url": "https://angular.dev/guide/forms", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Reactive Forms - Angular University", "url": "https://blog.angular-university.io/reactive-forms/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ang-http",
+      "label": "HTTP & Observables",
+      "description": "HttpClient, RxJS observables, API integration, interceptors",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["ang-forms"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "HTTP Guide - Angular Docs", "url": "https://angular.dev/guide/http", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "RxJS Official Docs", "url": "https://rxjs.dev/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ang-testing",
+      "label": "Testing",
+      "description": "Unit testing with Jasmine/Karma, integration testing",
+      "difficulty": "advanced",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["ang-http"],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Testing Guide - Angular Docs", "url": "https://angular.dev/guide/testing", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Angular Testing Course - Angular University", "url": "https://angular-university.com/courses/unit-testing-angular", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ang-rxjs",
+      "label": "Advanced RxJS",
+      "description": "Operators, subjects, error handling, advanced patterns",
+      "difficulty": "expert",
+      "x": 1500,
+      "y": 200,
+      "prerequisites": ["ang-testing"],
+      "estimatedMinutes": 160,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "RxJS Operators Guide", "url": "https://rxjs.dev/guide/operators", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "RxJS Marbles - Interactive", "url": "https://rxmarbles.com/", "type": "tutorial", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "ang-ts", "to": "ang-components" },
+    { "id": "e2", "from": "ang-components", "to": "ang-services" },
+    { "id": "e3", "from": "ang-services", "to": "ang-routing" },
+    { "id": "e4", "from": "ang-routing", "to": "ang-forms" },
+    { "id": "e5", "from": "ang-forms", "to": "ang-http" },
+    { "id": "e6", "from": "ang-http", "to": "ang-testing" },
+    { "id": "e7", "from": "ang-testing", "to": "ang-rxjs" }
+  ]
+}

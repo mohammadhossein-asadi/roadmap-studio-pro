@@ -1,0 +1,162 @@
+{
+  "nodes": [
+    {
+      "id": "excel",
+      "label": "Excel & Spreadsheets",
+      "description": "Master Excel formulas, pivot tables, conditional formatting, and data cleaning",
+      "difficulty": "beginner",
+      "x": 50,
+      "y": 150,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Excel Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=Vl0HqT2oAjY", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "ExcelJet Tutorials", "url": "https://exceljet.net/tutorials", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "Chandoo - Learn Excel", "url": "https://chandoo.org/wp/excel-basics/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "sql",
+      "label": "SQL",
+      "description": "Write queries, JOINs, subqueries, aggregations, and database design fundamentals",
+      "difficulty": "beginner",
+      "x": 50,
+      "y": 350,
+      "prerequisites": ["excel"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "SQL Tutorial - Full Database Course for Beginners", "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "SQLBolt Interactive Tutorial", "url": "https://sqlbolt.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "Mode Analytics SQL Tutorial", "url": "https://mode.com/sql-tutorial/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "python",
+      "label": "Python for Data Analysis",
+      "description": "Python fundamentals, data types, loops, functions, and Jupyter notebooks",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["excel"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python for Everybody - freeCodeCamp", "url": "https://www.youtube.com/watch?v=8DvywoWv6fI", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Automate the Boring Stuff with Python", "url": "https://automatetheboringstuff.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "Google Python Course", "url": "https://developers.google.com/edu/python", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "pandas",
+      "label": "Pandas",
+      "description": "DataFrames, data cleaning, groupby, merging, and time series with Pandas",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 400,
+      "prerequisites": ["python", "sql"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Pandas Tutorial - Corey Schafer", "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "10 Minutes to Pandas", "url": "https://pandas.pydata.org/docs/user_guide/10min.html", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "Kaggle Pandas Course", "url": "https://www.kaggle.com/learn/pandas", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "visualization",
+      "label": "Data Visualization",
+      "description": "Matplotlib, Seaborn, Plotly, and chart selection principles",
+      "difficulty": "intermediate",
+      "x": 350,
+      "y": 150,
+      "prerequisites": ["python", "pandas"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Matplotlib Tutorial - Corey Schafer", "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTvipOqoxVEQtpQACdadShMd", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Python Graph Gallery", "url": "https://www.python-graph-gallery.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "Plotly Official Tutorials", "url": "https://plotly.com/python/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "statistics",
+      "label": "Statistics",
+      "description": "Descriptive stats, probability, hypothesis testing, regression, and distributions",
+      "difficulty": "intermediate",
+      "x": 350,
+      "y": 380,
+      "prerequisites": ["python"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Statistics Fundamentals - freeCodeCamp", "url": "https://www.youtube.com/watch?v=xxpc-HPKNSE", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Khan Academy Statistics", "url": "https://www.khanacademy.org/math/statistics-probability", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "Think Stats (Free Book)", "url": "https://greenteapress.com/thinkstats2/html/index.html", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "bi_tools",
+      "label": "BI Tools",
+      "description": "Tableau, Power BI, and Looker for building dashboards and reports",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["visualization", "sql"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Tableau Free Training Videos", "url": "https://www.tableau.com/learn/training/20241", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Power BI Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=3u7MQz1EyPY", "type": "video", "rating": 5 },
+        { "id": "r3", "title": "Kaggle Tableau Course", "url": "https://www.kaggle.com/learn/tableau", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "storytelling",
+      "label": "Data Storytelling",
+      "description": "Communicating insights through narratives, presentations, and stakeholder management",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 400,
+      "prerequisites": ["visualization", "bi_tools"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Storytelling with Data (YouTube)", "url": "https://www.youtube.com/@storytellingwithdata", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Data Storytelling - Coursera", "url": "https://www.coursera.org/learn/data-storytelling-visualization", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "advanced_analysis",
+      "label": "Advanced Analysis",
+      "description": "A/B testing, predictive modeling, time series analysis, and causal inference",
+      "difficulty": "advanced",
+      "x": 650,
+      "y": 300,
+      "prerequisites": ["statistics", "pandas", "visualization"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "A/B Testing Course - Google", "url": "https://www.coursera.org/learn/ab-testing", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Kaggle Learn - Intro to ML", "url": "https://www.kaggle.com/learn/intro-to-machine-learning", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "excel", "to": "sql" },
+    { "id": "e2", "from": "excel", "to": "python" },
+    { "id": "e3", "from": "python", "to": "pandas" },
+    { "id": "e4", "from": "sql", "to": "pandas" },
+    { "id": "e5", "from": "python", "to": "visualization" },
+    { "id": "e6", "from": "pandas", "to": "visualization" },
+    { "id": "e7", "from": "python", "to": "statistics" },
+    { "id": "e8", "from": "visualization", "to": "bi_tools" },
+    { "id": "e9", "from": "sql", "to": "bi_tools" },
+    { "id": "e10", "from": "visualization", "to": "storytelling" },
+    { "id": "e11", "from": "bi_tools", "to": "storytelling" },
+    { "id": "e12", "from": "statistics", "to": "advanced_analysis" },
+    { "id": "e13", "from": "pandas", "to": "advanced_analysis" },
+    { "id": "e14", "from": "visualization", "to": "advanced_analysis" }
+  ]
+}

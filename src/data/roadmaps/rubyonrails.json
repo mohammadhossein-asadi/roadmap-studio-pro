@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "rails-1",
+      "label": "MVC Architecture",
+      "description": "Model-View-Controller pattern in Rails",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Rails Guide", "url": "https://guides.rubyonrails.org/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Rails Getting Started", "url": "https://guides.rubyonrails.org/getting_started.html", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "rails-2",
+      "label": "Active Record",
+      "description": "ORM for database operations",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["rails-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Active Record Guide", "url": "https://guides.rubyonrails.org/active_record_basics.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Active Record Migrations", "url": "https://guides.rubyonrails.org/active_record_migrations.html", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "rails-3",
+      "label": "Controllers",
+      "description": "Handle requests and responses",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["rails-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Controllers Guide", "url": "https://guides.rubyonrails.org/action_controller_overview.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Routing Guide", "url": "https://guides.rubyonrails.org/routing.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rails-4",
+      "label": "Views",
+      "description": "ERB and view templates",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["rails-3"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Layouts and Rendering", "url": "https://guides.rubyonrails.org/layouts_and_rendering.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "View Helpers", "url": "https://guides.rubyonrails.org/action_view_overview.html", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rails-5",
+      "label": "Testing",
+      "description": "Minitest and Rails testing tools",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["rails-2", "rails-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Testing Guide", "url": "https://guides.rubyonrails.org/testing.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Controller Testing", "url": "https://guides.rubyonrails.org/testing.html#controller-tests", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rails-6",
+      "label": "Deployment",
+      "description": "Deploy Rails apps with Capistrano or Docker",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["rails-5"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Rails Deployment Guide", "url": "https://guides.rubyonrails.org/security.html", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Capistrano Docs", "url": "https://capistranorb.com/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "rails-1", "to": "rails-2" },
+    { "id": "e2", "from": "rails-1", "to": "rails-3" },
+    { "id": "e3", "from": "rails-3", "to": "rails-4" },
+    { "id": "e4", "from": "rails-2", "to": "rails-5" },
+    { "id": "e5", "from": "rails-3", "to": "rails-5" },
+    { "id": "e6", "from": "rails-5", "to": "rails-6" }
+  ]
+}

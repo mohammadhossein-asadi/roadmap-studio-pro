@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 interface Particle {
   x: number;
@@ -56,7 +56,7 @@ export function ParticleField({ count = 60 }: { count?: number }) {
         const dy = mouse.current.y - p.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 150) {
+        if (dist > 0 && dist < 150) {
           const force = (150 - dist) / 150;
           p.vx -= (dx / dist) * force * 0.02;
           p.vy -= (dy / dist) * force * 0.02;
@@ -111,6 +111,7 @@ export function ParticleField({ count = 60 }: { count?: number }) {
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
       className="absolute inset-0 h-full w-full pointer-events-none"
     />
   );

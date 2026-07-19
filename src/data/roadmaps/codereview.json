@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "best-practices",
+      "label": "Review Best Practices",
+      "description": "What to look for, review checklist, giving constructive feedback",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Google Code Review Guide", "url": "https://google.github.io/eng-practices/review/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "How to Do Code Reviews", "url": "https://mtlynch.io/code-review-101/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Review Tools",
+      "description": "GitHub PRs, GitLab MRs, SonarQube, CodeClimate, automated linting",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["best-practices"],
+      "estimatedMinutes": 45,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "GitHub Pull Requests", "url": "https://docs.github.com/en/pull-requests", "type": "docs", "rating": 5 },
+        { "id": "r4", "title": "SonarQube Documentation", "url": "https://docs.sonarsource.com/sonarqube/latest/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "communication",
+      "label": "Communication",
+      "description": "Writing clear review comments, tone, resolving discussions",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["tools"],
+      "estimatedMinutes": 45,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "How to Write Code Review Comments", "url": "https://google.github.io/eng-practices/review/comments/", "type": "tutorial", "rating": 5 },
+        { "id": "r6", "title": "Conventional Comments", "url": "https://conventionalcomments.org/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Security Review",
+      "description": "OWASP checks, dependency auditing, secrets detection, input validation",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["communication"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "OWASP Code Review Guide", "url": "https://owasp.org/www-project-code-review-guide/", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "GitHub Dependabot", "url": "https://docs.github.com/en/code-security/dependabot", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "performance",
+      "label": "Performance Review",
+      "description": "Algorithmic complexity, memory usage, caching opportunities, profiling",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["security"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Google Performance Guide", "url": "https://google.github.io/eng-practices/review/reviewer/looking-for.html", "type": "tutorial", "rating": 5 },
+        { "id": "r10", "title": "Chrome DevTools Performance", "url": "https://developer.chrome.com/docs/devtools/performance", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "best-practices", "to": "tools" },
+    { "id": "e2", "from": "tools", "to": "communication" },
+    { "id": "e3", "from": "communication", "to": "security" },
+    { "id": "e4", "from": "security", "to": "performance" }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "go-syntax",
+      "label": "Go Syntax & Basics",
+      "description": "Variables, types, functions, control flow, error handling",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Go Tour - Official", "url": "https://go.dev/tour/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Go Programming Crash Course - Fireship", "url": "https://www.youtube.com/watch?v=un6ZyFkqFKo", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "go-structs",
+      "label": "Structs & Interfaces",
+      "description": "Structs, methods, interfaces, composition, embedding",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["go-syntax"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Go Tour - Interfaces", "url": "https://go.dev/tour/methods/10", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Go Interfaces Explained - Tech with Tim", "url": "https://www.youtube.com/watch?v=nknYtpFjVjY", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "go-goroutines",
+      "label": "Goroutines & Concurrency",
+      "description": "Goroutines, sync package, WaitGroups, context, race detection",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["go-structs"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "A Tour of Go - Goroutines", "url": "https://go.dev/tour/concurrency/1", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Concurrency in Go - Kat Zien", "url": "https://www.youtube.com/watch?v=KBZlN0izeiY", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "go-channels",
+      "label": "Channels & Patterns",
+      "description": "Buffered/unbuffered channels, select, fan-in/fan-out, pipeline patterns",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["go-goroutines"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Go by Example - Channels", "url": "https://gobyexample.com/channels", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Go Concurrency Patterns - Rob Pike", "url": "https://www.youtube.com/watch?v=f6kdp27TYZs", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "go-http",
+      "label": "HTTP & Web Servers",
+      "description": "net/http, handlers, middleware, routing, REST APIs",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["go-channels"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Go HTTP Servers - Go Blog", "url": "https://go.dev/doc/articles/wiki/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Building REST APIs in Go - Alex Edwards", "url": "https://www.alexedwards.net/blog/how-to-use-router-package", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "go-testing",
+      "label": "Testing in Go",
+      "description": "Testing package, benchmarks, fuzzing, table-driven tests, test coverage",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["go-http"],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Go Testing Docs", "url": "https://go.dev/doc/tutorial/add-a-test", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Go Testing Best Practices - Eli Bendersky", "url": "https://blog.learngolang.com/go-testing-best-practices", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "go-advanced",
+      "label": "Advanced Patterns",
+      "description": "Reflection, code generation, generics (1.18+), dependency injection, advanced patterns",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["go-testing"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Effective Go - Official", "url": "https://go.dev/doc/effective_go", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Go Generics Tutorial", "url": "https://go.dev/blog/intro-generics", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "go-syntax", "to": "go-structs" },
+    { "id": "e2", "from": "go-structs", "to": "go-goroutines" },
+    { "id": "e3", "from": "go-goroutines", "to": "go-channels" },
+    { "id": "e4", "from": "go-channels", "to": "go-http" },
+    { "id": "e5", "from": "go-http", "to": "go-testing" },
+    { "id": "e6", "from": "go-testing", "to": "go-advanced" }
+  ]
+}

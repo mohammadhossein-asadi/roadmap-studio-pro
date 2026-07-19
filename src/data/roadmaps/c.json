@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "c-syntax",
+      "label": "C Syntax & Basics",
+      "description": "Variables, operators, control flow, functions, basic I/O",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "C Programming Tutorial - W3Schools", "url": "https://www.w3schools.com/c/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Learn C - Programiz", "url": "https://www.programiz.com/c-programming", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "c-pointers",
+      "label": "Pointers & References",
+      "description": "Pointer arithmetic, pointer-to-pointer, void pointers, const pointers",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["c-syntax"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Pointers in C - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/pointers-in-c/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Understanding Pointers - freeCodeCamp", "url": "https://www.freecodecamp.org/news/pointers-in-c-explained/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "c-memory",
+      "label": "Memory Management",
+      "description": "malloc, calloc, realloc, free, stack vs heap, memory leaks",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["c-pointers"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Dynamic Memory in C - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "C Memory Management - Learn-C.org", "url": "https://www.learn-c.org/wiki/Memory_management", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "c-datastructures",
+      "label": "Data Structures in C",
+      "description": "Arrays, linked lists, stacks, queues, trees, hash tables",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["c-memory"],
+      "estimatedMinutes": 160,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Data Structures in C - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/c-data-structures/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Data Structures Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=RBSGKlUvoLU", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "c-fileio",
+      "label": "File I/O",
+      "description": "fopen, fread, fwrite, fprintf, fscanf, binary file handling",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["c-datastructures"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "File Handling in C - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/basics-file-handling-c/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "C File I/O - Tutorialspoint", "url": "https://www.tutorialspoint.com/cprogramming/c_file_io.htm", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "c-os",
+      "label": "OS Concepts & Systems Programming",
+      "description": "Processes, threads, signals, system calls, POSIX API",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["c-fileio"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Linux System Programming - MIT OCW", "url": "https://ocw.mit.edu/courses/6-828-operating-system-engineering-fall-2012/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "The Linux Programming Interface", "url": "https://man7.org/tlpi/", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "c-syntax", "to": "c-pointers" },
+    { "id": "e2", "from": "c-pointers", "to": "c-memory" },
+    { "id": "e3", "from": "c-memory", "to": "c-datastructures" },
+    { "id": "e4", "from": "c-datastructures", "to": "c-fileio" },
+    { "id": "e5", "from": "c-fileio", "to": "c-os" }
+  ]
+}

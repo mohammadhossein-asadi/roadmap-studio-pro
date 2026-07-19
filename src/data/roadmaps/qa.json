@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "testing-basics",
+      "label": "Testing Fundamentals",
+      "description": "Testing types, test cases, test plans, and quality assurance principles",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Software Testing Fundamentals - Guru99", "url": "https://www.guru99.com/software-testing.html", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "ISTQB Foundation Syllabus", "url": "https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "manual-testing",
+      "label": "Manual Testing",
+      "description": "Exploratory testing, test case design, bug reporting, and regression testing",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 150,
+      "prerequisites": ["testing-basics"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Manual Testing Tutorial - Guru99", "url": "https://www.guru99.com/manual-testing.html", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Software Testing Help - Manual", "url": "https://www.softwaretestinghelp.com/manual-testing-tutorial-for-beginners/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "test-automation",
+      "label": "Test Automation",
+      "description": "Automation frameworks, test scripts, CI integration, and automation strategy",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 200,
+      "prerequisites": ["manual-testing"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Test Automation University", "url": "https://testautomationu.applitools.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Automation Testing - Guru99", "url": "https://www.guru99.com/automation-testing.html", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "selenium",
+      "label": "Selenium WebDriver",
+      "description": "Browser automation, locators, waits, page object model, and test frameworks",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 150,
+      "prerequisites": ["test-automation"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Selenium Documentation", "url": "https://www.selenium.dev/documentation/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Selenium with Python Tutorial", "url": "https://selenium-python.readthedocs.io/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "api-testing",
+      "label": "API Testing",
+      "description": "REST API testing, Postman, contract testing, and API automation",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["manual-testing"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Postman Learning Center", "url": "https://learning.postman.com/docs/getting-started/introduction/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "REST API Testing - Guru99", "url": "https://www.guru99.com/rest-api-manual.html", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "performance-testing",
+      "label": "Performance Testing",
+      "description": "Load testing, stress testing, JMeter, and performance benchmarks",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["api-testing"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Apache JMeter Documentation", "url": "https://jmeter.apache.org/usermanual/index.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "k6 Load Testing", "url": "https://k6.io/docs/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ci-cd",
+      "label": "CI/CD for QA",
+      "description": "Continuous integration pipelines, test automation in CI/CD, and deployment testing",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["selenium", "performance-testing"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "GitHub Actions Documentation", "url": "https://docs.github.com/en/actions", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Jenkins User Documentation", "url": "https://www.jenkins.io/doc/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "bug-tracking",
+      "label": "Bug Tracking & Reporting",
+      "description": "Bug lifecycle, Jira, bug reports, and defect management",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 50,
+      "prerequisites": ["testing-basics"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Jira Documentation", "url": "https://support.atlassian.com/jira/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Bug Reporting Best Practices", "url": "https://www.guru99.com/bug-reporting-defect-tracking.html", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mobile-testing",
+      "label": "Mobile Testing",
+      "description": "Appium, mobile automation, device testing, and mobile test strategy",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["test-automation"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Appium Documentation", "url": "https://appium.io/docs/en/about-appium/intro/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Mobile Testing Guide - BrowserStack", "url": "https://www.browserstack.com/guide/mobile-testing-guide", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "security-testing",
+      "label": "Security Testing",
+      "description": "Basic security testing, OWASP Top 10, penetration testing basics",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 50,
+      "prerequisites": ["manual-testing"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "OWASP Testing Guide", "url": "https://owasp.org/www-project-web-security-testing-guide/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "OWASP Top 10", "url": "https://owasp.org/www-project-top-ten/", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "testing-basics", "to": "manual-testing" },
+    { "id": "e2", "from": "testing-basics", "to": "bug-tracking" },
+    { "id": "e3", "from": "manual-testing", "to": "test-automation" },
+    { "id": "e4", "from": "manual-testing", "to": "api-testing" },
+    { "id": "e5", "from": "manual-testing", "to": "security-testing" },
+    { "id": "e6", "from": "test-automation", "to": "selenium" },
+    { "id": "e7", "from": "api-testing", "to": "performance-testing" },
+    { "id": "e8", "from": "selenium", "to": "ci-cd" },
+    { "id": "e9", "from": "performance-testing", "to": "ci-cd" },
+    { "id": "e10", "from": "test-automation", "to": "mobile-testing" }
+  ]
+}

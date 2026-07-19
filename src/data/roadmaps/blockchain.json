@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    {
+      "id": "crypto-basics",
+      "label": "Cryptography Basics",
+      "description": "Hash functions, public/private keys, digital signatures, and encryption",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Mastering Ethereum - Crypto Chapter", "url": "https://ethereum.org/en/developers/docs/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "CryptoZombies - Learn Blockchain", "url": "https://cryptozombies.io/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "solidity",
+      "label": "Solidity",
+      "description": "Smart contract language for Ethereum, syntax, types, and contract development",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["crypto-basics"],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Solidity Documentation", "url": "https://docs.soliditylang.org/en/latest/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Solidity by Example", "url": "https://solidity-by-example.org/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "smart-contracts",
+      "label": "Smart Contracts",
+      "description": "Contract lifecycle, gas optimization, ERC standards, and contract architecture",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 150,
+      "prerequisites": ["solidity"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Ethereum Smart Contracts - ethereum.org", "url": "https://ethereum.org/en/developers/docs/smart-contracts/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "OpenZeppelin Contracts", "url": "https://docs.openzeppelin.com/contracts/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "dapps",
+      "label": "DApps Development",
+      "description": "Decentralized application architecture, frontend integration, and IPFS",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["smart-contracts"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "DApps Guide - ethereum.org", "url": "https://ethereum.org/en/developers/docs/dapps/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "The Graph Protocol", "url": "https://thegraph.com/docs/en/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "web3js",
+      "label": "Web3.js & Ethers.js",
+      "description": "JavaScript libraries for interacting with Ethereum blockchain",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["smart-contracts"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Ethers.js Documentation", "url": "https://docs.ethers.org/v6/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Web3.js Documentation", "url": "https://docs.web3js.org/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Smart Contract Security",
+      "description": "Common vulnerabilities, auditing, formal verification, and best practices",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["dapps"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Smart Contract Security - ethereum.org", "url": "https://ethereum.org/en/developers/docs/smart-contracts/security/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Damn Vulnerable DeFi", "url": "https://www.damnvulnerabledefi.xyz/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "erc-standards",
+      "label": "ERC Standards",
+      "description": "ERC-20, ERC-721, ERC-1155 token standards and implementation patterns",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 50,
+      "prerequisites": ["solidity"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "ERC-20 Token Standard", "url": "https://eips.ethereum.org/EIPS/eip-20", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "ERC-721 NFT Standard", "url": "https://eips.ethereum.org/EIPS/eip-721", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "testing-contracts",
+      "label": "Smart Contract Testing",
+      "description": "Hardhat, Foundry, unit testing, and integration testing for contracts",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["solidity"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Hardhat Documentation", "url": "https://hardhat.org/hardhat-runner/docs/getting-started", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Foundry Book", "url": "https://book.getfoundry.sh/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "defi",
+      "label": "DeFi Protocols",
+      "description": "Lending, DEXs, yield farming, flash loans, and DeFi composability",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["dapps", "security"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "DeFi Developer Road Map", "url": "https://github.com/Offc_arcC/DeFi-Developer-Road-Map-Guide", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Uniswap V3 Docs", "url": "https://docs.uniswap.org/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "layer2",
+      "label": "Layer 2 Solutions",
+      "description": "Rollups, sidechains, state channels, and L2 scaling strategies",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 50,
+      "prerequisites": ["smart-contracts"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Layer 2 Scaling - ethereum.org", "url": "https://ethereum.org/en/developers/docs/scaling/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Optimism Documentation", "url": "https://docs.optimism.io/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "crypto-basics", "to": "solidity" },
+    { "id": "e2", "from": "solidity", "to": "smart-contracts" },
+    { "id": "e3", "from": "smart-contracts", "to": "dapps" },
+    { "id": "e4", "from": "smart-contracts", "to": "web3js" },
+    { "id": "e5", "from": "dapps", "to": "security" },
+    { "id": "e6", "from": "solidity", "to": "erc-standards" },
+    { "id": "e7", "from": "solidity", "to": "testing-contracts" },
+    { "id": "e8", "from": "security", "to": "defi" },
+    { "id": "e9", "from": "dapps", "to": "defi" },
+    { "id": "e10", "from": "smart-contracts", "to": "layer2" },
+    { "id": "e11", "from": "web3js", "to": "dapps" },
+    { "id": "e12", "from": "testing-contracts", "to": "smart-contracts" }
+  ]
+}

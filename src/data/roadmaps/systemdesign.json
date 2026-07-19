@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "fundamentals",
+      "label": "Fundamentals",
+      "description": "CAP theorem, horizontal vs vertical scaling, single points of failure",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "System Design Primer", "url": "https://github.com/donnemartin/system-design-primer", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Grokking the System Design Interview", "url": "https://www.designgurus.io/course/grokking-the-system-design-interview", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "scaling",
+      "label": "Scaling Strategies",
+      "description": "Horizontal scaling, sharding, consistent hashing, stateless services",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["fundamentals"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Netflix Tech Blog", "url": "https://netflixtechblog.com/", "type": "article", "rating": 5 },
+        { "id": "r4", "title": "System Design Interview Vol 1", "url": "https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B09CM6YPL3", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "caching",
+      "label": "Caching",
+      "description": "Redis, CDN, cache invalidation strategies, write-through vs write-back",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["scaling"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Redis Documentation", "url": "https://redis.io/docs/", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "Caching Strategies Explained", "url": "https://aws.amazon.com/caching/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "databases",
+      "label": "Database Design",
+      "description": "SQL vs NoSQL, indexing, replication, partitioning, ACID",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["caching"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "PostgreSQL Documentation", "url": "https://www.postgresql.org/docs/current/", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "MongoDB University", "url": "https://university.mongodb.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "loadbalancing",
+      "label": "Load Balancing",
+      "description": "Round-robin, least connections, health checks, L4 vs L7 load balancing",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["databases"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Nginx Load Balancing", "url": "https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "AWS ELB Documentation", "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "microservices",
+      "label": "Microservices",
+      "description": "Service decomposition, communication patterns, saga pattern, CQRS",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["loadbalancing"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Microservices.io Patterns", "url": "https://microservices.io/patterns/", "type": "docs", "rating": 5 },
+        { "id": "r12", "title": "Martin Fowler Microservices", "url": "https://martinfowler.com/articles/microservices.html", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "case-studies",
+      "label": "Case Studies",
+      "description": "Design Twitter, YouTube, WhatsApp, Uber, and other real systems",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["microservices"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r13", "title": "System Design Interviews", "url": "https://www.youtube.com/@SystemDesignInterview", "type": "video", "rating": 5 },
+        { "id": "r14", "title": "ByteByteGo System Design", "url": "https://bytebytego.com/", "type": "tutorial", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "fundamentals", "to": "scaling" },
+    { "id": "e2", "from": "scaling", "to": "caching" },
+    { "id": "e3", "from": "caching", "to": "databases" },
+    { "id": "e4", "from": "databases", "to": "loadbalancing" },
+    { "id": "e5", "from": "loadbalancing", "to": "microservices" },
+    { "id": "e6", "from": "microservices", "to": "case-studies" }
+  ]
+}

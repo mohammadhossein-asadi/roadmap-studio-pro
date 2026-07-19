@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "text-processing",
+      "label": "Text Processing",
+      "description": "Tokenization, stemming, lemmatization, stopwords, TF-IDF",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "NLTK Documentation", "url": "https://www.nltk.org/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "spaCy NLP Guide", "url": "https://spacy.io/usage/spacy-101", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "transformers",
+      "label": "Transformers",
+      "description": "Self-attention, positional encoding, encoder-decoder, multi-head attention",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["text-processing"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Attention Is All You Need", "url": "https://arxiv.org/abs/1706.03762", "type": "article", "rating": 5 },
+        { "id": "r4", "title": "Hugging Face Transformers", "url": "https://huggingface.co/docs/transformers/index", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "bert",
+      "label": "BERT & Encoders",
+      "description": "Bidirectional encoding, masked LM, fine-tuning for classification and NER",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["transformers"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "BERT Paper", "url": "https://arxiv.org/abs/1810.04805", "type": "article", "rating": 5 },
+        { "id": "r6", "title": "Hugging Face BERT Tutorial", "url": "https://huggingface.co/docs/transformers/training", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "gpt",
+      "label": "GPT & Decoders",
+      "description": "Autoregressive generation, causal attention, prompt engineering, in-context learning",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["bert"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "OpenAI GPT Docs", "url": "https://platform.openai.com/docs/guides/text-generation", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "Language Models Are Few-Shot Learners", "url": "https://arxiv.org/abs/2005.14165", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "fine-tuning",
+      "label": "Fine-Tuning & LoRA",
+      "description": "Full fine-tuning, LoRA, QLoRA, RLHF, DPO, alignment techniques",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["gpt"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "PEFT by Hugging Face", "url": "https://huggingface.co/docs/peft/index", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "TRL Library", "url": "https://huggingface.co/docs/trl/index", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "text-processing", "to": "transformers" },
+    { "id": "e2", "from": "transformers", "to": "bert" },
+    { "id": "e3", "from": "bert", "to": "gpt" },
+    { "id": "e4", "from": "gpt", "to": "fine-tuning" }
+  ]
+}
