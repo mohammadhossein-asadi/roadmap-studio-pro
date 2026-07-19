@@ -80,7 +80,7 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-[#050510]">
       <GlobalNav />
 
-      <main className="mx-auto max-w-7xl px-6 pt-24 pb-16">
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 pt-20 sm:pt-24 pb-12 sm:pb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

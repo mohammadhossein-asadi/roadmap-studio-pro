@@ -13,7 +13,7 @@ export function StreakGrid({ activity }: StreakGridProps) {
   return (
     <div className="space-y-3">
       <h3 className="text-sm font-semibold text-white/80">Daily Activity</h3>
-      <div className="grid grid-cols-7 gap-1.5">
+      <div className="grid grid-cols-7 gap-1 sm:gap-1.5">
         {activity.map((day, i) => {
           const intensity = day.xpEarned / maxXP;
           return (

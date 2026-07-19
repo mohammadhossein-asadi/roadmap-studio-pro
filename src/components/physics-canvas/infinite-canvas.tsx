@@ -48,17 +48,17 @@ export function InfiniteCanvas({ nodes, edges, onSelectNode }: InfiniteCanvasPro
         ))}
       </div>
 
-      <div className="absolute bottom-6 right-6 flex items-center gap-2">
-        <Button variant="glass" size="icon" onClick={() => zoom(-100)} aria-label="Zoom in">
+      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 flex items-center gap-1.5 sm:gap-2">
+        <Button variant="glass" size="icon" onClick={() => zoom(-100)} aria-label="Zoom in" className="min-h-[44px] min-w-[44px]">
           <ZoomIn className="h-4 w-4" />
         </Button>
-        <Button variant="glass" size="icon" onClick={() => zoom(100)} aria-label="Zoom out">
+        <Button variant="glass" size="icon" onClick={() => zoom(100)} aria-label="Zoom out" className="min-h-[44px] min-w-[44px]">
           <ZoomOut className="h-4 w-4" />
         </Button>
-        <Button variant="glass" size="icon" onClick={resetView} aria-label="Reset view">
+        <Button variant="glass" size="icon" onClick={resetView} aria-label="Reset view" className="min-h-[44px] min-w-[44px]">
           <RotateCcw className="h-4 w-4" />
         </Button>
-        <div className="ml-2 rounded-lg border border-white/10 bg-black/40 backdrop-blur-xl px-3 py-1.5 text-xs text-white/40">
+        <div className="hidden sm:block ml-1 sm:ml-2 rounded-lg border border-white/10 bg-black/40 backdrop-blur-xl px-2.5 sm:px-3 py-1.5 text-xs text-white/40">
           {Math.round(state.scale * 100)}%
         </div>
       </div>
