@@ -39,9 +39,8 @@ export const TIER_COLORS: Record<string, { bg: string; border: string; text: str
 };
 
 export const NAV_LINKS = [
-  { label: "Roadmaps", href: "/roadmap/frontend" },
+  { label: "Roadmaps", href: "/dashboard" },
   { label: "Dashboard", href: "/dashboard" },
-  { label: "Community", href: "#" },
 ] as const;
 
 export const XP_PER_LEVEL = 1000;

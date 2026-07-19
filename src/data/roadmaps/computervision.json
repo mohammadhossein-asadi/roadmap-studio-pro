@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "image-processing",
+      "label": "Image Processing",
+      "description": "OpenCV, image transforms, filtering, color spaces, edge detection",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "OpenCV Python Tutorial", "url": "https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "CS231n Stanford", "url": "https://cs231n.stanford.edu/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "cnns",
+      "label": "Convolutional Neural Networks",
+      "description": "Conv layers, pooling, architectures (ResNet, EfficientNet), transfer learning",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["image-processing"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "CS231n CNN Notes", "url": "https://cs231n.github.io/convolutional-networks/", "type": "tutorial", "rating": 5 },
+        { "id": "r4", "title": "PyTorch CNN Tutorial", "url": "https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "object-detection",
+      "label": "Object Detection",
+      "description": "R-CNN, SSD, YOLO, anchor boxes, NMS, mAP evaluation",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["cnns"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Papers with Code Detection", "url": "https://paperswithcode.com/task/object-detection", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "Ultralytics YOLOv8 Docs", "url": "https://docs.ultralytics.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "segmentation",
+      "label": "Image Segmentation",
+      "description": "Semantic, instance, and panoptic segmentation; U-Net, Mask R-CNN",
+      "difficulty": "advanced",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["object-detection"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Segmentation Models PyTorch", "url": "https://github.com/qubvel/segmentation_models.pytorch", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "Papers with Code Segmentation", "url": "https://paperswithcode.com/task/semantic-segmentation", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "yolo",
+      "label": "YOLO in Practice",
+      "description": "Training custom YOLO models, dataset preparation, deployment, real-time inference",
+      "difficulty": "expert",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["segmentation"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "YOLOv8 Custom Training", "url": "https://docs.ultralytics.com/modes/train/", "type": "tutorial", "rating": 5 },
+        { "id": "r10", "title": "Roboflow Universe Datasets", "url": "https://universe.roboflow.com/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "image-processing", "to": "cnns" },
+    { "id": "e2", "from": "cnns", "to": "object-detection" },
+    { "id": "e3", "from": "object-detection", "to": "segmentation" },
+    { "id": "e4", "from": "segmentation", "to": "yolo" }
+  ]
+}

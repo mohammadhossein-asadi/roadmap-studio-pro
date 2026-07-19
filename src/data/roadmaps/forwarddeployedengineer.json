@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    { "id": "fde-linux", "label": "Linux & CLI", "description": "Command line, shell scripting, and Linux system administration.", "difficulty": "beginner", "x": 100, "y": 150, "prerequisites": [], "estimatedMinutes": 120, "completed": false, "resources": [{ "id": "r1", "title": "Linux Journey", "url": "https://linuxjourney.com/", "type": "docs", "rating": 5 }] },
+    { "id": "fde-networking", "label": "Networking Basics", "description": "TCP/IP, HTTP, DNS, and how the internet works.", "difficulty": "beginner", "x": 300, "y": 150, "prerequisites": ["fde-linux"], "estimatedMinutes": 100, "completed": false, "resources": [{ "id": "r2", "title": "Computer Networking (Kurose)", "url": "https://www.youtube.com/watch?v=IPv9IVJZ3vQ", "type": "video", "rating": 5 }] },
+    { "id": "fde-programming", "label": "Programming Fundamentals", "description": "Python or Go for scripting, automation, and tool building.", "difficulty": "beginner", "x": 500, "y": 150, "prerequisites": [], "estimatedMinutes": 200, "completed": false, "resources": [{ "id": "r3", "title": "Python for Everybody", "url": "https://www.py4e.com/", "type": "tutorial", "rating": 5 }] },
+    { "id": "fde-cloud", "label": "Cloud Platforms", "description": "AWS/GCP/Azure fundamentals, IAM, compute, and storage services.", "difficulty": "intermediate", "x": 200, "y": 300, "prerequisites": ["fde-networking"], "estimatedMinutes": 250, "completed": false, "resources": [{ "id": "r4", "title": "AWS Cloud Practitioner", "url": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/", "type": "tutorial", "rating": 5 }] },
+    { "id": "fde-terraform", "label": "Infrastructure as Code", "description": "Terraform, Pulumi, or CloudFormation for provisioning infrastructure.", "difficulty": "intermediate", "x": 400, "y": 300, "prerequisites": ["fde-cloud"], "estimatedMinutes": 200, "completed": false, "resources": [{ "id": "r5", "title": "Terraform Tutorials", "url": "https://developer.hashicorp.com/terraform/tutorials", "type": "tutorial", "rating": 5 }] },
+    { "id": "fde-docker", "label": "Containers & Docker", "description": "Containerization, Dockerfile, compose, and container orchestration basics.", "difficulty": "intermediate", "x": 600, "y": 300, "prerequisites": ["fde-linux"], "estimatedMinutes": 180, "completed": false, "resources": [{ "id": "r6", "title": "Docker Getting Started", "url": "https://docs.docker.com/get-started/", "type": "docs", "rating": 5 }] },
+    { "id": "fde-k8s", "label": "Kubernetes", "description": "Pods, deployments, services, and cluster management.", "difficulty": "advanced", "x": 600, "y": 450, "prerequisites": ["fde-docker"], "estimatedMinutes": 300, "completed": false, "resources": [{ "id": "r7", "title": "Kubernetes Tutorials", "url": "https://kubernetes.io/docs/tutorials/", "type": "docs", "rating": 5 }] },
+    { "id": "fde-cicd", "label": "CI/CD Pipelines", "description": "GitHub Actions, Jenkins, and deployment automation.", "difficulty": "intermediate", "x": 400, "y": 450, "prerequisites": ["fde-terraform", "fde-docker"], "estimatedMinutes": 200, "completed": false, "resources": [{ "id": "r8", "title": "GitHub Actions Docs", "url": "https://docs.github.com/en/actions", "type": "docs", "rating": 5 }] },
+    { "id": "fde-collab", "label": "Cross-Functional Collaboration", "description": "Working with product, design, and engineering teams. Translating business needs into technical solutions.", "difficulty": "advanced", "x": 300, "y": 600, "prerequisites": ["fde-cicd"], "estimatedMinutes": 150, "completed": false, "resources": [{ "id": "r9", "title": "Tech Decision Making", "url": "https://www.youtube.com/watch?v=USE_jYz20lI", "type": "video", "rating": 4 }] },
+    { "id": "fde-consulting", "label": "Client-Facing Skills", "description": "Presenting technical solutions, stakeholder management, and consulting frameworks.", "difficulty": "expert", "x": 500, "y": 600, "prerequisites": ["fde-collab"], "estimatedMinutes": 150, "completed": false, "resources": [{ "id": "r10", "title": "Consulting Approach", "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights", "type": "docs", "rating": 4 }] }
+  ],
+  "edges": [
+    { "id": "e1", "from": "fde-linux", "to": "fde-networking" },
+    { "id": "e2", "from": "fde-networking", "to": "fde-cloud" },
+    { "id": "e3", "from": "fde-cloud", "to": "fde-terraform" },
+    { "id": "e4", "from": "fde-linux", "to": "fde-docker" },
+    { "id": "e5", "from": "fde-docker", "to": "fde-k8s" },
+    { "id": "e6", "from": "fde-terraform", "to": "fde-cicd" },
+    { "id": "e7", "from": "fde-docker", "to": "fde-cicd" },
+    { "id": "e8", "from": "fde-cicd", "to": "fde-collab" },
+    { "id": "e9", "from": "fde-collab", "to": "fde-consulting" }
+  ]
+}

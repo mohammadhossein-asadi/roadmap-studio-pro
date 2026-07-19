@@ -1,0 +1,167 @@
+{
+  "nodes": [
+    {
+      "id": "tech-leadership",
+      "label": "Technical Leadership",
+      "description": "Influence without authority, technical vision, and leading by example",
+      "difficulty": "intermediate",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "The Manager's Path - Camille Fournier", "url": "https://www.oreilly.com/library/view/the-managers-path/9781491973882/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Will Larson - Engineering Management", "url": "https://lethain.com/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "team-building",
+      "label": "Team Building",
+      "description": "Hiring, onboarding, team culture, and building high-performing teams",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["tech-leadership"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "High Output Management - Andy Grove", "url": "https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Stripe Engineering Culture", "url": "https://stripe.com/blog/engineering-culture", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "project-mgmt",
+      "label": "Project Management",
+      "description": "Planning, estimation, risk management, and delivery accountability",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 150,
+      "prerequisites": ["tech-leadership"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "PMBOK Guide Summary", "url": "https://www.pmi.org/learning/library", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Agile Project Management - Atlassian", "url": "https://www.atlassian.com/agile/project-management", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "hiring",
+      "label": "Hiring & Interviews",
+      "description": "Interviewing techniques, technical assessments, and building diverse teams",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["team-building"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Hiring Engineering Managers - Will Larson", "url": "https://lethain.com/hiring-engineering-managers/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Google's Guide to Interviewing", "url": "https://www.google.com/about/careers/applications/interview-guide/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mentoring",
+      "label": "Mentoring & Coaching",
+      "description": "One-on-ones, feedback, career development, and growing engineers",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["team-building", "hiring"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Radical Candor - Kim Scott", "url": "https://www.radicalcandor.com/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "One-on-One Meetings Guide - Lighthouse", "url": "https://www.getlighthouse.com/blog/one-on-one-meeting-guide/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "strategy-em",
+      "label": "Engineering Strategy",
+      "description": "Technical strategy, roadmap alignment, build vs buy, and technology choices",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["mentoring", "project-mgmt"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "An Elegant Puzzle - Will Larson", "url": "https://www.oreilly.com/library/view/an-elegant-puzzle/9781492043317/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Staff Engineer - Will Larson", "url": "https://staffeng.com/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "budget",
+      "label": "Budgeting & Finance",
+      "description": "Engineering budgeting, resource allocation, and ROI analysis",
+      "difficulty": "advanced",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["project-mgmt"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Engineering Budget Guide - The Pragmatic Engineer", "url": "https://blog.pragmaticengineer.com/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "CTO Craft - Budgeting", "url": "https://ctocraft.com/blog/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "conflict",
+      "label": "Conflict Resolution",
+      "description": "Mediation, difficult conversations, and building psychological safety",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 350,
+      "prerequisites": ["tech-leadership"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Crucial Conversations Book", "url": "https://www.cruciallearning.com/crucial-conversations/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Psychological Safety - Amy Edmondson", "url": "https://www.google.com/search?q=psychological+safety+edmondson", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "devops-mgmt",
+      "label": "DevOps & Platform Leadership",
+      "description": "Platform engineering, developer experience, and operational excellence",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["project-mgmt"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Platform Engineering - Team Topologies", "url": "https://teamtopologies.com/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "DevOps Handbook Summary", "url": "https://itrevolution.com/the-devops-handbook/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "exec-presence",
+      "label": "Executive Presence",
+      "description": "Board presentations, C-suite communication, and organizational influence",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 50,
+      "prerequisites": ["strategy-em"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "CTO Craft - Executive Presence", "url": "https://ctocraft.com/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "The First 90 Days - Summary", "url": "https://www.michaeldwatkins.com/books/the-first-90-days/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "tech-leadership", "to": "team-building" },
+    { "id": "e2", "from": "tech-leadership", "to": "project-mgmt" },
+    { "id": "e3", "from": "tech-leadership", "to": "conflict" },
+    { "id": "e4", "from": "team-building", "to": "hiring" },
+    { "id": "e5", "from": "hiring", "to": "mentoring" },
+    { "id": "e6", "from": "team-building", "to": "mentoring" },
+    { "id": "e7", "from": "mentoring", "to": "strategy-em" },
+    { "id": "e8", "from": "project-mgmt", "to": "strategy-em" },
+    { "id": "e9", "from": "project-mgmt", "to": "budget" },
+    { "id": "e10", "from": "project-mgmt", "to": "devops-mgmt" },
+    { "id": "e11", "from": "strategy-em", "to": "exec-presence" }
+  ]
+}

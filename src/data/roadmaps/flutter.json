@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "id": "flutter-dart",
+      "label": "Dart Language",
+      "description": "Syntax, types, functions, null safety, async/await",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Dart Language Tour", "url": "https://dart.dev/language", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Dart Crash Course - Traversy Media", "url": "https://www.youtube.com/watch?v=5F-5PNvU-5M", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "flutter-widgets",
+      "label": "Widgets & UI",
+      "description": "StatelessWidget, StatefulWidget, layout widgets, styling",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["flutter-dart"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Flutter Widget Catalog", "url": "https://docs.flutter.dev/ui/widgets", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Flutter Widgets Course - The Net Ninja", "url": "https://www.youtube.com/watch?v=1uk0wT7Jq5g", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "flutter-state",
+      "label": "State Management",
+      "description": "setState, Provider, Riverpod, Bloc, state patterns",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["flutter-widgets"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Flutter State Management Docs", "url": "https://docs.flutter.dev/data-and-backend/state-mgmt", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Riverpod Tutorial - Andrea Bizzotto", "url": "https://codewithandrea.com/articles/flutter-state-management-riverpod/", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "flutter-navigation",
+      "label": "Navigation & Routing",
+      "description": "Navigator, named routes, go_router, deep linking, navigation patterns",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["flutter-state"],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Flutter Navigation Docs", "url": "https://docs.flutter.dev/ui/navigation", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "go_router Package - pub.dev", "url": "https://pub.dev/packages/go_router", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "flutter-forms",
+      "label": "Forms & Input",
+      "description": "Form validation, TextFormFields, custom inputs, user interaction",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["flutter-navigation"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Flutter Forms Guide", "url": "https://docs.flutter.dev/ui/layout", "type": "docs", "rating": 4 },
+        { "id": "r2", "title": "Flutter Forms Tutorial - Reso Coder", "url": "https://resocoder.com/flutter-form-validation/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "flutter-api",
+      "label": "API Integration",
+      "description": "HTTP requests, JSON parsing, Dio package, REST API integration",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["flutter-forms"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Fetch Data from Internet - Flutter Docs", "url": "https://docs.flutter.dev/data-and-backend/networking", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Dio Package Docs", "url": "https://pub.dev/packages/dio", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "flutter-testing",
+      "label": "Testing & Debugging",
+      "description": "Unit tests, widget tests, integration tests, DevTools, profiling",
+      "difficulty": "advanced",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["flutter-api"],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Flutter Testing Docs", "url": "https://docs.flutter.dev/testing", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Flutter Testing Course - Flutter Mapp", "url": "https://www.youtube.com/watch?v=QpKJBNLgZn0", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "flutter-publish",
+      "label": "Publishing to App Stores",
+      "description": "App signing, store listings, CI/CD, code signing, release builds",
+      "difficulty": "expert",
+      "x": 1500,
+      "y": 200,
+      "prerequisites": ["flutter-testing"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Flutter Build & Release - Docs", "url": "https://docs.flutter.dev/deployment", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Flutter App Publishing - FilledStacks", "url": "https://www.filledstacks.com/post/flutter-deploy-to-app-store-and-play-store/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "flutter-dart", "to": "flutter-widgets" },
+    { "id": "e2", "from": "flutter-widgets", "to": "flutter-state" },
+    { "id": "e3", "from": "flutter-state", "to": "flutter-navigation" },
+    { "id": "e4", "from": "flutter-navigation", "to": "flutter-forms" },
+    { "id": "e5", "from": "flutter-forms", "to": "flutter-api" },
+    { "id": "e6", "from": "flutter-api", "to": "flutter-testing" },
+    { "id": "e7", "from": "flutter-testing", "to": "flutter-publish" }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "sql-bi",
+      "label": "SQL for Analytics",
+      "description": "Complex queries, window functions, CTEs, and analytical SQL patterns",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "SQL Tutorial - Mode Analytics", "url": "https://mode.com/sql-tutorial/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Advanced SQL for Analytics", "url": "https://www.postgresqltutorial.com/postgresql-window-functions/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "excel",
+      "label": "Excel & Sheets",
+      "description": "Pivot tables, formulas, VLOOKUP, data validation, and spreadsheet modeling",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["sql-bi"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Excel Tutorial - GCFGlobal", "url": "https://edu.gcfglobal.org/en/excel/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Google Sheets Training", "url": "https://support.google.com/docs/answer/6004800", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "power-bi",
+      "label": "Power BI / Tableau",
+      "description": "Data visualization, dashboard creation, DAX, and interactive reports",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 150,
+      "prerequisites": ["excel"],
+      "estimatedMinutes": 350,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Power BI Documentation", "url": "https://learn.microsoft.com/en-us/power-bi/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Tableau Training - Free", "url": "https://www.tableau.com/learn/training", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "data-modeling",
+      "label": "Data Modeling",
+      "description": "Dimensional modeling, star schemas, snowflake schemas, and data warehouse design",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["sql-bi"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Kimball Group - Data Modeling", "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Data Modeling for Beginners", "url": "https://dataedo.com/kb/data-modeling/what-is-data-modeling", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "statistics",
+      "label": "Statistics & Analytics",
+      "description": "Descriptive statistics, hypothesis testing, regression, and A/B testing",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["power-bi"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Statistics Fundamentals - Khan Academy", "url": "https://www.khanacademy.org/math/statistics-probability", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Practical Statistics for Data Scientists", "url": "https://www.oreilly.com/library/view/practical-statistics-for/9781492072935/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "business-acumen",
+      "label": "Business Acumen",
+      "description": "KPI definition, business metrics, financial literacy, and strategic thinking",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["statistics"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Business Metrics for Data-Driven Companies", "url": "https://www.oreilly.com/library/view/business-metrics-for/9780132780131/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Harvard Business Review - Analytics", "url": "https://hbr.org/topic/subject/analytics", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "etl",
+      "label": "ETL & Data Pipelines",
+      "description": "Extract, Transform, Load processes, Airflow, and data pipeline design",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["data-modeling"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Apache Airflow Documentation", "url": "https://airflow.apache.org/docs/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "ETL Best Practices", "url": "https://www.talend.com/resources/what-is-etl/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "python-bi",
+      "label": "Python for Analytics",
+      "description": "Pandas, NumPy, Jupyter notebooks, and data manipulation in Python",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 50,
+      "prerequisites": ["sql-bi"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python for Data Analysis - Pandas", "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Jupyter Notebook Tutorial", "url": "https://jupyter-notebook.readthedocs.io/en/latest/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "reporting",
+      "label": "Reporting & Dashboards",
+      "description": "Automated reporting, dashboard design principles, and stakeholder communication",
+      "difficulty": "beginner",
+      "x": 600,
+      "y": 50,
+      "prerequisites": ["power-bi"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Dashboard Design - Chartio", "url": "https://chartio.com/learn/best-practices/best-practices-for-dashboard-design/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Storytelling with Data", "url": "https://www.storytellingwithdata.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "data-governance",
+      "label": "Data Governance",
+      "description": "Data quality, data literacy, compliance, and data catalog management",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["etl", "business-acumen"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Data Governance Guide - Atlan", "url": "https://atlan.com/data-governance/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Collibra Learning Center", "url": "https://www.collibra.com/us/en/resources", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "sql-bi", "to": "excel" },
+    { "id": "e2", "from": "sql-bi", "to": "data-modeling" },
+    { "id": "e3", "from": "sql-bi", "to": "python-bi" },
+    { "id": "e4", "from": "excel", "to": "power-bi" },
+    { "id": "e5", "from": "power-bi", "to": "statistics" },
+    { "id": "e6", "from": "power-bi", "to": "reporting" },
+    { "id": "e7", "from": "statistics", "to": "business-acumen" },
+    { "id": "e8", "from": "data-modeling", "to": "etl" },
+    { "id": "e9", "from": "etl", "to": "data-governance" },
+    { "id": "e10", "from": "business-acumen", "to": "data-governance" }
+  ]
+}

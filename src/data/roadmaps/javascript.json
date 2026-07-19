@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "js-es6",
+      "label": "ES6+ Features",
+      "description": "Arrow functions, destructuring, template literals, spread/rest, modules",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "ES6 Features Overview - MDN", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "ES6 JavaScript Tutorial - Fireship", "url": "https://www.youtube.com/watch?v=LPBCkxhZyX0", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "js-dom",
+      "label": "DOM Manipulation",
+      "description": "Selecting elements, event handling, DOM traversal, manipulation",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["js-es6"],
+      "estimatedMinutes": 110,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Introduction to the DOM - MDN", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "DOM Crash Course - Traversy Media", "url": "https://www.youtube.com/watch?v=0ik6X4LJKu0", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "js-async",
+      "label": "Async JavaScript",
+      "description": "Callbacks, promises, async/await, error handling, fetch API",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["js-dom"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Using Promises - MDN", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Async Await Explained - Fireship", "url": "https://www.youtube.com/watch?v=vn3TMFrKOJQ", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "js-modules",
+      "label": "Modules & Bundling",
+      "description": "ES modules, CommonJS, npm packages, webpack/vite configuration",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["js-async"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "JavaScript Modules - MDN", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Vite Getting Started", "url": "https://vitejs.dev/guide/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "js-patterns",
+      "label": "Design Patterns",
+      "description": "Module, observer, factory, singleton, pub/sub patterns in JS",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["js-modules"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "JavaScript Patterns - Addy Osmani", "url": "https://www.patterns.dev/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "JS Design Patterns - Fireship", "url": "https://www.youtube.com/watch?v=tgb_R5NJC7s", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "js-performance",
+      "label": "Performance Optimization",
+      "description": "Debouncing, throttling, lazy loading, memoization, profiling",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["js-patterns"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Performance - MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/Performance", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "JavaScript Performance Tips - V8 Blog", "url": "https://v8.dev/blog", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "js-security",
+      "label": "Security Best Practices",
+      "description": "XSS prevention, CSP, input sanitization, secure coding",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["js-performance"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Web Security - MDN", "url": "https://developer.mozilla.org/en-US/docs/Web/Security", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "OWASP XSS Prevention Cheat Sheet", "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Scripting_Prevention_Cheat_Sheet.html", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "js-es6", "to": "js-dom" },
+    { "id": "e2", "from": "js-dom", "to": "js-async" },
+    { "id": "e3", "from": "js-async", "to": "js-modules" },
+    { "id": "e4", "from": "js-modules", "to": "js-patterns" },
+    { "id": "e5", "from": "js-patterns", "to": "js-performance" },
+    { "id": "e6", "from": "js-performance", "to": "js-security" }
+  ]
+}

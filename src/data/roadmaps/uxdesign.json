@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "design-thinking",
+      "label": "Design Thinking",
+      "description": "Human-centered design process, empathy, ideation, and prototyping mindset",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "IDEO Design Thinking Guide", "url": "https://designthinking.ideo.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Stanford d.school Bootcamp Bootleg", "url": "https://dschool.stanford.edu/resources", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "user-research",
+      "label": "User Research",
+      "description": "Interviews, surveys, personas, journey mapping, and usability studies",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["design-thinking"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "NNGroup - User Research Methods", "url": "https://www.nngroup.com/articles/user-research-methods/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "UX Research Guide - CareerFoundry", "url": "https://careerfoundry.com/en/blog/ux-design/the-ultimate-guide-to-ux-research/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "wireframing",
+      "label": "Wireframing",
+      "description": "Low-fidelity layouts, information architecture, and content hierarchy",
+      "difficulty": "beginner",
+      "x": 400,
+      "y": 200,
+      "prerequisites": ["user-research"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Balsamiq Wireframing Academy", "url": "https://wireframeschool.balsamiq.com/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Figma Wireframe Tutorial", "url": "https://help.figma.com/hc/en-us/articles/360040449893", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "prototyping",
+      "label": "Prototyping",
+      "description": "Interactive prototypes, Figma, InVision, and high-fidelity mockups",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["wireframing"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Figma Learning Center", "url": "https://help.figma.com/hc/en-us/categories/360002051634-Learn", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "InVision Blog - Prototyping", "url": "https://www.invisionapp.com/inside-design/how-to-prototype/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "usability-testing",
+      "label": "Usability Testing",
+      "description": "Usability studies, A/B testing, heuristic evaluation, and user feedback",
+      "difficulty": "intermediate",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["prototyping"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "NNGroup - Usability Testing", "url": "https://www.nngroup.com/articles/usability-testing-101/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "UsabilityHub - User Testing Guide", "url": "https://usabilitygeek.com/usability-testing/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "design-systems",
+      "label": "Design Systems",
+      "description": "Component libraries, design tokens, consistency, and scalability patterns",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["prototyping"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Design Systems Handbook", "url": "https://www.designsystemshandbook.com/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Material Design Guidelines", "url": "https://m3.material.io/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "interaction-design",
+      "label": "Interaction Design",
+      "description": "Micro-interactions, animation, feedback loops, and motion design",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["wireframing"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Interaction Design Foundation", "url": "https://www.interaction-design.org/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Lottie Animations", "url": "https://airbnb.io/lottie/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "label": "Accessibility (a11y)",
+      "description": "WCAG guidelines, screen readers, ARIA, and inclusive design",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 50,
+      "prerequisites": ["wireframing"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "WCAG 2.1 Guidelines", "url": "https://www.w3.org/WAI/WCAG21/quickref/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "A11y Project Checklist", "url": "https://www.a11yproject.com/checklist/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "visual-design",
+      "label": "Visual Design",
+      "description": "Typography, color theory, layout, hierarchy, and visual communication",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 50,
+      "prerequisites": ["design-thinking"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Adobe Color", "url": "https://color.adobe.com/", "type": "tutorial", "rating": 4 },
+        { "id": "r2", "title": "Google Fonts - Typography", "url": "https://fonts.google.com/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ux-strategy",
+      "label": "UX Strategy",
+      "description": "Product strategy, competitive analysis, metrics, and business-UX alignment",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 50,
+      "prerequisites": ["user-research", "usability-testing"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "NNGroup - UX Strategy", "url": "https://www.nngroup.com/articles/ux-strategy/", "type": "article", "rating": 4 },
+        { "id": "r2", "title": "Lean UX Book Summary", "url": "https://www.oreilly.com/library/view/lean-ux/9781491960066/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "design-thinking", "to": "user-research" },
+    { "id": "e2", "from": "design-thinking", "to": "visual-design" },
+    { "id": "e3", "from": "user-research", "to": "wireframing" },
+    { "id": "e4", "from": "wireframing", "to": "prototyping" },
+    { "id": "e5", "from": "wireframing", "to": "interaction-design" },
+    { "id": "e6", "from": "wireframing", "to": "accessibility" },
+    { "id": "e7", "from": "prototyping", "to": "usability-testing" },
+    { "id": "e8", "from": "prototyping", "to": "design-systems" },
+    { "id": "e9", "from": "user-research", "to": "ux-strategy" },
+    { "id": "e10", "from": "usability-testing", "to": "ux-strategy" }
+  ]
+}

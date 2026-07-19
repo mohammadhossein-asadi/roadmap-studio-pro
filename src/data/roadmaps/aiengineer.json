@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "id": "python",
+      "label": "Python Programming",
+      "description": "Python fundamentals, OOP, async programming, and package management",
+      "difficulty": "beginner",
+      "x": 50,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Python Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=rfscVS0vtbw", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "Python Official Tutorial", "url": "https://docs.python.org/3/tutorial/", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "Automate the Boring Stuff", "url": "https://automatetheboringstuff.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ml_basics",
+      "label": "Machine Learning Basics",
+      "description": "Supervised/unsupervised learning, scikit-learn, model evaluation, and feature engineering",
+      "difficulty": "intermediate",
+      "x": 50,
+      "y": 400,
+      "prerequisites": ["python"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Machine Learning Course - Andrew Ng (Coursera)", "url": "https://www.coursera.org/learn/machine-learning", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Kaggle Intro to ML", "url": "https://www.kaggle.com/learn/intro-to-machine-learning", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "StatQuest ML Playlist", "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "math",
+      "label": "Math for ML",
+      "description": "Linear algebra, calculus, probability, and optimization for machine learning",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 150,
+      "prerequisites": ["python"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Mathematics for Machine Learning (Free Book)", "url": "https://mml-book.github.io/", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "3Blue1Brown - Linear Algebra", "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "deep_learning",
+      "label": "Deep Learning",
+      "description": "Neural networks, CNNs, RNNs, PyTorch/TensorFlow, and training techniques",
+      "difficulty": "advanced",
+      "x": 200,
+      "y": 380,
+      "prerequisites": ["ml_basics", "math"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Deep Learning Specialization - Andrew Ng", "url": "https://www.coursera.org/specializations/deep-learning", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Fast.ai Practical Deep Learning", "url": "https://course.fast.ai/", "type": "tutorial", "rating": 5 },
+        { "id": "r3", "title": "PyTorch Tutorials", "url": "https://pytorch.org/tutorials/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "llms",
+      "label": "Large Language Models",
+      "description": "Transformer architecture, attention mechanisms, GPT, BERT, and prompt engineering",
+      "difficulty": "advanced",
+      "x": 350,
+      "y": 200,
+      "prerequisites": ["deep_learning"],
+      "estimatedMinutes": 180,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "LLM Course - Maxime Labonne", "url": "https://github.com/mlabonne/llm-course", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Andrej Karpathy - Let's build GPT", "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY", "type": "video", "rating": 5 },
+        { "id": "r3", "title": "Hugging Face NLP Course", "url": "https://huggingface.co/learn/nlp-course", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "rag",
+      "label": "RAG Systems",
+      "description": "Retrieval-Augmented Generation, vector databases, embedding models, and knowledge bases",
+      "difficulty": "advanced",
+      "x": 350,
+      "y": 400,
+      "prerequisites": ["llms"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "LangChain RAG Tutorial", "url": "https://python.langchain.com/docs/tutorials/rag/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Pinecone RAG Guide", "url": "https://www.pinecone.io/learn/retrieval-augmented-generation/", "type": "article", "rating": 4 },
+        { "id": "r3", "title": "ChromaDB Docs", "url": "https://docs.trychroma.com/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "fine_tuning",
+      "label": "Fine-tuning & RLHF",
+      "description": "LoRA, QLoRA, fine-tuning LLMs, RLHF, DPO, and evaluation methods",
+      "difficulty": "expert",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["llms", "deep_learning"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Unsloth Fine-tuning Guide", "url": "https://github.com/unslothai/unsloth", "type": "article", "rating": 5 },
+        { "id": "r2", "title": "Hugging Face PEFT Docs", "url": "https://huggingface.co/docs/peft/index", "type": "docs", "rating": 4 },
+        { "id": "r3", "title": "RLHF Explained - Hugging Face", "url": "https://huggingface.co/blog/rlhf", "type": "article", "rating": 5 }
+      ]
+    },
+    {
+      "id": "mlops",
+      "label": "MLOps",
+      "description": "Experiment tracking, model versioning, ML pipelines, and monitoring",
+      "difficulty": "advanced",
+      "x": 500,
+      "y": 380,
+      "prerequisites": ["deep_learning", "docker"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MLOps Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=Ghnxc235x4Y", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "MLflow Documentation", "url": "https://mlflow.org/docs/latest/index.html", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "Made With ML", "url": "https://madewithml.com/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "docker_ml",
+      "label": "Docker for ML",
+      "description": "Containerizing ML models, GPU support, and reproducible environments",
+      "difficulty": "intermediate",
+      "x": 650,
+      "y": 150,
+      "prerequisites": ["ml_basics"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docker for Data Science - YouTube", "url": "https://www.youtube.com/watch?v=1uHVJEQ0mRI", "type": "video", "rating": 4 },
+        { "id": "r2", "title": "Docker Official Docs", "url": "https://docs.docker.com/get-started/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "deployment",
+      "label": "Model Deployment",
+      "description": "REST APIs with FastAPI, model serving with TorchServe/Triton, and edge deployment",
+      "difficulty": "advanced",
+      "x": 650,
+      "y": 350,
+      "prerequisites": ["mlops", "fine_tuning"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Deploy ML Models - Full Course - freeCodeCamp", "url": "https://www.youtube.com/watch?v=mmusGf5rRt4", "type": "video", "rating": 5 },
+        { "id": "r2", "title": "FastAPI Documentation", "url": "https://fastapi.tiangolo.com/", "type": "docs", "rating": 5 },
+        { "id": "r3", "title": "TorchServe Documentation", "url": "https://pytorch.org/serve/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "python", "to": "ml_basics" },
+    { "id": "e2", "from": "python", "to": "math" },
+    { "id": "e3", "from": "ml_basics", "to": "deep_learning" },
+    { "id": "e4", "from": "math", "to": "deep_learning" },
+    { "id": "e5", "from": "deep_learning", "to": "llms" },
+    { "id": "e6", "from": "llms", "to": "rag" },
+    { "id": "e7", "from": "llms", "to": "fine_tuning" },
+    { "id": "e8", "from": "deep_learning", "to": "fine_tuning" },
+    { "id": "e9", "from": "deep_learning", "to": "mlops" },
+    { "id": "e10", "from": "ml_basics", "to": "docker_ml" },
+    { "id": "e11", "from": "mlops", "to": "deployment" },
+    { "id": "e12", "from": "fine_tuning", "to": "deployment" }
+  ]
+}

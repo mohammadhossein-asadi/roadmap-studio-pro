@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "rust-ownership",
+      "label": "Ownership & Borrowing",
+      "description": "Ownership rules, move semantics, borrowing, lifetimes",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Rust Book - Ownership", "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Rust Ownership Explained - Let's Get Rusty", "url": "https://www.youtube.com/watch?v=IlPf7x06z0Y", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rust-types",
+      "label": "Types & Pattern Matching",
+      "description": "Structs, enums, Option, Result, pattern matching, match expressions",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["rust-ownership"],
+      "estimatedMinutes": 130,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Rust Book - Enums & Pattern Matching", "url": "https://doc.rust-lang.org/book/ch06-00-enums.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Rust Enums & Structs - Exercism", "url": "https://exercism.org/tracks/rust", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rust-traits",
+      "label": "Traits & Generics",
+      "description": "Trait definitions, implementations, trait bounds, generic functions",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["rust-types"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Rust Book - Traits", "url": "https://doc.rust-lang.org/book/ch10-02-traits.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Rust Traits - Jon Gjengset", "url": "https://www.youtube.com/watch?v=TKdGNZTR3mQ", "type": "video", "rating": 5 }
+      ]
+    },
+    {
+      "id": "rust-errors",
+      "label": "Error Handling",
+      "description": "Result, Option, custom errors, error propagation with ?",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["rust-traits"],
+      "estimatedMinutes": 100,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Rust Book - Error Handling", "url": "https://doc.rust-lang.org/book/ch09-00-error-handling.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Error Handling in Rust - Anyhow & Thiserror", "url": "https://www.shuttle.rs/blog/2023/09/27/rust-error-handling", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rust-async",
+      "label": "Async Rust",
+      "description": "async/await, Future trait, Tokio runtime, async patterns",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["rust-errors"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Async Book - Rust", "url": "https://rust-lang.github.io/async-book/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Tokio Tutorial", "url": "https://tokio.rs/tokio/tutorial", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "rust-concurrency",
+      "label": "Fearless Concurrency",
+      "description": "Threads, message passing, shared state, Mutex, Arc, Send/Sync",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["rust-async"],
+      "estimatedMinutes": 140,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Rust Book - Concurrency", "url": "https://doc.rust-lang.org/book/ch16-00-concurrency.html", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Rust Concurrency Patterns - YouTube", "url": "https://www.youtube.com/watch?v=bo5kul5tdEw", "type": "video", "rating": 4 }
+      ]
+    },
+    {
+      "id": "rust-wasm",
+      "label": "WebAssembly with Rust",
+      "description": "Compiling to WASM, wasm-bindgen, web-sys, wasm-pack",
+      "difficulty": "expert",
+      "x": 1300,
+      "y": 200,
+      "prerequisites": ["rust-concurrency"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Rust & WebAssembly Book", "url": "https://rustwasm.github.io/docs/book/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "wasm-pack Getting Started", "url": "https://rustwasm.github.io/wasm-pack/tutorial/", "type": "tutorial", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "rust-ownership", "to": "rust-types" },
+    { "id": "e2", "from": "rust-types", "to": "rust-traits" },
+    { "id": "e3", "from": "rust-traits", "to": "rust-errors" },
+    { "id": "e4", "from": "rust-errors", "to": "rust-async" },
+    { "id": "e5", "from": "rust-async", "to": "rust-concurrency" },
+    { "id": "e6", "from": "rust-concurrency", "to": "rust-wasm" }
+  ]
+}

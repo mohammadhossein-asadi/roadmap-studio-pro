@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "tokens",
+      "label": "Design Tokens",
+      "description": "Colors, typography, spacing, elevation — the atomic values of design",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Design Tokens W3C Draft", "url": "https://tr.designtokens.org/format/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Salesforce Design Tokens", "url": "https://www.lightningdesignsystem.com/design-tokens/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "components",
+      "label": "Component Library",
+      "description": "Buttons, inputs, modals, cards — reusable UI building blocks",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["tokens"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "Shadcn/UI Components", "url": "https://ui.shadcn.com/", "type": "docs", "rating": 5 },
+        { "id": "r4", "title": "Radix UI Primitives", "url": "https://www.radix-ui.com/primitives", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "documentation",
+      "label": "Documentation",
+      "description": "Storybook, usage guidelines, code examples, do/don't patterns",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["components"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Storybook Documentation", "url": "https://storybook.js.org/docs/", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "Polaris Design System", "url": "https://polaris.shopify.com/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "label": "Accessibility",
+      "description": "WCAG 2.1, ARIA labels, keyboard navigation, screen readers",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["documentation"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "WCAG 2.1 Guidelines", "url": "https://www.w3.org/WAI/WCAG21/quickref/", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "A11y Project Checklist", "url": "https://www.a11yproject.com/checklist/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "figma",
+      "label": "Figma Integration",
+      "description": "Figma to code workflow, design tokens sync, component mapping",
+      "difficulty": "intermediate",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["accessibility"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Figma Dev Mode", "url": "https://www.figma.com/dev-mode/", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "Style Dictionary", "url": "https://amzn.github.io/style-dictionary/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "testing",
+      "label": "Testing & Quality",
+      "description": "Visual regression testing, component testing, cross-browser testing",
+      "difficulty": "advanced",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["figma"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Chromatic Visual Testing", "url": "https://www.chromatic.com/", "type": "docs", "rating": 5 },
+        { "id": "r12", "title": "Testing Library Docs", "url": "https://testing-library.com/docs/", "type": "docs", "rating": 5 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "tokens", "to": "components" },
+    { "id": "e2", "from": "components", "to": "documentation" },
+    { "id": "e3", "from": "documentation", "to": "accessibility" },
+    { "id": "e4", "from": "accessibility", "to": "figma" },
+    { "id": "e5", "from": "figma", "to": "testing" }
+  ]
+}

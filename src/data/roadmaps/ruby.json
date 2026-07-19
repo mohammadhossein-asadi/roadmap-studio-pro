@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "ruby-1",
+      "label": "Ruby Syntax",
+      "description": "Ruby language basics and syntax",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Ruby Official Docs", "url": "https://www.ruby-lang.org/en/documentation/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Ruby in Twenty Minutes", "url": "https://www.ruby-lang.org/en/documentation/quickstart/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "ruby-2",
+      "label": "Object-Oriented Ruby",
+      "description": "Classes, modules, and mixins",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["ruby-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Ruby OOP Guide", "url": "https://www.ruby-lang.org/en/documentation/oop/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Learn Ruby the Hard Way", "url": "https://learnrubythehardway.org/book/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ruby-3",
+      "label": "Blocks & Procs",
+      "description": "Blocks, Procs, and Lambdas in Ruby",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["ruby-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Blocks and Procs", "url": "https://www.ruby-lang.org/en/documentation/syntax/control_expressions/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Ruby Closures", "url": "https://www.sitepoint.com/ruby-closures/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ruby-4",
+      "label": "Gems",
+      "description": "Package management with RubyGems",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["ruby-2"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "RubyGems Docs", "url": "https://guides.rubygems.org/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Creating a Gem", "url": "https://guides.rubygems.org/make-your-own-gem/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ruby-5",
+      "label": "Testing",
+      "description": "Unit testing with RSpec and Minitest",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["ruby-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "RSpec Documentation", "url": "https://rspec.info/documentation/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Minitest Guide", "url": "https://github.com/seattlerb/minitest", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ruby-6",
+      "label": "Metaprogramming",
+      "description": "Dynamic code generation and reflection",
+      "difficulty": "advanced",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["ruby-2", "ruby-3"],
+      "estimatedMinutes": 150,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Metaprogramming in Ruby", "url": "https://www.oreilly.com/library/view/metaprogramming-ruby-2/9781941222997/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Ruby Metaprogramming Tutorial", "url": "https://www.sitepoint.com/metaprogramming-ruby/", "type": "article", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "ruby-1", "to": "ruby-2" },
+    { "id": "e2", "from": "ruby-1", "to": "ruby-3" },
+    { "id": "e3", "from": "ruby-2", "to": "ruby-4" },
+    { "id": "e4", "from": "ruby-2", "to": "ruby-5" },
+    { "id": "e5", "from": "ruby-2", "to": "ruby-6" },
+    { "id": "e6", "from": "ruby-3", "to": "ruby-6" }
+  ]
+}

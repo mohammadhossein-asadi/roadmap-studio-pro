@@ -1,0 +1,120 @@
+{
+  "nodes": [
+    {
+      "id": "docker-1",
+      "label": "Docker Images",
+      "description": "Build and manage container images",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 100,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docker Images Guide", "url": "https://docs.docker.com/engine/reference/commandline/image/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Docker Getting Started", "url": "https://docs.docker.com/get-started/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "docker-2",
+      "label": "Containers",
+      "description": "Run and manage containerized applications",
+      "difficulty": "beginner",
+      "x": 300,
+      "y": 100,
+      "prerequisites": ["docker-1"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docker Containers Docs", "url": "https://docs.docker.com/get-started/docker-overview/#docker-containers", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Docker Tutorial for Beginners", "url": "https://www.digitalocean.com/community/tutorials/docker-tutorial-for-beginners", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "docker-3",
+      "label": "Dockerfile",
+      "description": "Write build instructions for custom images",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 100,
+      "prerequisites": ["docker-1"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Dockerfile Reference", "url": "https://docs.docker.com/engine/reference/builder/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Best Practices for Dockerfiles", "url": "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "docker-4",
+      "label": "Docker Compose",
+      "description": "Define and run multi-container applications",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 300,
+      "prerequisites": ["docker-2", "docker-3"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docker Compose Docs", "url": "https://docs.docker.com/compose/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Docker Compose Tutorial", "url": "https://docs.docker.com/compose/gettingstarted/", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "docker-5",
+      "label": "Networking",
+      "description": "Container networking and service discovery",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 300,
+      "prerequisites": ["docker-2"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docker Networking Overview", "url": "https://docs.docker.com/network/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Bridge Networks Tutorial", "url": "https://docs.docker.com/network/network-tutorial-bridge/", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "docker-6",
+      "label": "Volumes",
+      "description": "Persistent data storage for containers",
+      "difficulty": "intermediate",
+      "x": 100,
+      "y": 500,
+      "prerequisites": ["docker-4"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docker Volumes Guide", "url": "https://docs.docker.com/storage/volumes/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Storage in Docker", "url": "https://docs.docker.com/storage/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "docker-7",
+      "label": "Best Practices",
+      "description": "Production-ready Docker patterns and optimization",
+      "difficulty": "advanced",
+      "x": 300,
+      "y": 500,
+      "prerequisites": ["docker-4", "docker-5", "docker-6"],
+      "estimatedMinutes": 120,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docker Best Practices", "url": "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Docker Security Best Practices", "url": "https://docs.docker.com/engine/security/", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "docker-1", "to": "docker-2" },
+    { "id": "e2", "from": "docker-1", "to": "docker-3" },
+    { "id": "e3", "from": "docker-2", "to": "docker-4" },
+    { "id": "e4", "from": "docker-3", "to": "docker-4" },
+    { "id": "e5", "from": "docker-2", "to": "docker-5" },
+    { "id": "e6", "from": "docker-4", "to": "docker-6" },
+    { "id": "e7", "from": "docker-4", "to": "docker-7" },
+    { "id": "e8", "from": "docker-5", "to": "docker-7" },
+    { "id": "e9", "from": "docker-6", "to": "docker-7" }
+  ]
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, Clock, ExternalLink, BookOpen, Video, FileText, GraduationCap, CheckCircle2, Star } from "lucide-react";
 import { SPRING_CONFIG, TIER_COLORS } from "@/lib/constants";
@@ -20,23 +21,39 @@ const resourceIcons: Record<string, typeof BookOpen> = {
 };
 
 export function TopicDrawer({ node, onClose }: TopicDrawerProps) {
-  if (!node) return null;
+  const handleEscape = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    },
+    [onClose]
+  );
 
-  const tierStyle = TIER_COLORS[node.difficulty] || TIER_COLORS.beginner;
+  useEffect(() => {
+    if (node) {
+      document.addEventListener("keydown", handleEscape);
+      return () => document.removeEventListener("keydown", handleEscape);
+    }
+  }, [node, handleEscape]);
+
+  const tierStyle = node ? TIER_COLORS[node.difficulty] || TIER_COLORS.beginner : TIER_COLORS.beginner;
 
   return (
     <AnimatePresence>
       {node && (
-        <>
+        <div key="topic-drawer">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
             onClick={onClose}
+            aria-hidden="true"
           />
 
           <motion.aside
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${node.label} details`}
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -53,7 +70,7 @@ export function TopicDrawer({ node, onClose }: TopicDrawerProps) {
                   {node.estimatedMinutes} min
                 </div>
               </div>
-              <Button variant="ghost" size="icon" onClick={onClose}>
+              <Button variant="ghost" size="icon" onClick={onClose} aria-label="Close drawer">
                 <X className="h-5 w-5" />
               </Button>
             </div>
@@ -137,7 +154,7 @@ export function TopicDrawer({ node, onClose }: TopicDrawerProps) {
               </div>
             </div>
           </motion.aside>
-        </>
+        </div>
       )}
     </AnimatePresence>
   );

@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "app-router",
+      "label": "App Router",
+      "description": "File-based routing, layouts, loading states, error boundaries",
+      "difficulty": "beginner",
+      "x": 100,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Next.js App Router Docs", "url": "https://nextjs.org/docs/app", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Next.js Learn Course", "url": "https://nextjs.org/learn", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "server-components",
+      "label": "Server Components",
+      "description": "React Server Components, client components, server actions",
+      "difficulty": "intermediate",
+      "x": 300,
+      "y": 200,
+      "prerequisites": ["app-router"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r3", "title": "React Server Components", "url": "https://react.dev/reference/rsc/server-components", "type": "docs", "rating": 5 },
+        { "id": "r4", "title": "Next.js Data Fetching", "url": "https://nextjs.org/docs/app/building-your-application/data-fetching", "type": "docs", "rating": 5 }
+      ]
+    },
+    {
+      "id": "api-routes",
+      "label": "Route Handlers",
+      "description": "API routes with Route Handlers, request/response objects, streaming",
+      "difficulty": "intermediate",
+      "x": 500,
+      "y": 200,
+      "prerequisites": ["server-components"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r5", "title": "Route Handlers Docs", "url": "https://nextjs.org/docs/app/building-your-application/routing/route-handlers", "type": "docs", "rating": 5 },
+        { "id": "r6", "title": "Next.js API Routes Tutorial", "url": "https://nextjs.org/learn/dashboard/fetching-data", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "middleware",
+      "label": "Middleware",
+      "description": "Request modification, authentication, redirects, rewrites",
+      "difficulty": "intermediate",
+      "x": 700,
+      "y": 200,
+      "prerequisites": ["api-routes"],
+      "estimatedMinutes": 45,
+      "completed": false,
+      "resources": [
+        { "id": "r7", "title": "Next.js Middleware Docs", "url": "https://nextjs.org/docs/app/building-your-application/routing/middleware", "type": "docs", "rating": 5 },
+        { "id": "r8", "title": "NextAuth.js with Middleware", "url": "https://next-auth.js.org/configuration/nextjs", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ssr-ssg",
+      "label": "SSR & SSG",
+      "description": "Server-side rendering, static site generation, ISR, streaming SSR",
+      "difficulty": "advanced",
+      "x": 900,
+      "y": 200,
+      "prerequisites": ["middleware"],
+      "estimatedMinutes": 90,
+      "completed": false,
+      "resources": [
+        { "id": "r9", "title": "Next.js Rendering Modes", "url": "https://nextjs.org/docs/app/building-your-application/rendering", "type": "docs", "rating": 5 },
+        { "id": "r10", "title": "Vercel Performance Guide", "url": "https://nextjs.org/docs/app/building-your-application/caching", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "deploy",
+      "label": "Deployment",
+      "description": "Vercel, Docker, self-hosted, environment variables, CI/CD",
+      "difficulty": "intermediate",
+      "x": 1100,
+      "y": 200,
+      "prerequisites": ["ssr-ssg"],
+      "estimatedMinutes": 60,
+      "completed": false,
+      "resources": [
+        { "id": "r11", "title": "Vercel Deployment Docs", "url": "https://vercel.com/docs/deployments/overview", "type": "docs", "rating": 5 },
+        { "id": "r12", "title": "Next.js Docker Guide", "url": "https://nextjs.org/docs/app/building-your-application/deploying#docker", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "app-router", "to": "server-components" },
+    { "id": "e2", "from": "server-components", "to": "api-routes" },
+    { "id": "e3", "from": "api-routes", "to": "middleware" },
+    { "id": "e4", "from": "middleware", "to": "ssr-ssg" },
+    { "id": "e5", "from": "ssr-ssg", "to": "deploy" }
+  ]
+}

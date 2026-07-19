@@ -1,0 +1,167 @@
+{
+  "nodes": [
+    {
+      "id": "ml-basics",
+      "label": "ML Fundamentals",
+      "description": "Machine learning concepts, algorithms, model training, and evaluation metrics",
+      "difficulty": "beginner",
+      "x": 0,
+      "y": 200,
+      "prerequisites": [],
+      "estimatedMinutes": 400,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Machine Learning - Stanford Coursera", "url": "https://www.coursera.org/learn/machine-learning", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Google ML Crash Course", "url": "https://developers.google.com/machine-learning/crash-course", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "description": "Containerization, Dockerfiles, images, and container orchestration basics",
+      "difficulty": "beginner",
+      "x": 200,
+      "y": 200,
+      "prerequisites": ["ml-basics"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Docker Getting Started", "url": "https://docs.docker.com/get-started/", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Docker for Data Science", "url": "https://www.docker.com/blog/how-docker-helps-data-scientists/", "type": "article", "rating": 4 }
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "label": "Kubernetes",
+      "description": "Container orchestration, pods, services, deployments, and cluster management",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 200,
+      "prerequisites": ["docker"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Kubernetes Documentation", "url": "https://kubernetes.io/docs/home/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Kubernetes Tutorial - DigitalOcean", "url": "https://www.digitalocean.com/community/tutorials/kubernetes-for-machine-learning", "type": "tutorial", "rating": 4 }
+      ]
+    },
+    {
+      "id": "mlflow",
+      "label": "MLflow",
+      "description": "Experiment tracking, model registry, and ML lifecycle management",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 200,
+      "prerequisites": ["kubernetes"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "MLflow Documentation", "url": "https://mlflow.org/docs/latest/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "MLflow Quickstart", "url": "https://mlflow.org/docs/latest/quickstart.html", "type": "tutorial", "rating": 5 }
+      ]
+    },
+    {
+      "id": "model-monitoring",
+      "label": "Model Monitoring",
+      "description": "Model drift, performance monitoring, logging, and alerting",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 200,
+      "prerequisites": ["mlflow"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Evidently AI Documentation", "url": "https://docs.evidentlyai.com/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Whylabs Documentation", "url": "https://docs.whylabs.ai/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "ml-cicd",
+      "label": "ML CI/CD",
+      "description": "Automated model training, testing, deployment pipelines, and GitOps for ML",
+      "difficulty": "advanced",
+      "x": 800,
+      "y": 350,
+      "prerequisites": ["mlflow", "kubernetes"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Kubeflow Documentation", "url": "https://www.kubeflow.org/docs/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "GitHub Actions for ML", "url": "https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "label": "ML Infrastructure",
+      "description": "GPU clusters, distributed training, feature stores, and model serving",
+      "difficulty": "advanced",
+      "x": 1000,
+      "y": 200,
+      "prerequisites": ["ml-cicd", "model-monitoring"],
+      "estimatedMinutes": 300,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "ML Systems Design", "url": "https://huyenchip.com/machine-learning-systems-design/toc.html", "type": "tutorial", "rating": 5 },
+        { "id": "r2", "title": "Triton Inference Server", "url": "https://github.com/triton-inference-server/server", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "model-serving",
+      "label": "Model Serving",
+      "description": "REST APIs for models, batch inference, edge deployment, and optimization",
+      "difficulty": "intermediate",
+      "x": 600,
+      "y": 350,
+      "prerequisites": ["docker"],
+      "estimatedMinutes": 250,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "FastAPI Documentation", "url": "https://fastapi.tiangolo.com/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "TensorFlow Serving", "url": "https://www.tensorflow.org/tfx/guide/serving", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "feature-store",
+      "label": "Feature Stores",
+      "description": "Feature engineering, feature pipelines, and feature store platforms",
+      "difficulty": "intermediate",
+      "x": 400,
+      "y": 350,
+      "prerequisites": ["docker"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "Feast Documentation", "url": "https://docs.feast.dev/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "Hopsworks Documentation", "url": "https://docs.hopsworks.ai/", "type": "docs", "rating": 4 }
+      ]
+    },
+    {
+      "id": "cloud-ml",
+      "label": "Cloud ML Platforms",
+      "description": "AWS SageMaker, GCP Vertex AI, Azure ML, and managed ML services",
+      "difficulty": "intermediate",
+      "x": 200,
+      "y": 350,
+      "prerequisites": ["ml-basics"],
+      "estimatedMinutes": 200,
+      "completed": false,
+      "resources": [
+        { "id": "r1", "title": "AWS SageMaker Documentation", "url": "https://docs.aws.amazon.com/sagemaker/", "type": "docs", "rating": 5 },
+        { "id": "r2", "title": "GCP Vertex AI", "url": "https://cloud.google.com/vertex-ai/docs", "type": "docs", "rating": 4 }
+      ]
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "ml-basics", "to": "docker" },
+    { "id": "e2", "from": "ml-basics", "to": "cloud-ml" },
+    { "id": "e3", "from": "docker", "to": "kubernetes" },
+    { "id": "e4", "from": "docker", "to": "model-serving" },
+    { "id": "e5", "from": "docker", "to": "feature-store" },
+    { "id": "e6", "from": "kubernetes", "to": "mlflow" },
+    { "id": "e7", "from": "mlflow", "to": "model-monitoring" },
+    { "id": "e8", "from": "mlflow", "to": "ml-cicd" },
+    { "id": "e9", "from": "kubernetes", "to": "ml-cicd" },
+    { "id": "e10", "from": "ml-cicd", "to": "infrastructure" },
+    { "id": "e11", "from": "model-monitoring", "to": "infrastructure" }
+  ]
+}
