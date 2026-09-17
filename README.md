@@ -7,7 +7,11 @@
 A visually immersive roadmap visualization platform built with Next.js 16, React Three Fiber, Three.js, GSAP, and Lottie — featuring 3D scene rendering, smooth scroll animations, and interactive career/learning roadmaps.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Coming_Soon-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=3b82f6)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=22c55e)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=22c55e)](LICENSE)
+[![Next.js 16](https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React 19](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![Three.js](https://img.shields.io/badge/Three.js_0.185-000000?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript_5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 </div>
 
@@ -117,15 +121,33 @@ npm run start
 
 ---
 
-## Author
+## Key Architecture Decisions
 
-**Mohammadhossein Asadi** — Frontend & Full-Stack Engineer
+### React Three Fiber for 3D
+R3F provides a React-native declarative API for Three.js, enabling component-based 3D scene composition with automatic cleanup and React lifecycle integration.
 
-[![GitHub](https://img.shields.io/badge/GitHub-mohammadhossein--asadi-0a0a0a?style=flat-square&logo=github)](https://github.com/mohammadhossein-asadi)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammadhossein--asadi-0a66c2?style=flat-square&logo=linkedin)](https://linkedin.com/in/mohammadhossein-asadi)
+### GSAP + Lenis for Scroll-Driven Animation
+Lenis handles smooth scrolling at the browser level, while GSAP's ScrollTrigger maps scroll progress to animation timelines — creating buttery, performant scroll experiences.
+
+### Custom GLSL Shaders
+The `shaders/` directory contains custom fragment/vertex shaders for unique visual effects that go beyond standard Three.js materials.
+
+### Data-Driven Roadmaps
+Roadmap data lives in `src/data/` as typed TypeScript structures, making it easy to add new career paths or learning tracks without touching rendering logic.
 
 ---
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**Mohammadhossein Asadi** — Frontend & Full-Stack Engineer
+
+[![GitHub](https://img.shields.io/badge/GitHub-mohammadhossein--asadi-0a0a0a?style=flat-square&logo=github)](https://github.com/mohammadhossein-asadi)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammadhossein--asadi-0a66c2?style=flat-square&logo=linkedin)](https://linkedin.com/in/mohammadhossein-asadi)
+
+</div>
